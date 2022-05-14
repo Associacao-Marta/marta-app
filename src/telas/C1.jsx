@@ -1,21 +1,10 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import {
-  BottomNavigation,
-  BottomNavigationAction,
-  Card,
-  Chip,
-  Grid,
-  Stack,
-  Fab,
-  TextField,
-} from "@mui/material";
+import { Card, Chip, Grid, Stack, TextField } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import RectangleIcon from "@mui/icons-material/Rectangle";
-import GppMaybeIcon from "@mui/icons-material/GppMaybe";
-import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import BotaoDoPanico from "../components/BotaoDoPanico";
+import MenuInferior from "../components/MenuInferior";
 
 const C1 = () => {
   return (
@@ -25,6 +14,7 @@ const C1 = () => {
     // Componentizar cards
     // botão flutuante z-index DEIXAR EM CIMA
     // fixar bottom navigation
+    // componentizar botão de settings
 
     <Typography>
       <Grid>
@@ -88,17 +78,8 @@ const C1 = () => {
           </Stack>
         </Grid>
       </Grid>
-      <Fab style={{ flex: 1, position: "relative" }}>
-        <GppMaybeIcon />
-      </Fab>
-      <BottomNavigation showLabels>
-        <BottomNavigationAction label="Artigos" icon={<FeedOutlinedIcon />} />
-        <BottomNavigationAction
-          label="Atendimento"
-          icon={<CalendarTodayIcon />}
-        />
-        <BottomNavigationAction label="Apoio" icon={<LocationOnIcon />} />
-      </BottomNavigation>
+      <BotaoDoPanico />
+      <MenuInferior />
     </Typography>
   );
 };
