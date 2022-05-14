@@ -1,15 +1,30 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import { Card, Chip, Grid, Stack, Fab, TextField } from "@mui/material";
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Card,
+  Chip,
+  Grid,
+  Stack,
+  Fab,
+  TextField,
+} from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import RectangleIcon from "@mui/icons-material/Rectangle";
 import GppMaybeIcon from "@mui/icons-material/GppMaybe";
+import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 const C1 = () => {
   return (
     // Colocar autocomplete com TextField para busca????
     // Descobrir como deixar os chips deletable
     // Componentizar MobileStepper
     // Componentizar cards
+    // botão flutuante z-index DEIXAR EM CIMA
+    // fixar bottom navigation
 
     <Typography>
       <Grid>
@@ -76,6 +91,14 @@ const C1 = () => {
       <Fab style={{ flex: 1, position: "relative" }}>
         <GppMaybeIcon />
       </Fab>
+      <BottomNavigation showLabels>
+        <BottomNavigationAction label="Artigos" icon={<FeedOutlinedIcon />} />
+        <BottomNavigationAction
+          label="Atendimento"
+          icon={<CalendarTodayIcon />}
+        />
+        <BottomNavigationAction label="Apoio" icon={<LocationOnIcon />} />
+      </BottomNavigation>
     </Typography>
   );
 };
