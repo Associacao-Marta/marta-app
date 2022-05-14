@@ -65,6 +65,12 @@ const theme = createTheme({
       fontWeight: 500,
     },
   },
+  values: {
+    xs: 0,
+    sm: 360,
+    md: 600,
+    lg: 900,
+  },
 });
 
 export default theme;
