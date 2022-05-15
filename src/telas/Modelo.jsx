@@ -1,66 +1,52 @@
 import React from "react";
-import { Card, Chip, Grid, IconButton, Stack, TextField } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
+import { Card, Button, Grid, TextField, Stack } from "@mui/material";
+import RectangleIcon from "@mui/icons-material/Rectangle";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
-
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import "../assets/css/base.css";
 import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
-
+import calendario from "../assets/mock/Picker.svg";
 const Modelo = () => {
   return (
     <Grid container>
-      <Grid container className="C1buscar">
-        <BotaoVoltarSuperior />
-      </Grid>
-      <Grid className="C2ilustracao">
-        <CircleIcon sx={{ fontSize: "100px" }} />
-      </Grid>
-      <Grid container>
-        <h2 className="C2titulo">Titulo do artigo</h2>
-        <p className="C2subtitulo">
-          Nulla nisl integer egestas tellus. Hac id facilisis sit quis sit
-          pellentesque pulvinar. Faucibus cras.
-        </p>
-      </Grid>
-      <Grid container direction="row" className="C1chips">
-        <Chip label="Tema 1" className="C1chipindividual" />
-        <Chip label="Tema 2" className="C1chipindividual" />
-      </Grid>
-      <BotaoDoPanico />
-      <Grid container className="C2p">
-        <p>
-          Suspendisse nisi elit lobortis tristique. In facilisis consequat
-          hendrerit viverra sagittis diam lorem consequat lobortis. Felis, augue
-          eu massa nisl, sed est purus sollicitudin.
-        </p>
-        <p>
-          Nec viverra in consectetur aliquet eu donec adipiscing risus sed.
-          Pulvinar bibendum facilisis pellentesque eu morbi mattis condimentum
-          imperdiet.
-        </p>
-        <p>
-          Blandit eget tempor egestas pulvinar faucibus tristique. Diam sit quam
-          blandit tristique sed. Leo euismod fames tellus porttitor ut lacus
-          fames eget. Nulla adipiscing pharetra et fermentum aliquet. Amet diam.
-        </p>
-      </Grid>
       <Grid item>
-        <h3 className="C1destaques">Talvez você também goste</h3>
+        <BotaoVoltarSuperior className="D1voltar" />
       </Grid>
-      <Grid container className="Carrossel">
-        <Stack direction="row" spacing={4}>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
+
+      <Grid container>
+        <h2 className="D2titulo">Nos conte um pouco sobre você</h2>
+      </Grid>
+      <Grid container className="D2form">
+        <Stack direction="column" className="D2caixa">
+          <TextField label="Nome Completo" variant="outlined" />
+          <TextField label="Telefone" variant="outlined" />
+          <TextField label="Descrição" variant="outlined" multiline rows={4} />
         </Stack>
       </Grid>
+      <Grid container>
+        <h2 className="D2titulo">Com que profissional gostaria de falar?</h2>
+      </Grid>
+      <Grid container className="D2botoes">
+        <Stack direction="row">
+          <Button sx={{ marginRight: "70px" }} variant="contained">
+            psicóloga
+          </Button>
+          <Button variant="contained">advogada</Button>
+        </Stack>
+      </Grid>
+      <Grid container>
+        <h2 className="D2titulo">Quando gostaria de ser atendida?</h2>
+      </Grid>
+      <Grid item>
+        <img className="D2calendario" src={calendario} />
+      </Grid>
+      <Grid container className="D2botoes">
+        <Grid item>
+          <Button variant="contained">Enviar</Button>
+        </Grid>
+      </Grid>
+      <BotaoDoPanico />
       <Grid className="EspacoInferior" />
       <MenuInferior />
     </Grid>

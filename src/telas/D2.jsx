@@ -3,71 +3,50 @@ import { Button, Stack, Grid, TextField } from "@mui/material";
 import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
+import calendario from "../assets/mock/Picker.svg";
 
 const D2 = () => {
   return (
     <Grid container>
-      <BotaoVoltarSuperior />
-      <Grid item xs={12}>
-        <subtitle1 style={{ fontSize: 16, fontWeight: 600 }}>
-          Nos conte um pouco sobre você
-        </subtitle1>
+      <Grid item>
+        <BotaoVoltarSuperior className="D1voltar" />
       </Grid>
-      <Grid item xs={8}>
-        <Stack direction="column">
-          <TextField
-            label="Nome Completo"
-            variant="outlined"
-            style={{
-              width: 300,
-            }}
-          />
-          <TextField
-            label="Telefone"
-            variant="outlined"
-            style={{
-              width: 300,
-            }}
-          />
-          <TextField
-            label="Descrição"
-            variant="outlined"
-            multiline
-            rows={4}
-            style={{
-              width: 300,
-            }}
-          />
+
+      <Grid container>
+        <h2 className="D2titulo">Nos conte um pouco sobre você</h2>
+      </Grid>
+      <Grid container className="D2form">
+        <Stack direction="column" className="D2caixa">
+          <TextField label="Nome Completo" variant="outlined" />
+          <TextField label="Telefone" variant="outlined" />
+          <TextField label="Descrição" variant="outlined" multiline rows={4} />
         </Stack>
       </Grid>
-      <Grid item xs={12}>
-        <subtitle1 style={{ fontSize: 16, fontWeight: 600 }}>
-          Com que profissional gostaria de falar?
-        </subtitle1>
+      <Grid container>
+        <h2 className="D2titulo">Com que profissional gostaria de falar?</h2>
       </Grid>
-      <Grid item xs={12}>
-        <Stack direction="row" spacing={12}>
-          <Button variant="contained">psicóloga</Button>
+      <Grid container className="D2botoes">
+        <Stack direction="row">
+          <Button sx={{ marginRight: "70px" }} variant="contained">
+            psicóloga
+          </Button>
           <Button variant="contained">advogada</Button>
         </Stack>
       </Grid>
-      <Grid item xs={12}>
-        <subtitle1 style={{ fontSize: 16, fontWeight: 600 }}>
-          Quando gostaria de ser atendida?
-        </subtitle1>
+      <Grid container>
+        <h2 className="D2titulo">Quando gostaria de ser atendida?</h2>
       </Grid>
-      <Grid item xs={12}>
-        calendario
+      <Grid item>
+        <img className="D2calendario" src={calendario} />
       </Grid>
-      <Grid item xs={12}>
-        <Button variant="contained" sx={{ margin: 5 }}>
-          Enviar
-        </Button>
+      <Grid container className="D2botoes">
+        <Grid item>
+          <Button variant="contained">Enviar</Button>
+        </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <BotaoDoPanico />
-        <MenuInferior />
-      </Grid>
+      <BotaoDoPanico />
+      <Grid className="EspacoInferior" />
+      <MenuInferior />
     </Grid>
   );
 };

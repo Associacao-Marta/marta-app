@@ -197,3 +197,63 @@
     margin-top: 50px;
 }
 
+.D1icones {
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-left: 300px;
+}
+
+.D1titulo {
+    margin-left: 24px;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.D1cards {
+    margin-top: 0;
+    margin-left: 12px;
+}
+
+.D1botoes {
+    
+}
+
+.D1botaoindividual {
+        margin-top: 20px;
+        margin-bottom: 50px;
+}
+
+.D2titulo {
+    margin-left: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.D2form {
+    margin-left: 24px;
+}
+
+.D2caixa {
+    margin-bottom: 24px;
+    width: 300px;
+}
+
+.D2botoes {
+    justify-content: center;
+        margin-bottom: 30px;
+}
+
+.D2botaoindividual {
+    margin-bottom: 100px;
+}
+
+.D2calendario {
+    justify-content: center;
+    margin-left: 12px;
+}
+
