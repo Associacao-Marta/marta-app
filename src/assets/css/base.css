@@ -1,6 +1,114 @@
-@media (max-width: 360px)
+/* @media (max-width: 360px)
 {
-    body {
+    body {        
         background-color: blue;
     }
+} */
+.A1, .B1, .C1 {
+    height: 800px;
+    width: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.Ilustracao {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: calc(50% - 200px/2);
+    top: calc(50% - 200px/2 - 144px);
+    }
+
+.A1h1 {
+    position: absolute;
+}
+
+.A1body2{
+    position: absolute;
+    width: 312px;
+    height: 84px;
+    left: calc(50% - 312px/2);
+    top: calc(50% - 84px/2 + 62px);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.A1pular{
+    top: 644px; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: capitalize;
+}
+
+
+.B1body1{
+    position: relative;
+    align-items: center;
+    top: 528px;
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.B1body2 {
+    position: fixed;
+    width: 312px;
+    height: 42px;
+    left: 24px;
+    top: 420px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.B1finalizar {
+    top: 241px; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: capitalize;
+}
+
+.C1buscar{
+    
+}
+
+.C1chips {
+    margin: 5px;
+}
+
+.BotaoDoPanico {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 280px;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+
 }
