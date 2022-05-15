@@ -42,7 +42,6 @@ export default function Carrossel() {
         square
         elevation={0}
         sx={{
-          alignItems: "center",
           height: 50,
           pl: 2,
           bgcolor: "#C4C4C4",

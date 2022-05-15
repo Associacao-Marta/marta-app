@@ -19,6 +19,14 @@
     top: calc(50% - 200px/2 - 144px);
     }
 
+.Artigo {
+    padding: 25px
+}
+
+.BotaoGeral {
+    width: 34px;
+}
+
 .A1h1 {
     position: absolute;
 }
@@ -90,23 +98,41 @@
 }
 
 .C1buscar{
-    
+    align-items: center;
+    margin: 24px;
 }
 
 .C1chips {
     margin: 5px;
 }
 
+.C1destaques{
+    position: absolute;
+    width: 90px;
+    height: 24px;
+    left: 24px;
+    top: 126px;     
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+        
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+
+
 .BotaoDoPanico {
-    display: none;
-    position: fixed;
-    bottom: 20px;
+    display: absolute;
+    position: sticky;
+    bottom: 50px;
     left: 280px;
     z-index: 9999;
     border: none;
     outline: none;
-    background-color: red;
-    color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
