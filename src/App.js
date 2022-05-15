@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Typography>
-        <A1 />
+        <Modelo />
       </Typography>
     </div>
   );
