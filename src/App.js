@@ -1,17 +1,25 @@
 import React from "react";
+import { Typography } from "@mui/material";
 import { ReactDOM } from "react";
-import "./App.css";
-import A1 from "./telas/A1.jsx";
-import A2 from "./telas/A2.jsx";
-import A3 from "./telas/A3.jsx";
+
+import A1 from "./telas/A1";
 import B1 from "./telas/B1.jsx";
 import C1 from "./telas/C1.jsx";
-import { Button, Typography } from "@mui/material";
+import C2 from "./telas/C2.jsx";
+import D1 from "./telas/D1.jsx";
+import D2 from "./telas/D2.jsx";
+import D3 from "./telas/D3";
+import D4 from "./telas/D4";
+import D5 from "./telas/D5";
+import F1 from "./telas/F1";
+import Modelo from "./telas/Modelo";
 
 function App() {
   return (
     <div className="App">
-      <A1 />
+      <Typography>
+        <Modelo />
+      </Typography>
     </div>
   );
 }

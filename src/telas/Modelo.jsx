@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Chip, Grid, Stack, TextField } from "@mui/material";
+import { Card, Chip, Grid, IconButton, Stack, TextField } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import RectangleIcon from "@mui/icons-material/Rectangle";
 import BotaoDoPanico from "../components/BotaoDoPanico";
@@ -7,7 +7,7 @@ import MenuInferior from "../components/MenuInferior";
 import Carrossel from "../components/Carrossel";
 import "../assets/css/base.css";
 
-const C1 = () => {
+const Modelo = () => {
   return (
     // Colocar autocomplete com TextField para busca????
     // Descobrir como deixar os chips deletable
@@ -16,23 +16,19 @@ const C1 = () => {
     // botão flutuante z-index DEIXAR EM CIMA
     // fixar bottom navigation
     // componentizar botão de settings
+    <Grid container className="C1">
+      <Grid item xs={12}>
+        <TextField label="Buscar" variant="outlined" />
+        <IconButton>
+          <SettingsIcon sx={{ fontSize: "34px" }} />
+        </IconButton>
+      </Grid>
 
-    <Grid className="C1">
-      <Grid item xs={4}>
-        <TextField
-          label="Buscar"
-          variant="outlined"
-          style={{
-            width: 262,
-            paddingRight: 16,
-          }}
-        />
-        <SettingsIcon sx={{ fontSize: "56px" }} />
+      <Grid item>
+        <Chip label="Tema" />
+        <Chip label="Filtros" />
       </Grid>
-      <Grid item xs={8} sx={{ display: "flex" }}>
-        <Chip label="Tema" style={{ margin: 5 }} />
-        <Chip label="Filtros" style={{ margin: 5 }} />
-      </Grid>
+
       <Grid sx={{ display: "flex" }}>
         <subtitle1 style={{ marginTop: 28, marginBottom: 12 }}>
           Destaques
@@ -80,4 +76,4 @@ const C1 = () => {
   );
 };
 
-export default C1;
+export default Modelo;
