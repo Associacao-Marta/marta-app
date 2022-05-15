@@ -37,12 +37,11 @@ export default function Carrossel() {
   };
 
   return (
-    <Box sx={{ maxWidth: 300, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 232, flexGrow: 1 }}>
       <Paper
         square
         elevation={0}
         sx={{
-          display: "flex",
           alignItems: "center",
           height: 50,
           pl: 2,
@@ -54,8 +53,8 @@ export default function Carrossel() {
       <Box
         sx={{
           bgcolor: "#C4C4C4",
-          height: 200,
-          maxWidth: 268,
+          height: 150,
+          maxWidth: 200,
           width: "100%",
           p: 2,
         }}
