@@ -1,10 +1,11 @@
 import React from "react";
 import { Fab } from "@mui/material";
 import GppMaybeIcon from "@mui/icons-material/GppMaybe";
+import "../assets/css/base.css";
 
 const BotaoDoPanico = () => {
   return (
-    <Fab style={{ flex: 1, position: "relative" }}>
+    <Fab className="BotaoDoPanico">
       <GppMaybeIcon />
     </Fab>
   );
