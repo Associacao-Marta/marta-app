@@ -23,9 +23,7 @@ const B1 = () => {
         </body1>
       </Grid>
       <Grid item>
-        <Button variant="contained" className="B1finalizar">
-          Finalizar
-        </Button>
+        <Button className="B1finalizar">Finalizar</Button>
       </Grid>
       <Grid item>
         <Pontos />

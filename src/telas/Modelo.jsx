@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Chip, Grid, IconButton, Stack, TextField } from "@mui/material";
-import SettingsIcon from "@mui/icons-material/Settings";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import Carrossel from "../components/Carrossel";
@@ -17,9 +17,13 @@ const Modelo = () => {
     // componentizar botão de settings
     <Grid container>
       <Grid container className="C1buscar">
-        <TextField label="Buscar" variant="outlined" />
+        <TextField
+          label="Buscar"
+          variant="outlined"
+          sx={{ marginRight: "16px" }}
+        />
         <IconButton color="primary">
-          <SettingsIcon sx={{ fontSize: "34px", marginLeft: "16px" }} />
+          <SettingsApplicationsIcon sx={{ fontSize: "34px" }} />
         </IconButton>
       </Grid>
     </Grid>

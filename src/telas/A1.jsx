@@ -21,9 +21,7 @@ const A1 = () => {
         </body2>
       </Grid>
       <Grid item>
-        <Button variant="contained" className="A1pular">
-          Pular
-        </Button>
+        <Button className="A1pular">Pular</Button>
       </Grid>
       <Grid item>
         <Pontos />
