@@ -1,31 +1,68 @@
 import React from "react";
 import { Card, Chip, Grid, IconButton, Stack, TextField } from "@mui/material";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import CircleIcon from "@mui/icons-material/Circle";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
-import Carrossel from "../components/Carrossel";
+
 import "../assets/css/base.css";
+import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
 
 const Modelo = () => {
   return (
-    // Colocar autocomplete com TextField para busca????
-    // Descobrir como deixar os chips deletable
-    // Componentizar MobileStepper
-    // Componentizar cards
-    // botão flutuante z-index DEIXAR EM CIMA
-    // fixar bottom navigation
-    // componentizar botão de settings
     <Grid container>
       <Grid container className="C1buscar">
-        <TextField
-          label="Buscar"
-          variant="outlined"
-          sx={{ marginRight: "16px" }}
-        />
-        <IconButton color="primary">
-          <SettingsApplicationsIcon sx={{ fontSize: "34px" }} />
-        </IconButton>
+        <BotaoVoltarSuperior />
       </Grid>
+      <Grid className="C2ilustracao">
+        <CircleIcon sx={{ fontSize: "100px" }} />
+      </Grid>
+      <Grid container>
+        <h2 className="C2titulo">Titulo do artigo</h2>
+        <p className="C2subtitulo">
+          Nulla nisl integer egestas tellus. Hac id facilisis sit quis sit
+          pellentesque pulvinar. Faucibus cras.
+        </p>
+      </Grid>
+      <Grid container direction="row" className="C1chips">
+        <Chip label="Tema 1" className="C1chipindividual" />
+        <Chip label="Tema 2" className="C1chipindividual" />
+      </Grid>
+      <BotaoDoPanico />
+      <Grid container className="C2p">
+        <p>
+          Suspendisse nisi elit lobortis tristique. In facilisis consequat
+          hendrerit viverra sagittis diam lorem consequat lobortis. Felis, augue
+          eu massa nisl, sed est purus sollicitudin.
+        </p>
+        <p>
+          Nec viverra in consectetur aliquet eu donec adipiscing risus sed.
+          Pulvinar bibendum facilisis pellentesque eu morbi mattis condimentum
+          imperdiet.
+        </p>
+        <p>
+          Blandit eget tempor egestas pulvinar faucibus tristique. Diam sit quam
+          blandit tristique sed. Leo euismod fames tellus porttitor ut lacus
+          fames eget. Nulla adipiscing pharetra et fermentum aliquet. Amet diam.
+        </p>
+      </Grid>
+      <Grid item>
+        <h3 className="C1destaques">Talvez você também goste</h3>
+      </Grid>
+      <Grid container className="Carrossel">
+        <Stack direction="row" spacing={4}>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+        </Stack>
+      </Grid>
+      <Grid className="EspacoInferior" />
+      <MenuInferior />
     </Grid>
   );
 };

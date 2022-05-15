@@ -11,7 +11,7 @@ const A1 = () => {
         <h1>Bem-vinda!</h1>
       </Grid>
       <Grid item>
-        <CircleIcon className="Ilustracao" style={{ fontSize: "200px" }} />
+        <CircleIcon className="A1ilustracao" sx={{ fontSize: "200px" }} />
       </Grid>
       <Grid item>
         <body2 className="A1body2">

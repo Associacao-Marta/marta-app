@@ -11,25 +11,49 @@
     justify-content: center;
 }
 
-.Ilustracao {
+
+
+
+.Artigo {
+    padding: 15px 20px;
+}
+
+.BotaoDoPanico {
+    position: fixed;
+    top: 660px;
+    left: 280px;
+    z-index: 9998;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.Menu {
+    position: fixed;
+    margin-bottom: 0;
+    top: 744px;
+    width: 95%;
+    z-index: 9999;
+}
+
+.EspacoInferior {
+    padding-bottom: 100px;
+}
+
+
+.A1h1 {
+    position: absolute;
+}
+
+.A1ilustracao {
     position: absolute;
     width: 200px;
     height: 200px;
     left: calc(50% - 200px/2);
     top: calc(50% - 200px/2 - 144px);
     }
-
-.Artigo {
-    padding: 25px
-}
-
-.BotaoGeral {
-    width: 34px;
-}
-
-.A1h1 {
-    position: absolute;
-}
 
 .A1body2{
     position: absolute;
@@ -99,42 +123,77 @@
 
 .C1buscar{
     align-items: center;
-    margin: 24px;
+    margin-left: 24px;
+    margin-top: 24px;
 }
 
 .C1chips {
-    margin: 5px;
+    margin-top: 10px;
+    margin-left: 24px
+}
+
+.C1chipindividual {
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
 }
 
 .C1destaques{
     position: absolute;
-    width: 90px;
-    height: 24px;
-    left: 24px;
-    top: 126px;     
-    font-family: 'Poppins';
+    margin-left: 24px; 
+    margin-top: 16px;
+    margin-bottom: 16px;    
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-        
+}
+
+.C2voltar {
+    margin-top:24px;
+    margin-left: 10px;
+}
+
+.C2titulo {
+    position: absolute;
+    width: 155px;
+    height: 30px;
+    margin-left: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
     align-items: center;
     text-align: center;
+}
+
+.C2ilustracao {
+    margin-left: 130px;
+}
+
+.C2subtitulo {
+    margin-left: 24px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
     letter-spacing: 0.02em;
 }
 
-
-
-.BotaoDoPanico {
-    display: absolute;
-    position: sticky;
-    bottom: 50px;
-    left: 280px;
-    z-index: 9999;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-
+.C2p {
+    margin-left: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
 }
+
+.Carrossel {
+    margin-left: 24px;
+    margin-top: 50px;
+}
+

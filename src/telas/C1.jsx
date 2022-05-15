@@ -1,7 +1,6 @@
 import React from "react";
-import { Card, Chip, Grid, Stack, TextField } from "@mui/material";
-import SettingsIcon from "@mui/icons-material/Settings";
-import RectangleIcon from "@mui/icons-material/Rectangle";
+import { Card, Chip, Grid, IconButton, Stack, TextField } from "@mui/material";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import Carrossel from "../components/Carrossel";
@@ -16,65 +15,77 @@ const C1 = () => {
     // botão flutuante z-index DEIXAR EM CIMA
     // fixar bottom navigation
     // componentizar botão de settings
-
-    <Grid className="C1">
-      <Grid item xs={4}>
+    <Grid container>
+      <Grid container className="C1buscar">
         <TextField
           label="Buscar"
           variant="outlined"
-          style={{
-            width: 262,
-            paddingRight: 16,
-          }}
+          sx={{ marginRight: "16px" }}
         />
-        <SettingsIcon sx={{ fontSize: "56px" }} />
+        <IconButton color="primary">
+          <SettingsApplicationsIcon sx={{ fontSize: "34px" }} />
+        </IconButton>
       </Grid>
-      <Grid item xs={8} sx={{ display: "flex" }}>
-        <Chip label="Tema" style={{ margin: 5 }} />
-        <Chip label="Filtros" style={{ margin: 5 }} />
+      <BotaoDoPanico />
+      <Grid container direction="row" className="C1chips">
+        <Chip label="Tema" className="C1chipindividual" />
+        <Chip label="Filtros" className="C1chipindividual" />
       </Grid>
-      <Grid sx={{ display: "flex" }}>
-        <subtitle1 style={{ marginTop: 28, marginBottom: 12 }}>
-          Destaques
-        </subtitle1>
+      <Grid item>
+        <h3 className="C1destaques">Destaques</h3>
       </Grid>
-      <Grid>
+      <Grid container className="Carrossel">
         <Carrossel />
       </Grid>
-      <Grid sx={{ display: "flex" }}>
-        <subtitle1 style={{ marginTop: 28, marginBottom: 12 }}>Tema</subtitle1>
+      <Grid item>
+        <h3 className="C1destaques">Tema</h3>
       </Grid>
-      <Grid>
+      <Grid container className="Carrossel">
         <Stack direction="row" spacing={4}>
-          <Card style={{ padding: 25 }}>
-            <h4>Artigo</h4>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
           </Card>
-          <Card style={{ padding: 25 }}>
-            <h4>Artigo</h4>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
           </Card>
-          <Card style={{ padding: 25 }}>
-            <h4>Artigo</h4>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
           </Card>
         </Stack>
       </Grid>
-      <Grid sx={{ display: "flex" }}>
-        <subtitle1 style={{ marginTop: 28, marginBottom: 12 }}>Tema</subtitle1>
+      <Grid item>
+        <h3 className="C1destaques">Tema</h3>
       </Grid>
-      <Grid>
+      <Grid container className="Carrossel">
         <Stack direction="row" spacing={4}>
-          <Card style={{ padding: 25 }}>
-            <h4>Artigo</h4>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
           </Card>
-          <Card style={{ padding: 25 }}>
-            <h4>Artigo</h4>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
           </Card>
-          <Card style={{ padding: 25 }}>
-            <h4>Artigo</h4>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
           </Card>
         </Stack>
       </Grid>
-
-      <BotaoDoPanico />
+      <Grid item>
+        <h3 className="C1destaques">Tema</h3>
+      </Grid>
+      <Grid container className="Carrossel">
+        <Stack direction="row" spacing={4}>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+          <Card className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+        </Stack>
+      </Grid>
+      <Grid className="EspacoInferior" />
       <MenuInferior />
     </Grid>
   );
