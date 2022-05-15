@@ -1,13 +1,15 @@
 import React from "react";
-import { Fab } from "@mui/material";
+import { Fab, Grid } from "@mui/material";
 import GppMaybeIcon from "@mui/icons-material/GppMaybe";
 import "../assets/css/base.css";
 
 const BotaoDoPanico = () => {
   return (
-    <Fab className="BotaoDoPanico">
-      <GppMaybeIcon />
-    </Fab>
+    <Grid container className="BotaoDoPanico">
+      <Fab color="primary">
+        <GppMaybeIcon />
+      </Fab>
+    </Grid>
   );
 };
 

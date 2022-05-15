@@ -10,16 +10,16 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 const steps = [
   {
-    label: "teste",
-    description: `teste`,
+    label: "teste1",
+    description: `teste1`,
   },
   {
-    label: "",
-    description: ``,
+    label: "teste2",
+    description: `teste2`,
   },
   {
-    label: "",
-    description: ``,
+    label: "teste3",
+    description: `teste3`,
   },
 ];
 
@@ -43,6 +43,7 @@ export default function Carrossel() {
         elevation={0}
         sx={{
           height: 50,
+          width: "285px",
           pl: 2,
           bgcolor: "#C4C4C4",
         }}
@@ -53,15 +54,15 @@ export default function Carrossel() {
         sx={{
           bgcolor: "#C4C4C4",
           height: 150,
-          maxWidth: 200,
-          width: "100%",
+          width: "269px",
           p: 2,
         }}
       >
         {steps[activeStep].description}
       </Box>
       <MobileStepper
-        variant="text"
+        sx={{ marginLeft: "50px" }}
+        variant="dots"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
@@ -71,7 +72,6 @@ export default function Carrossel() {
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
-            Próximo
             {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
@@ -86,7 +86,6 @@ export default function Carrossel() {
             ) : (
               <KeyboardArrowLeft />
             )}
-            Anterior
           </Button>
         }
       />
