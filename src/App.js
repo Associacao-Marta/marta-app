@@ -13,6 +13,7 @@ import D3 from "./telas/D3";
 import D4 from "./telas/D4";
 import D5 from "./telas/D5";
 import E1 from "./telas/E1";
+import E2 from "./telas/E1";
 import F1 from "./telas/F1";
 import Modelo from "./telas/Modelo";
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Typography>
-        <D2 />
+        <F1 />
       </Typography>
     </div>
   );

@@ -5,7 +5,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 const BotaoVoltarSuperior = () => {
   return (
     <Grid>
-      <IconButton color="primary" aria-label="Voltar">
+      <IconButton color="primary" variant="" aria-label="Voltar">
         <ArrowBackIosNewIcon />
       </IconButton>
     </Grid>
