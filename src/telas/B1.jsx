@@ -9,8 +9,8 @@ const B1 = () => {
       <Grid className="A1h1">
         <h1>Termos de Uso</h1>
       </Grid>
-      <Grid item>
-        <CircleIcon className="Ilustracao" style={{ fontSize: "200px" }} />
+      <Grid container className="B1ilustracao">
+        <CircleIcon sx={{ fontSize: "200px" }} />
       </Grid>
       <Grid item>
         <body2 className="A1body2">
@@ -23,7 +23,7 @@ const B1 = () => {
         </body1>
       </Grid>
       <Grid item>
-        <Button variant="contained" className="B1finalizar">
+        <Button href="C1" className="B1finalizar" variant="contained">
           Finalizar
         </Button>
       </Grid>

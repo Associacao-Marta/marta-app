@@ -10,8 +10,8 @@ const A1 = () => {
       <Grid className="A1h1">
         <h1>Bem-vinda!</h1>
       </Grid>
-      <Grid item>
-        <CircleIcon className="A1ilustracao" sx={{ fontSize: "200px" }} />
+      <Grid container className="A1ilustracao">
+        <CircleIcon sx={{ fontSize: "200px" }} />
       </Grid>
       <Grid item>
         <body2 className="A1body2">
@@ -21,7 +21,9 @@ const A1 = () => {
         </body2>
       </Grid>
       <Grid item>
-        <Button className="A1pular">Pular</Button>
+        <Button href="B1" className="A1pular">
+          Pular
+        </Button>
       </Grid>
       <Grid item>
         <Pontos />

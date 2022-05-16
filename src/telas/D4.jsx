@@ -3,31 +3,36 @@ import { Button, Stack, Grid, TextField } from "@mui/material";
 import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
+import PopUpD4 from "../components/PopUpD4";
 
 const D4 = () => {
   return (
     <Grid container>
-      <BotaoVoltarSuperior />
-      <Grid item xs={8}>
-        <TextField
-          label="Protocolo"
-          variant="outlined"
-          style={{
-            width: 300,
-          }}
-        />
+      <Grid item>
+        <BotaoVoltarSuperior className="D1voltar" />
       </Grid>
-      <Grid>
-        <overline>
-          Para confirmar data e horário do seu atendimento, basta inserir o
-          número de protocolo que te enviamos por WhatsApp.
-        </overline>
+      <Grid className="EspacoInferior" />
+      <Grid container className="D2form">
+        <TextField label="Protocolo" variant="outlined" className="D2caixa" />
       </Grid>
 
-      <Grid item xs={12}>
-        <BotaoDoPanico />
-        <MenuInferior />
+      <Grid container>
+        <p className="D4p">
+          Para confirmar data e horário do seu atendimento, basta inserir o
+          número de protocolo que te enviamos por WhatsApp.
+        </p>
       </Grid>
+      <Grid className="EspacoInferior" />
+
+      <Grid container className="D2botoes">
+        <Grid item>
+          <PopUpD4 />
+        </Grid>
+        <Grid className="EspacoInferior" />
+      </Grid>
+      <BotaoDoPanico />
+
+      <MenuInferior />
     </Grid>
   );
 };

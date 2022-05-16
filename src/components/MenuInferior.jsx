@@ -9,14 +9,17 @@ const MenuInferior = () => {
   return (
     <BottomNavigation showLabels className="Menu">
       <BottomNavigationAction
+        href="C1"
         label="Artigos"
         icon={<FeedOutlinedIcon color="primary" />}
       />
       <BottomNavigationAction
+        href="D1"
         label="Atendimento"
         icon={<CalendarTodayIcon color="primary" />}
       />
       <BottomNavigationAction
+        href="E1"
         label="Apoio"
         icon={<LocationOnIcon color="primary" />}
       />

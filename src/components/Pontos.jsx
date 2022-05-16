@@ -25,7 +25,12 @@ export default function Pontos() {
       steps={3}
       activeStep={activeStep}
       nextButton={
-        <Button size="small" onClick={handleNext} disabled={activeStep === 2}>
+        <Button
+          href="B1"
+          size="small"
+          onClick={handleNext}
+          disabled={activeStep === 2}
+        >
           Avançar
           {theme.direction === "rtl" ? (
             <KeyboardArrowLeft />

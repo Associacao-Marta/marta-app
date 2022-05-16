@@ -48,12 +48,9 @@
 }
 
 .A1ilustracao {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    left: calc(50% - 200px/2);
-    top: calc(50% - 200px/2 - 144px);
-    }
+    justify-content: center;
+    margin-top: 120px;
+}
 
 .A1body2{
     position: absolute;
@@ -82,6 +79,11 @@
     text-transform: capitalize;
 }
 
+.B1ilustracao {
+    justify-content: center;
+    margin-top: 120px;
+}
+
 
 .B1body1{
     position: relative;
@@ -97,9 +99,7 @@
 .B1body2 {
     position: fixed;
     width: 312px;
-    height: 42px;
     left: 24px;
-    top: 420px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -110,10 +110,9 @@
 }
 
 .B1finalizar {
-    top: 241px; 
-    font-family: 'Poppins';
-    font-style: normal;
+    justify-content: center;
     font-weight: 400;
+    margin-bottom: 0;
     font-size: 14px;
     line-height: 36px;
     text-align: center;
@@ -218,7 +217,7 @@
 }
 
 .D1botoes {
-    
+    justify-content: center;
 }
 
 .D1botaoindividual {
@@ -258,7 +257,7 @@
 }
 
 .D4p{
-    margin: 0 24px;
+    margin: 10px 24px;
     font-weight: 400;
     font-size: 11px;
     line-height: 16px;

@@ -33,12 +33,12 @@ const D1 = () => {
       </Grid>
       <Grid container className="D1botoes">
         <Grid item>
-          <Button className="D1botaoindividual" variant="contained">
+          <Button href="D2" className="D1botaoindividual" variant="contained">
             Agendar Atendimento
           </Button>
         </Grid>
         <Grid item>
-          <Button className="D1botaoindividual" variant="contained">
+          <Button href="D4" className="D1botaoindividual" variant="contained">
             Consultar Atendimento
           </Button>
         </Grid>
