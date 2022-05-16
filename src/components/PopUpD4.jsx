@@ -1,16 +1,12 @@
 import * as React from "react";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { Checkbox } from "@mui/material";
-import { Fab, Grid } from "@mui/material";
-import GppMaybeIcon from "@mui/icons-material/GppMaybe";
-import "../assets/css/base.css";
 
-export default function PopUpBotaoDoPanico() {
+export default function PopUpD4() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -22,28 +18,25 @@ export default function PopUpBotaoDoPanico() {
   };
 
   return (
-    <Grid container className="BotaoDoPanico">
-      <Fab color="primary" variant="contained" onClick={handleClickOpen}>
-        <GppMaybeIcon />
-      </Fab>
-
+    <div>
+      <Button variant="contained" onClick={handleClickOpen}>
+        Enviar
+      </Button>
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Precisa de Ajuda?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">
+          {"Consulta de Atendimento"}
+        </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Você está prestes a ligar para polícia. Tem certeza que deseja
-            continuar?
-          </DialogContentText>
-          <DialogContentText
-            id="alert-dialog-description"
-            sx={{ fontSize: "11px", marginTop: "12px", marginLeft: "-12px" }}
-          >
-            <Checkbox size="small" /> Não mostrar novamente
+            Olá! Seu atendimento com uma de nossas psicólogas está marcado para
+            15h45, do dia 25 de outubro de 2022. Caso deseje desmarcar ou
+            cancelar seu horário conosco, entre em contato por Whatsapp, pelo
+            número (85) 98765-4321.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -52,6 +45,6 @@ export default function PopUpBotaoDoPanico() {
           </Button>
         </DialogActions>
       </Dialog>
-    </Grid>
+    </div>
   );
 }

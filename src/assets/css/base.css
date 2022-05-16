@@ -257,9 +257,17 @@
     margin-left: 12px;
 }
 
+.D4p{
+    margin: 0 24px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+}
+
 .E1voltar {
     position: fixed; 
     z-index: 9997;
     margin-left: 24px;
     margin-top: 24px; 
 }
+

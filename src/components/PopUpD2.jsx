@@ -1,16 +1,12 @@
 import * as React from "react";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { Checkbox } from "@mui/material";
-import { Fab, Grid } from "@mui/material";
-import GppMaybeIcon from "@mui/icons-material/GppMaybe";
-import "../assets/css/base.css";
 
-export default function PopUpBotaoDoPanico() {
+export default function PopUpD2() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -22,28 +18,23 @@ export default function PopUpBotaoDoPanico() {
   };
 
   return (
-    <Grid container className="BotaoDoPanico">
-      <Fab color="primary" variant="contained" onClick={handleClickOpen}>
-        <GppMaybeIcon />
-      </Fab>
-
+    <div>
+      <Button variant="contained" onClick={handleClickOpen}>
+        Enviar
+      </Button>
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Precisa de Ajuda?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">
+          {"Atendimento Agendado"}
+        </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Você está prestes a ligar para polícia. Tem certeza que deseja
-            continuar?
-          </DialogContentText>
-          <DialogContentText
-            id="alert-dialog-description"
-            sx={{ fontSize: "11px", marginTop: "12px", marginLeft: "-12px" }}
-          >
-            <Checkbox size="small" /> Não mostrar novamente
+            Olá! Muito obrigada por agendar um horário conosco! Estamos ansiosas
+            para te auxiliar da melhor forma possível!
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -52,6 +43,6 @@ export default function PopUpBotaoDoPanico() {
           </Button>
         </DialogActions>
       </Dialog>
-    </Grid>
+    </div>
   );
 }

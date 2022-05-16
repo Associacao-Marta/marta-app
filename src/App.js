@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Typography>
-        <F1 />
+        <C1 />
       </Typography>
     </div>
   );

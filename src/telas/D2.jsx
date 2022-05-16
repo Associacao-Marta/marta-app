@@ -4,6 +4,7 @@ import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import calendario from "../assets/mock/Picker.svg";
+import PopUpD2 from "../components/PopUpD2.jsx";
 
 const D2 = () => {
   return (
@@ -37,15 +38,16 @@ const D2 = () => {
         <h2 className="D2titulo">Quando gostaria de ser atendida?</h2>
       </Grid>
       <Grid item>
-        <img className="D2calendario" src={calendario} />
+        <img className="D2calendario" src={calendario} alt="calendário" />
       </Grid>
       <Grid container className="D2botoes">
         <Grid item>
-          <Button variant="contained">Enviar</Button>
+          <PopUpD2 />
         </Grid>
+        <Grid className="EspacoInferior" />
       </Grid>
       <BotaoDoPanico />
-      <Grid className="EspacoInferior" />
+
       <MenuInferior />
     </Grid>
   );
