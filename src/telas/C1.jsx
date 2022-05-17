@@ -42,29 +42,13 @@ const C1 = () => {
       </Grid>
       <Grid container className="Carrossel">
         <Stack direction="row" spacing={4}>
-          <Card className="Artigo">
+          <Card href="C2" className="Artigo">
             <h5>Artigo</h5>
           </Card>
-          <Card className="Artigo">
+          <Card href="C2" className="Artigo">
             <h5>Artigo</h5>
           </Card>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-        </Stack>
-      </Grid>
-      <Grid item>
-        <h3 className="C1destaques">Tema</h3>
-      </Grid>
-      <Grid container className="Carrossel">
-        <Stack direction="row" spacing={4}>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card className="Artigo">
+          <Card href="C2" className="Artigo">
             <h5>Artigo</h5>
           </Card>
         </Stack>
@@ -74,13 +58,29 @@ const C1 = () => {
       </Grid>
       <Grid container className="Carrossel">
         <Stack direction="row" spacing={4}>
-          <Card className="Artigo">
+          <Card href="C2" className="Artigo">
             <h5>Artigo</h5>
           </Card>
-          <Card className="Artigo">
+          <Card href="C2" className="Artigo">
             <h5>Artigo</h5>
           </Card>
-          <Card className="Artigo">
+          <Card href="C2" className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+        </Stack>
+      </Grid>
+      <Grid item>
+        <h3 className="C1destaques">Tema</h3>
+      </Grid>
+      <Grid container className="Carrossel">
+        <Stack direction="row" spacing={4}>
+          <Card href="C2" className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+          <Card href="C2" className="Artigo">
+            <h5>Artigo</h5>
+          </Card>
+          <Card href="C2" className="Artigo">
             <h5>Artigo</h5>
           </Card>
         </Stack>
