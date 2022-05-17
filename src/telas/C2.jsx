@@ -11,7 +11,9 @@ const C2 = () => {
   return (
     <Grid container>
       <Grid container className="C2voltar">
-        <BotaoVoltarSuperior />
+        <a href="C1">
+          <BotaoVoltarSuperior />
+        </a>
       </Grid>
       <Grid className="C2ilustracao">
         <CircleIcon sx={{ fontSize: "100px" }} />

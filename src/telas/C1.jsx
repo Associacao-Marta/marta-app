@@ -42,15 +42,21 @@ const C1 = () => {
       </Grid>
       <Grid container className="Carrossel">
         <Stack direction="row" spacing={4}>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
         </Stack>
       </Grid>
       <Grid item>
@@ -58,15 +64,21 @@ const C1 = () => {
       </Grid>
       <Grid container className="Carrossel">
         <Stack direction="row" spacing={4}>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
         </Stack>
       </Grid>
       <Grid item>
@@ -74,15 +86,21 @@ const C1 = () => {
       </Grid>
       <Grid container className="Carrossel">
         <Stack direction="row" spacing={4}>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card href="C2" className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
+          <a href="C2">
+            <Card className="Artigo">
+              <h5>Artigo</h5>
+            </Card>
+          </a>
         </Stack>
       </Grid>
       <Grid className="EspacoInferior" />
