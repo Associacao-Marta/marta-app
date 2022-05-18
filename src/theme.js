@@ -3,15 +3,15 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#88BCA1",
+      main: "#2F4550",
     },
     secondary: {
-      main: "#A2D8CB",
+      main: "#88BCA1",
     },
   },
   typography: {
     fontFamily: "Poppins",
-    h1: {
+    /* h1: {
       fontSize: "24px",
       fontWeight: 600,
     },
@@ -63,7 +63,13 @@ const theme = createTheme({
       //CORRESPONDE AO BUTTON SMALL 02
       fontSize: "11px",
       fontWeight: 500,
-    },
+    }, */
+  },
+  values: {
+    xs: 0,
+    sm: 360,
+    md: 600,
+    lg: 900,
   },
 });
 

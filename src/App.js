@@ -1,13 +1,33 @@
 import React from "react";
-import { ReactDOM } from "react";
-import "./App.css";
-import A1 from "./telas/A1.jsx";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import A1 from "./telas/A1";
+import B1 from "./telas/B1";
+import C1 from "./telas/C1";
+import C2 from "./telas/C2";
+import D1 from "./telas/D1";
+import D2 from "./telas/D2";
+import D4 from "./telas/D4";
+import E1 from "./telas/E1";
 
 function App() {
   return (
     <div className="App">
-      <A1 />
+      <Typography>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<A1 />} />
+            <Route exact path="B1" element={<B1 />} />
+            <Route exact path="C1" element={<C1 />} />
+            <Route exact path="C2" element={<C2 />} />
+            <Route exact path="D1" element={<D1 />} />
+            <Route exact path="D2" element={<D2 />} />
+            <Route exact path="D4" element={<D4 />} />
+            <Route exact path="E1" element={<E1 />} />
+          </Routes>
+        </Router>
+      </Typography>
     </div>
   );
 }
