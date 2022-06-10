@@ -47,7 +47,12 @@ export default function PopUpBotaoDoPanico() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" onClick={handleClose} autoFocus>
+          <Button
+            href="tel:+55190"
+            variant="contained"
+            onClick={handleClose}
+            autoFocus
+          >
             OK
           </Button>
         </DialogActions>
