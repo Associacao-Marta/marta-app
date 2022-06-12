@@ -201,25 +201,20 @@ body{
     margin-top: 50px;
 }
 
-.D1icones {
-    margin-top: 24px;
-    margin-left: 24px;
-    margin-left: 300px;
-}
-
-.D1container {
-    position: relative;
-}
-
 .D1titulo {
-    position: absolute;
-    font-style: normal;
+    color: #337066;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0px;
 }
 
-
+.D1container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 375px;
+}
 
 .D1cards {
     margin-top: 0;
@@ -227,12 +222,14 @@ body{
 }
 
 .D1botoes {
+    position: absolute;
+    display: flex;
     justify-content: center;
+    margin-top: 540px;
 }
 
 .D1botaoindividual {
-        margin-top: 20px;
-        margin-bottom: 50px;
+    padding-top: 30px;
 }
 
 .D2titulo {

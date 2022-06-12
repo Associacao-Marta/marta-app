@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
 import "../assets/css/base.css";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
