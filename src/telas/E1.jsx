@@ -8,29 +8,13 @@ import "../assets/css/base.css";
 import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
 import mapa from "../assets/mock/mockmapa.svg";
 import SwipeableEdgeDrawer from "../components/Drawer";
+import Mapa from "../components/mapa/mapa";
 
 const E1 = () => {
   return (
     <Grid container>
-      <Grid item className="E1voltar">
-        <BotaoVoltarSuperior />
-      </Grid>
-      <Grid item className="E1voltar">
-        <TextField
-          label="Buscar"
-          variant="filled"
-          sx={{ marginLeft: "50px" }}
-        />
-      </Grid>
-      <Grid item className="E1voltar">
-        <IconButton color="primary">
-          <SettingsApplicationsIcon
-            sx={{ fontSize: "34px", marginLeft: "300px" }}
-          />
-        </IconButton>
-      </Grid>
-      <img src={mapa} sx={{ width: "95%" }} />
-
+      <Grid item className="E1voltar"></Grid>
+      <Mapa />
       <BotaoDoPanico />
       <Grid className="EspacoInferior" />
       <MenuInferior />

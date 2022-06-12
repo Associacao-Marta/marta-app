@@ -27,9 +27,7 @@ const B1 = () => {
           Finalizar
         </Button>
       </Grid>
-      <Grid item>
-        <Pontos />
-      </Grid>
+      <Grid item></Grid>
     </Grid>
   );
 };
