@@ -82,10 +82,6 @@ body{
     padding-bottom: 100px;
 }
 
-
-
-
-
 .A1pular{
     top: 644px; 
     font-family: 'Poppins';
@@ -211,14 +207,19 @@ body{
     margin-left: 300px;
 }
 
+.D1container {
+    position: relative;
+}
+
 .D1titulo {
-    margin-left: 24px;
-    margin-bottom: 0;
+    position: absolute;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
 }
+
+
 
 .D1cards {
     margin-top: 0;
