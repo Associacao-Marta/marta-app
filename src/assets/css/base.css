@@ -1,18 +1,58 @@
-/* @media (max-width: 360px)
-{
-    body {        
-        background-color: blue;
-    }
-} */
-.A1, .B1, .C1 {
-    height: 800px;
-    width: 360px;
+
+body{
+    position: display;
+    justify-content: center;
+    background-color: #EBEBEB;
+    color: #1B1B1B;
+}
+
+.container {
+    position: absolute;
     display: flex;
     justify-content: center;
 }
 
+.containerMaior {
+    height: 800px;
+    width: 360px;
+}
 
+.ilustracao {
+    margin-top: 144px;
+}
 
+.botaoOnboarding {
+    justify-content: center;
+    margin-top: 580px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: capitalize;
+}
+
+.tituloOnboarding {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+}
+
+.A1body2{
+    position: absolute;
+    width: 312px;
+    left: calc(50% - 312px/2);
+    top: calc(50% - 84px/2 + 62px);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
 
 .Artigo {
     padding: 15px 20px;
@@ -43,29 +83,8 @@
 }
 
 
-.A1h1 {
-    position: absolute;
-}
 
-.A1ilustracao {
-    justify-content: center;
-    margin-top: 120px;
-}
 
-.A1body2{
-    position: absolute;
-    width: 312px;
-    height: 84px;
-    left: calc(50% - 312px/2);
-    top: calc(50% - 84px/2 + 62px);
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    letter-spacing: 0.02em;
-}
 
 .A1pular{
     top: 644px; 
@@ -109,16 +128,6 @@
     letter-spacing: 0.02em;
 }
 
-.B1finalizar {
-    justify-content: center;
-    font-weight: 400;
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 36px;
-    text-align: center;
-    letter-spacing: 1.25px;
-    text-transform: capitalize;
-}
 
 .C1buscar{
     align-items: center;

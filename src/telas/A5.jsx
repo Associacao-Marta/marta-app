@@ -6,9 +6,9 @@ import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-/** import Pontos from "../components/Pontos"; **/
+import ilustracao from "../assets/img/A5.svg";
 
-const A4 = () => {
+const A5 = () => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(4);
 
@@ -21,12 +21,12 @@ const A4 = () => {
   };
 
   return (
-    <Grid container className="A3">
-      <Grid className="A1h1">
-        <h1>Caminho para o acolhimento</h1>
+    <Grid container className="containerMaior">
+      <Grid container className="container">
+        <h1 className="tituloOnboarding">Caminho para o acolhimento</h1>
       </Grid>
-      <Grid container className="A1ilustracao">
-        <CircleIcon sx={{ fontSize: "200px" }} />
+      <Grid container className="container">
+        <img src={ilustracao} className="ilustracao" />
       </Grid>
       <Grid item>
         <body2 className="A1body2">
@@ -34,10 +34,12 @@ const A4 = () => {
           informações como endereço, telefone e horário de atendimento.
         </body2>
       </Grid>
-      <Grid item>
-        <Button href="B1" className="A1pular">
-          Pular
-        </Button>
+      <Grid container className="botaoOnboarding">
+        <Grid item>
+          <Button variant="contained" href="B1">
+            Pular
+          </Button>
+        </Grid>
       </Grid>
       <Grid item>
         <MobileStepper
@@ -81,4 +83,4 @@ const A4 = () => {
   );
 };
 
-export default A4;
+export default A5;

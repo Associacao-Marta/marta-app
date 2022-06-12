@@ -6,7 +6,7 @@ import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-/** import Pontos from "../components/Pontos"; **/
+import ilustracao from "../assets/img/A1.svg";
 
 const A1 = () => {
   const theme = useTheme();
@@ -21,12 +21,12 @@ const A1 = () => {
   };
 
   return (
-    <Grid container className="A1">
-      <Grid className="A1h1">
-        <h1>Bem-vinda!</h1>
+    <Grid container className="containerMaior">
+      <Grid container className="container">
+        <h1 className="tituloOnboarding">Bem-vinda!</h1>
       </Grid>
-      <Grid container className="A1ilustracao">
-        <CircleIcon sx={{ fontSize: "200px" }} />
+      <Grid container className="container">
+        <img src={ilustracao} className="ilustracao" />
       </Grid>
       <Grid item>
         <body2 className="A1body2">
@@ -35,10 +35,12 @@ const A1 = () => {
           mulher.
         </body2>
       </Grid>
-      <Grid item>
-        <Button href="B1" className="A1pular">
-          Pular
-        </Button>
+      <Grid container className="botaoOnboarding">
+        <Grid item>
+          <Button variant="contained" href="B1">
+            Pular
+          </Button>
+        </Grid>
       </Grid>
       <Grid item>
         <MobileStepper
