@@ -46,6 +46,7 @@ Instale as dependências
   npm i react-router-dom
   npm install react react-dom leaflet
   npm install react-leaflet
+  npm install --save react-font-size-changer
 ```
 
 Inicie o servidor
