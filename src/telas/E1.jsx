@@ -6,8 +6,6 @@ import MenuInferior from "../components/MenuInferior";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import "../assets/css/base.css";
 import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
-import mapa from "../assets/mock/mockmapa.svg";
-import SwipeableEdgeDrawer from "../components/Drawer";
 import Mapa from "../components/mapa/mapa";
 
 const E1 = () => {

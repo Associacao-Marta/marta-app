@@ -6,6 +6,7 @@ import MenuInferior from "../components/MenuInferior";
 
 import "../assets/css/base.css";
 import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
+import BotaoAcessibilidade from "../components/BotaoAcessibilidade";
 
 const C2 = () => {
   return (
@@ -26,43 +27,35 @@ const C2 = () => {
         </p>
       </Grid>
       <Grid container direction="row" className="C1chips">
-        <Chip label="Tema 1" className="C1chipindividual" />
-        <Chip label="Tema 2" className="C1chipindividual" />
+        <Chip label="Tema 1" color="primary" className="C1chipindividual" />
+        <Chip label="Tema 2" color="primary" className="C1chipindividual" />
       </Grid>
+      <Grid container direction="row" className="C1chips">
+        <BotaoAcessibilidade />
+      </Grid>
+
       <BotaoDoPanico />
-      <Grid container className="C2p">
-        <p>
-          Suspendisse nisi elit lobortis tristique. In facilisis consequat
-          hendrerit viverra sagittis diam lorem consequat lobortis. Felis, augue
-          eu massa nisl, sed est purus sollicitudin.
-        </p>
-        <p>
-          Nec viverra in consectetur aliquet eu donec adipiscing risus sed.
-          Pulvinar bibendum facilisis pellentesque eu morbi mattis condimentum
-          imperdiet.
-        </p>
-        <p>
-          Blandit eget tempor egestas pulvinar faucibus tristique. Diam sit quam
-          blandit tristique sed. Leo euismod fames tellus porttitor ut lacus
-          fames eget. Nulla adipiscing pharetra et fermentum aliquet. Amet diam.
-        </p>
+      <Grid container className="C2p" id="target">
+        <div className="content">
+          <p>
+            Suspendisse nisi elit lobortis tristique. In facilisis consequat
+            hendrerit viverra sagittis diam lorem consequat lobortis. Felis,
+            augue eu massa nisl, sed est purus sollicitudin.
+          </p>
+          <p>
+            Nec viverra in consectetur aliquet eu donec adipiscing risus sed.
+            Pulvinar bibendum facilisis pellentesque eu morbi mattis condimentum
+            imperdiet.
+          </p>
+          <p>
+            Blandit eget tempor egestas pulvinar faucibus tristique. Diam sit
+            quam blandit tristique sed. Leo euismod fames tellus porttitor ut
+            lacus fames eget. Nulla adipiscing pharetra et fermentum aliquet.
+            Amet diam.
+          </p>
+        </div>
       </Grid>
-      <Grid item>
-        <h3 className="C1destaques">Talvez você também goste</h3>
-      </Grid>
-      <Grid container className="Carrossel">
-        <Stack direction="row" spacing={4}>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-          <Card className="Artigo">
-            <h5>Artigo</h5>
-          </Card>
-        </Stack>
-      </Grid>
+
       <Grid className="EspacoInferior" />
       <MenuInferior />
     </Grid>
