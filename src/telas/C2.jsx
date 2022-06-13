@@ -1,62 +1,67 @@
 import React from "react";
 import { Card, Chip, Grid, Stack } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
+import img from "../assets/img/C2ilustracao.svg";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 
 import "../assets/css/base.css";
 import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
 import BotaoAcessibilidade from "../components/BotaoAcessibilidade";
+import LeiaMais from "../components/LeiaMais";
 
 const C2 = () => {
   return (
-    <Grid container>
-      <Grid container className="C2voltar">
+    <Grid container className="container">
+      <Grid container>
         <a href="C1">
           <BotaoVoltarSuperior />
         </a>
       </Grid>
-      <Grid className="C2ilustracao">
-        <CircleIcon sx={{ fontSize: "100px" }} />
+      <Grid>
+        <img src={img} />
       </Grid>
-      <Grid container>
-        <h2 className="C2titulo">Titulo do artigo</h2>
-        <p className="C2subtitulo">
-          Nulla nisl integer egestas tellus. Hac id facilisis sit quis sit
-          pellentesque pulvinar. Faucibus cras.
-        </p>
-      </Grid>
-      <Grid container direction="row" className="C1chips">
-        <Chip label="Tema 1" color="primary" className="C1chipindividual" />
-        <Chip label="Tema 2" color="primary" className="C1chipindividual" />
-      </Grid>
-      <Grid container direction="row" className="C1chips">
-        <BotaoAcessibilidade />
+      <Grid container className="C2container">
+        <Grid>
+          <h2 className="C2titulo">
+            Por que essas relações de violência perduram tanto tempo?
+          </h2>
+          <Grid container direction="row" className="C2botoes">
+            <Chip label="Entenda melhor" color="primary" className="C2botoes" />
+            <BotaoAcessibilidade />
+          </Grid>
+        </Grid>
+
+        <BotaoDoPanico />
+        <Grid container className="C2p" id="target">
+          <div className="content">
+            <LeiaMais>
+              <p>
+                Entre todas as causas, pode-se apontar como a maior delas
+                justamente o risco ao se romper a relação. Além disso, procurar
+                ajuda é algo visto de maneira vergonhosa por muitas das vítimas
+                e gera muito medo.
+              </p>
+              <p>
+                Ainda, algo bastante comum é que sempre resta alguma esperança
+                de que tudo se resolva e que o agressor mude o seu comportamento
+                de maneira rápida.
+              </p>
+              <p>
+                Não se pode esquecer que, em muitos casos, a vítima encontra-se
+                depende financeiramente do agressor, está isolada da sua rede de
+                apoio e que a sociedade, como um todo, está despreparada para
+                lidar com essas situações, culpabilizando a vítima, inclusive,
+                por algo que ela está sofrendo, o que demonstra a existência de
+                muitos obstáculos que impedem o rompimento do ciclo de
+                violência.
+              </p>
+            </LeiaMais>
+            <Grid className="EspacoInferior" />
+            <Grid className="EspacoInferior" />
+          </div>
+        </Grid>
       </Grid>
 
-      <BotaoDoPanico />
-      <Grid container className="C2p" id="target">
-        <div className="content">
-          <p>
-            Suspendisse nisi elit lobortis tristique. In facilisis consequat
-            hendrerit viverra sagittis diam lorem consequat lobortis. Felis,
-            augue eu massa nisl, sed est purus sollicitudin.
-          </p>
-          <p>
-            Nec viverra in consectetur aliquet eu donec adipiscing risus sed.
-            Pulvinar bibendum facilisis pellentesque eu morbi mattis condimentum
-            imperdiet.
-          </p>
-          <p>
-            Blandit eget tempor egestas pulvinar faucibus tristique. Diam sit
-            quam blandit tristique sed. Leo euismod fames tellus porttitor ut
-            lacus fames eget. Nulla adipiscing pharetra et fermentum aliquet.
-            Amet diam.
-          </p>
-        </div>
-      </Grid>
-
-      <Grid className="EspacoInferior" />
       <MenuInferior />
     </Grid>
   );

@@ -42,18 +42,14 @@ export default function PopUpBotaoDoPanico() {
           <DialogContentText
             id="alert-dialog-description"
             sx={{ fontSize: "11px", marginTop: "12px", marginLeft: "-12px" }}
-          >
-            <Checkbox size="small" /> Não mostrar novamente
-          </DialogContentText>
+          ></DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button
-            href="tel:+55190"
-            variant="contained"
-            onClick={handleClose}
-            autoFocus
-          >
-            OK
+          <Button onClick={handleClose} autoFocus sx={{ marginRight: "110px" }}>
+            Cancelar
+          </Button>
+          <Button href="tel:+55190" variant="contained" autoFocus>
+            LIGAR
           </Button>
         </DialogActions>
       </Dialog>

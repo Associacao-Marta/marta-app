@@ -92,6 +92,13 @@ body{
     padding-bottom: 100px;
 }
 
+.read-or-hide {
+    background-color: #357F7880;
+    color: white;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
 .A1pular{
     top: 644px; 
     font-family: 'Poppins';
@@ -141,9 +148,8 @@ body{
     margin-top: 24px;
 }
 
-.C1chips {
-    margin-top: 10px;
-    margin-left: 24px;
+.C2botoes {
+    margin: 0 12px 6px 12px;
 }
 
 .C1chipindividual {
@@ -154,45 +160,26 @@ body{
 }
 
 .C1titulo{
-    color: #337066;
+    color: #357F78;
 }
 
 .C1container {
     margin-left: 14px;
 }
 
+.C2container {
+    margin-left: -20px;
+    max-width: 360px;
+}
 .C2voltar {
     margin-top:24px;
     margin-left: 10px;
 }
 
 .C2titulo {
-    position: absolute;
-    width: 155px;
-    height: 30px;
+    color: #1B1B1B;
     margin-left: 24px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.C2ilustracao {
-    margin-left: 130px;
-}
-
-.C2subtitulo {
-    margin-left: 24px;
-    margin-top: 50px;
-    margin-bottom: 5px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
+    
 }
 
 .C2p {
@@ -205,7 +192,7 @@ body{
 
 
 .D1titulo {
-    color: #337066;
+    color: #357F78;
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
