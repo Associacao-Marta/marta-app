@@ -1,18 +1,68 @@
-/* @media (max-width: 360px)
-{
-    body {        
-        background-color: blue;
-    }
-} */
-.A1, .B1, .C1 {
-    height: 800px;
-    width: 360px;
+
+body{
+    position: display;
+    justify-content: center;
+    background-color: #EBEBEB;
+    color: #1B1B1B;
+}
+
+.container {
+    position: absolute;
     display: flex;
     justify-content: center;
 }
 
+.containerMaior {
+    height: 800px;
+    width: 360px;
+}
 
+.ilustracao {
+    margin-top: 144px;
+}
 
+.botaoOnboarding {
+    justify-content: center;
+    margin-top: 580px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: capitalize;
+}
+
+.tituloOnboarding {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+}
+
+.carrosselArtigos {
+    display: flex;
+    overflow: auto;
+    flex: none;
+    width: 100%;
+    height: 130px;
+    flex-flow: row wrap;
+    scroll-snap-type: x mandatory;
+}
+
+.A1body2{
+    position: absolute;
+    width: 312px;
+    left: calc(50% - 312px/2);
+    top: calc(50% - 84px/2 + 62px);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
 
 .Artigo {
     padding: 15px 20px;
@@ -42,29 +92,11 @@
     padding-bottom: 100px;
 }
 
-
-.A1h1 {
-    position: absolute;
-}
-
-.A1ilustracao {
-    justify-content: center;
-    margin-top: 120px;
-}
-
-.A1body2{
-    position: absolute;
-    width: 312px;
-    height: 84px;
-    left: calc(50% - 312px/2);
-    top: calc(50% - 84px/2 + 62px);
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    letter-spacing: 0.02em;
+.read-or-hide {
+    background-color: #357F7880;
+    color: white;
+    padding: 0 10px;
+    cursor: pointer;
 }
 
 .A1pular{
@@ -109,16 +141,6 @@
     letter-spacing: 0.02em;
 }
 
-.B1finalizar {
-    justify-content: center;
-    font-weight: 400;
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 36px;
-    text-align: center;
-    letter-spacing: 1.25px;
-    text-transform: capitalize;
-}
 
 .C1buscar{
     align-items: center;
@@ -126,61 +148,38 @@
     margin-top: 24px;
 }
 
-.C1chips {
-    margin-top: 10px;
-    margin-left: 24px
+.C2botoes {
+    margin: 0 12px 6px 12px;
 }
 
 .C1chipindividual {
     margin-right: 5px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 20px;    
 }
 
-.C1destaques{
-    position: absolute;
-    margin-left: 24px; 
-    margin-top: 16px;
-    margin-bottom: 16px;    
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+.C1titulo{
+    color: #357F78;
 }
 
+.C1container {
+    margin-left: 14px;
+}
+
+.C2container {
+    margin-left: -20px;
+    max-width: 360px;
+}
 .C2voltar {
     margin-top:24px;
     margin-left: 10px;
 }
 
 .C2titulo {
-    position: absolute;
-    width: 155px;
-    height: 30px;
+    color: #1B1B1B;
     margin-left: 24px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.C2ilustracao {
-    margin-left: 130px;
-}
-
-.C2subtitulo {
-    margin-left: 24px;
-    margin-top: 50px;
-    margin-bottom: 5px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
+    
 }
 
 .C2p {
@@ -191,24 +190,20 @@
     letter-spacing: 0.02em;
 }
 
-.Carrossel {
-    margin-left: 24px;
-    margin-top: 50px;
-}
-
-.D1icones {
-    margin-top: 24px;
-    margin-left: 24px;
-    margin-left: 300px;
-}
 
 .D1titulo {
-    margin-left: 24px;
-    margin-bottom: 0;
-    font-style: normal;
+    color: #357F78;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+
+.D1container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 375px;
 }
 
 .D1cards {
@@ -217,12 +212,14 @@
 }
 
 .D1botoes {
+    position: absolute;
+    display: flex;
     justify-content: center;
+    margin-top: 540px;
 }
 
 .D1botaoindividual {
-        margin-top: 20px;
-        margin-bottom: 50px;
+    padding-top: 30px;
 }
 
 .D2titulo {

@@ -7,19 +7,23 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import "../assets/css/base.css";
+import img1 from "../assets/img/C1Carrossel1.svg";
+import img2 from "../assets/img/C1Carrossel2.svg";
+import img3 from "../assets/img/C1Carrossel3.svg";
 
 const steps = [
   {
     label: "teste1",
-    description: `teste1`,
+    description: <img src={img1} />,
   },
   {
     label: "teste2",
-    description: `teste2`,
+    description: <img src={img2} />,
   },
   {
     label: "teste3",
-    description: `teste3`,
+    description: <img src={img3} />,
   },
 ];
 
@@ -37,31 +41,9 @@ export default function Carrossel() {
   };
 
   return (
-    <Box sx={{ maxWidth: 232, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={0}
-        sx={{
-          height: 50,
-          width: "285px",
-          pl: 2,
-          bgcolor: "#C4C4C4",
-        }}
-      >
-        <Typography>{steps[activeStep].label}</Typography>
-      </Paper>
-      <Box
-        sx={{
-          bgcolor: "#C4C4C4",
-          height: 150,
-          width: "269px",
-          p: 2,
-        }}
-      >
-        {steps[activeStep].description}
-      </Box>
+    <Box>
+      <Box>{steps[activeStep].description}</Box>
       <MobileStepper
-        sx={{ marginLeft: "50px" }}
         variant="dots"
         steps={maxSteps}
         position="static"
