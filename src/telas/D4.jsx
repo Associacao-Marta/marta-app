@@ -6,6 +6,8 @@ import MenuInferior from "../components/MenuInferior";
 import PopUpD4 from "../components/PopUpD4";
 
 const D4 = () => {
+  const [protocolo, setProtocolo] = React.useState("");
+
   return (
     <Grid container>
       <Grid item>
@@ -13,7 +15,7 @@ const D4 = () => {
       </Grid>
       <Grid className="EspacoInferior" />
       <Grid container className="D2form">
-        <TextField label="Protocolo" variant="outlined" className="D2caixa" />
+        <TextField label="Protocolo" variant="outlined" className="D2caixa" onChange={(event) => {setProtocolo(event.target.value)}}/>
       </Grid>
 
       <Grid container>
@@ -26,7 +28,7 @@ const D4 = () => {
 
       <Grid container className="D2botoes">
         <Grid item>
-          <PopUpD4 />
+          <PopUpD4 protocolo={protocolo}/>
         </Grid>
         <Grid className="EspacoInferior" />
       </Grid>
