@@ -8,17 +8,24 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 import { useState } from "react";
 import { db } from "../firebase-config.js"
-import { collection, getDocs } from "firebase/firestore"
+import { getDoc, doc} from "firebase/firestore"
+import { collection, getDocs} from "firebase/firestore"
 
 export default function PopUpD4(props) {
   const [open, setOpen] = useState(false);
   const [atendimento, setAtendimento] = useState([]);
 
   const getAtendimento =  async () => {
-    const userCollectionRef = collection(db, "atendimento");
+
+    // const userCollectionRef = collection(db, "atendimento");
   
-    const data = await getDocs(userCollectionRef);
-    setAtendimento(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    // const data = await getDocs(userCollectionRef);
+    // setAtendimento(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+
+    const docRef = doc(db, "atendimento", props.protocolo);
+    const data = await getDoc(docRef);
+    setAtendimento(data.data())
+    
   };
 
   const handleClickOpen = () => {
@@ -51,14 +58,7 @@ export default function PopUpD4(props) {
             cancelar seu horário conosco, entre em contato por Whatsapp, pelo
             número (85) 98765-4321. */}
             <div>
-              {" "}
-              {atendimento.map((atendimento) => {
-                return (
-                  <div>
-                    {atendimento.name}
-                  </div>
-                )
-              })}
+            Olá, {atendimento.name}!
             </div>
           </DialogContentText>
         </DialogContent>
