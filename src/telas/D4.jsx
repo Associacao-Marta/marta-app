@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Stack, Grid, TextField } from "@mui/material";
-import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
+import TopButton from "../components/TopButton";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import PopUpD4 from "../components/PopUpD4";
@@ -11,7 +11,7 @@ const D4 = () => {
   return (
     <Grid container>
       <Grid item>
-        <BotaoVoltarSuperior className="D1voltar" />
+        <TopButton className="D1voltar" />
       </Grid>
       <Grid className="EspacoInferior" />
       <Grid container className="D2form">

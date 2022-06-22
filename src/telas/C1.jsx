@@ -16,6 +16,8 @@ import img1 from "../assets/img/C1artigo1.svg";
 import img2 from "../assets/img/C1artigo2.svg";
 import img3 from "../assets/img/C1artigo3.svg";
 
+import Header from "../components/Header";
+
 const busca = [
   { label: "Buscar" },
   { label: "Entenda melhor" },
@@ -32,7 +34,7 @@ const C1 = () => {
     // fixar bottom navigation
     // componentizar botão de settings
     <Grid container>
-      <Grid container className="C1buscar">
+      {/* <Grid container className="C1buscar">
         <Autocomplete
           variant="outlined"
           sx={{ marginLeft: "-10px", width: "270px" }}
@@ -44,17 +46,19 @@ const C1 = () => {
         <IconButton color="primary">
           <SettingsApplicationsIcon sx={{ fontSize: "36px" }} />
         </IconButton>
-      </Grid>
-      <BotaoDoPanico />
+      </Grid> */}
       <Grid container className="C1container">
+
+      <Header titulo="Artigos"></Header>
+
         <Grid item>
-          <h3 className="C1titulo">Destaques</h3>
+          <h3 className="C1titulo">Sobre a Associação Marta</h3>
         </Grid>
         <Grid container>
           <Carrossel />
         </Grid>
         <Grid item>
-          <h3>Comece por aqui</h3>
+          <h3>Artigos em destaque</h3>
         </Grid>
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack direction="row" spacing={2}>
@@ -81,6 +85,8 @@ const C1 = () => {
         </Grid>
       </Grid>
       <Grid item className="EspacoInferior" />
+      
+      <BotaoDoPanico />
       <MenuInferior />
     </Grid>
   );

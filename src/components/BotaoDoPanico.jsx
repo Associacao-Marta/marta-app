@@ -23,7 +23,7 @@ export default function PopUpBotaoDoPanico() {
 
   return (
     <Grid container className="BotaoDoPanico">
-      <Fab color="primary" variant="contained" onClick={handleClickOpen}>
+      <Fab color="warning" variant="contained" onClick={handleClickOpen}>
         <GppMaybeIcon />
       </Fab>
 
@@ -48,7 +48,7 @@ export default function PopUpBotaoDoPanico() {
           <Button onClick={handleClose} autoFocus sx={{ marginRight: "110px" }}>
             Cancelar
           </Button>
-          <Button href="tel:+55190" variant="contained" autoFocus>
+          <Button href="tel:+55190" variant="contained" autoFocus color="warning">
             LIGAR
           </Button>
         </DialogActions>

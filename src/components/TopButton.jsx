@@ -1,15 +1,16 @@
 import React from "react";
 import { IconButton, Grid } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import "../assets/css/base.css"
 
-const BotaoVoltarSuperior = () => {
+const TopButton = (props) => {
   return (
-    <Grid>
-      <IconButton color="primary" variant="" aria-label="Voltar">
+    <div className="TopButton">
+      <IconButton color="primary" variant="" aria-label="Voltar" href={props.destino}>
         <ArrowBackIosNewIcon />
       </IconButton>
-    </Grid>
+    </div>
   );
 };
 
-export default BotaoVoltarSuperior;
+export default TopButton;
