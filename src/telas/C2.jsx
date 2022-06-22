@@ -5,16 +5,19 @@ import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 
 import "../assets/css/base.css";
-import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
+import TopButton from "../components/TopButton";
 import BotaoAcessibilidade from "../components/BotaoAcessibilidade";
 import LeiaMais from "../components/LeiaMais";
+
+import Header from "../components/Header";
 
 const C2 = () => {
   return (
     <Grid container className="container">
+      <Header titulo="Artigos"></Header>
       <Grid container>
         <a href="C1">
-          <BotaoVoltarSuperior />
+          <TopButton />
         </a>
       </Grid>
       <Grid>

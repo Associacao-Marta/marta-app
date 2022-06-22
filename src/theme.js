@@ -12,6 +12,15 @@ const theme = createTheme({
       light: "#888686",
       lighter: "##D3EBD3",
     },
+    warning: {
+      main: "#FF5722",
+    },
+    error: {
+      main: "#FF5252",
+    },
+    success: {
+      main: "#4CAF50",
+    },
   },
   typography: {
     fontFamily: "Poppins",

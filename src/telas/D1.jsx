@@ -5,24 +5,20 @@ import MenuInferior from "../components/MenuInferior";
 import img from "../assets/img/D1.svg";
 
 import "../assets/css/base.css";
-import BotaoVoltarSuperior from "../components/BotaoVoltarSuperior";
+import TopButton from "../components/TopButton";
 const D1 = () => {
   return (
     <Grid container className="containerMaior">
       <Grid item>
-        <BotaoVoltarSuperior className="D1voltar" />
-      </Grid>
-      <Grid container className="container">
-        <h1 className="tituloOnboarding">Atendimento</h1>
+        <TopButton className="D1voltar" />
       </Grid>
       <Grid item>
         <img src={img} className="ilustracao" />
       </Grid>
       <Grid container className="D1container">
-        <h2 className="D1titulo">Como podemos te ajudar?</h2>
+        <h2 className="D1titulo">Marque um horário gratuito com a Associação Marta</h2>
         <p className="A1body2">
-          Está precisando de ajuda? Marque um horário de atendimento conosco e
-          vamos conversar!
+        Está precisando de ajuda? Temos serviços psicológicos e jurídicos gratuitos para você!
         </p>
       </Grid>
 

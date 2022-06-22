@@ -20,7 +20,7 @@ const MenuInferior = () => {
       />
       <BottomNavigationAction
         href="E1"
-        label="Apoio"
+        label="Local"
         icon={<LocationOnIcon color="primary" />}
       />
     </BottomNavigation>
