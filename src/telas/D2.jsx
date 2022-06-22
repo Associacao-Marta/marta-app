@@ -5,8 +5,23 @@ import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import calendario from "../assets/mock/Picker.svg";
 import PopUpD2 from "../components/PopUpD2.jsx";
+import { useState } from "react";
+
 
 const D2 = () => {
+  const [newName, setNewName] = useState("")
+  const [newPhone, setNewPhone] = useState("")
+  const [newDescription, setNewDescription] = useState("")
+  const [newType, setNewType] = useState("")
+
+  const setTypePsicologa = () => {
+    setNewType("psicólogas")
+  }
+
+  const setTypeAdvogada = () => {
+    setNewType("advogadas")
+  }
+
   return (
     <Grid container>
       <Grid item>
@@ -18,9 +33,9 @@ const D2 = () => {
       </Grid>
       <Grid container className="D2form">
         <Stack direction="column" className="D2caixa">
-          <TextField label="Nome Completo" variant="outlined" />
-          <TextField label="Telefone" variant="outlined" />
-          <TextField label="Descrição" variant="outlined" multiline rows={4} />
+          <TextField label="Nome Completo" variant="outlined" onChange={(event) => {setNewName(event.target.value)}}/>
+          <TextField label="Telefone" variant="outlined" onChange={(event) => {setNewPhone(event.target.value)}}/>
+          <TextField label="Descrição" variant="outlined" multiline rows={4} onChange={(event) => {setNewDescription(event.target.value)}}/>
         </Stack>
       </Grid>
       <Grid container>
@@ -28,10 +43,10 @@ const D2 = () => {
       </Grid>
       <Grid container className="D2botoes">
         <Stack direction="row">
-          <Button sx={{ marginRight: "70px" }} variant="contained">
+          <Button sx={{ marginRight: "70px" }} variant="contained" onClick={setTypePsicologa}>
             psicóloga
           </Button>
-          <Button variant="contained">advogada</Button>
+          <Button variant="contained" onClick={setTypeAdvogada}>advogada</Button>
         </Stack>
       </Grid>
       <Grid container>
@@ -42,7 +57,7 @@ const D2 = () => {
       </Grid>
       <Grid container className="D2botoes">
         <Grid item>
-          <PopUpD2 />
+          <PopUpD2 newName={newName} newPhone={newPhone} newDescription={newDescription} newType={newType} />
         </Grid>
         <Grid className="EspacoInferior" />
       </Grid>

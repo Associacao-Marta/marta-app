@@ -6,10 +6,21 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-export default function PopUpD2() {
+import { db } from "../firebase-config.js"
+import { collection, addDoc} from "firebase/firestore"
+
+export default function PopUpD2(props) {
   const [open, setOpen] = React.useState(false);
+  
+  
+  const enviarAgendamento = async () => {
+    const docRef = collection(db, "atendimento");
+
+    await addDoc(docRef, {name: props.newName, phone: props.newPhone, description: props.newDescription, type: props.newType})
+  }
 
   const handleClickOpen = () => {
+    enviarAgendamento();
     setOpen(true);
   };
 
@@ -38,7 +49,7 @@ export default function PopUpD2() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" onClick={handleClose} autoFocus>
+          <Button variant="contained" onClick={handleClose} autoFocus href="D1">
             OK
           </Button>
         </DialogActions>
