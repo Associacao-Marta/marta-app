@@ -9,7 +9,7 @@ const Header = (props) => {
         <Grid item>
             <TopButton destino={props.destino}></TopButton>
         </Grid>
-        <Grid item>
+        <Grid item className="itemHeaderTitulo">
         <div className="tituloHeader">{props.titulo}</div>
         </Grid>
     </Grid>

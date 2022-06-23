@@ -1,0 +1,8 @@
+.carrosselContainer{
+    margin-top: 5px;
+}
+
+.carrossel{
+    position: relative;
+    top: -10px;
+}

@@ -1,27 +1,46 @@
 body{
+    margin: 0;
+	padding: 0;
+	border: 0;
     position: display;
     justify-content: center;
     background-color: #F6F6F6;
     color: #1B1B1B;
 }
 
-.containerHeader {
+.pageContainer{
+    padding-left: 24px;
+}
+
+.itemHeaderTitulo {
+    width: 100%;
     justify-content: center;
+    position: absolute;
 }
 
 .tituloHeader {
-    font-family: 'Poppins';
+    margin-top: 32px;
     font-weight: 600;
-    margin-top: 18px;
     font-size: 18px;
     text-align: center;
 }
 
 .TopButton {
-    margin-top: 11px;
-    position: relative;
-    left: -125px;
+    margin-top: 24px;
 }
+
+.tituloH1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tituloH2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
 
 .container {
     position: absolute;
@@ -103,7 +122,7 @@ body{
     position: fixed;
     margin-bottom: 0;
     top: 744px;
-    width: 95%;
+    width: 100%;
     z-index: 9999;
 }
 
