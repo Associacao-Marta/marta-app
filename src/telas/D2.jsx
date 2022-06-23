@@ -15,8 +15,9 @@ const D2 = () => {
   const [newPhone, setNewPhone] = useState("")
   const [newDescription, setNewDescription] = useState("")
   const [newType, setNewType] = useState("")
-  const [selectedDate, setSelectedDate] = useState(null);
-
+  const [selectedCalendar, setSelectedCalendar] = useState("");
+  var formatedDate, formatedTime;
+  
   const setTypePsicologa = () => {
     setNewType("psicólogas")
   }
@@ -25,47 +26,31 @@ const D2 = () => {
     setNewType("advogadas")
   }
 
-  const newDate = (date) => {
+  const setNewDateNewTime = (date) => {
     var d = new Date(date),
       month = '' + (d.getMonth() + 1), 
       day = '' + d.getDate(), 
-      year = d.getFullYear();
-
-
+      year = d.getFullYear(),
+      hour = d.getHours(),
+      minutes = d.getMinutes();
+      
       if(month.length < 2){
         month = '0' + month;
       }
       if(day.length < 2){
         day = '0' + day;
       }
-
-    return[day, month, year].join('/');
-  }
-
-  const newTime = (date) =>{
-    var d = new Date(date),
-    hour = d.getHours(),
-    minutes = d.getMinutes();
-    
-    if(minutes === 0){
+         if(minutes === 0){
       minutes = minutes + "0";
-    }
+      }
+      
+      formatedDate = [day, month, year].join('/');
+      formatedTime = (hour + ":" + minutes);
 
-    var horario = (hour + ":" + minutes);
-    return(horario);
+      return (formatedDate, formatedTime)   
   }
 
-  const dateFormat = (date) => {
-    console.log(new Date(date))
-
-    let formatDayMonthYear = newDate(date);
-    console.log(formatDayMonthYear)
-
-    let formatHHMM = newTime(date);
-    console.log(formatHHMM)
-  }
-
-  dateFormat(selectedDate);
+  setNewDateNewTime(selectedCalendar)
 
   return (
     <Grid container>
@@ -99,11 +84,11 @@ const D2 = () => {
         </Grid>
           <Grid container>
             <DatePicker 
-            selected={selectedDate} 
-            onChange={date => setSelectedDate(date)} 
+            selected={selectedCalendar} 
+            onChange={(date) => setSelectedCalendar(date)} 
             placeholderText="Escolha um horário" 
             className="D2caixa" 
-            dateFormat="dd/MM/yyy"
+            dateFormat="dd/MM/yyyy"
             showTimeSelect
             />
           </Grid>
@@ -112,7 +97,7 @@ const D2 = () => {
           </Grid> */}
       <Grid container className="D2botoes">
         <Grid item>
-          <PopUpD2 newDate={newDate} newTime={newTime} newName={newName} newPhone={newPhone} newDescription={newDescription} newType={newType} />
+          <PopUpD2 newDate={formatedDate} newTime={formatedTime} newName={newName} newPhone={newPhone} newDescription={newDescription} newType={newType} />
         </Grid>
         <Grid className="EspacoInferior" />
       </Grid>

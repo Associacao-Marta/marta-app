@@ -12,7 +12,6 @@ import { collection, addDoc} from "firebase/firestore"
 export default function PopUpD2(props) {
   const [open, setOpen] = React.useState(false);
   
-  
   const enviarAgendamento = async () => {
     const docRef = collection(db, "atendimento");
 
