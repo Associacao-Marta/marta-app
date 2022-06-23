@@ -16,7 +16,7 @@ export default function PopUpD2(props) {
   const enviarAgendamento = async () => {
     const docRef = collection(db, "atendimento");
 
-    await addDoc(docRef, {name: props.newName, phone: props.newPhone, description: props.newDescription, type: props.newType})
+    await addDoc(docRef, {time: props.newTime, date: props.newDate, name: props.newName, phone: props.newPhone, description: props.newDescription, type: props.newType})
   }
 
   const handleClickOpen = () => {

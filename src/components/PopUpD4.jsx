@@ -60,8 +60,7 @@ export default function PopUpD4(props) {
             15h45, do dia 25 de outubro de 2022. Caso deseje desmarcar ou
             cancelar seu horário conosco, entre em contato por Whatsapp, pelo
             número (85) 98765-4321. */}
-            Olá, {atendimento.name}! Seu atendimento com uma de nossas {atendimento.type} está marcado para {atendimento.hour}h{atendimento.minute}, 
-            do dia {atendimento.day} de {atendimento.month} de {atendimento.year}. 
+            Olá, {atendimento.name}! Seu atendimento com uma de nossas {atendimento.type} está marcado para o dia {atendimento.data} às {atendimento.hora}. 
             Caso deseje desmarcar ou cancelar seu horário conosco, entre em contato por Whatsapp, pelo
             número (85) 98765-4321.
           </DialogContentText>
