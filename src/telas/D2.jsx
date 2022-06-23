@@ -3,67 +3,97 @@ import { Button, Stack, Grid, TextField } from "@mui/material";
 import TopButton from "../components/TopButton";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
-import calendario from "../assets/mock/Picker.svg";
 import PopUpD2 from "../components/PopUpD2.jsx";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import setHours from "date-fns/setHours";
+import setMinutes from "date-fns/setMinutes";
+import { registerLocale } from "react-datepicker";
+import pt from "date-fns/locale/pt";
+registerLocale("pt", pt);
 
 const D2 = () => {
-  const [newName, setNewName] = useState("")
-  const [newPhone, setNewPhone] = useState("")
-  const [newDescription, setNewDescription] = useState("")
-  const [newType, setNewType] = useState("")
+  const [newName, setNewName] = useState("");
+  const [newPhone, setNewPhone] = useState("");
+  const [newDescription, setNewDescription] = useState("");
+  const [newType, setNewType] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
+  const [startDate, setStartDate] = useState(
+    setHours(setMinutes(new Date(), 30), 16)
+  );
 
   const setTypePsicologa = () => {
-    setNewType("psicólogas")
-  }
+    setNewType("psicólogas");
+  };
 
   const setTypeAdvogada = () => {
-    setNewType("advogadas")
-  }
+    setNewType("advogadas");
+  };
 
   const newDate = (date) => {
     var d = new Date(date),
-      month = '' + (d.getMonth() + 1), 
-      day = '' + d.getDate(), 
+      month = "" + (d.getMonth() + 1),
+      day = "" + d.getDate(),
       year = d.getFullYear();
 
+    if (month.length < 2) {
+      month = "0" + month;
+    }
+    if (day.length < 2) {
+      day = "0" + day;
+    }
 
-      if(month.length < 2){
-        month = '0' + month;
-      }
-      if(day.length < 2){
-        day = '0' + day;
-      }
+    return [day, month, year].join("/");
+  };
 
-    return[day, month, year].join('/');
-  }
-
-  const newTime = (date) =>{
+  const newTime = (date) => {
     var d = new Date(date),
-    hour = d.getHours(),
-    minutes = d.getMinutes();
-    
-    if(minutes === 0){
+      hour = d.getHours(),
+      minutes = d.getMinutes();
+
+    if (minutes === 0) {
       minutes = minutes + "0";
     }
 
-    var horario = (hour + ":" + minutes);
-    return(horario);
-  }
+    var horario = hour + ":" + minutes;
+    return horario;
+  };
 
   const dateFormat = (date) => {
-    console.log(new Date(date))
+    console.log(new Date(date));
 
     let formatDayMonthYear = newDate(date);
-    console.log(formatDayMonthYear)
+    console.log(formatDayMonthYear);
 
     let formatHHMM = newTime(date);
-    console.log(formatHHMM)
-  }
+    console.log(formatHHMM);
+  };
+
+  const horariosExcluidos = [
+    setHours(setMinutes(new Date(), 0), 0),
+    setHours(setMinutes(new Date(), 30), 0),
+    setHours(setMinutes(new Date(), 0), 1),
+    setHours(setMinutes(new Date(), 30), 1),
+    setHours(setMinutes(new Date(), 0), 2),
+    setHours(setMinutes(new Date(), 30), 2),
+    setHours(setMinutes(new Date(), 0), 3),
+    setHours(setMinutes(new Date(), 30), 3),
+    setHours(setMinutes(new Date(), 0), 4),
+    setHours(setMinutes(new Date(), 30), 4),
+    setHours(setMinutes(new Date(), 0), 5),
+    setHours(setMinutes(new Date(), 30), 5),
+    setHours(setMinutes(new Date(), 0), 6),
+    setHours(setMinutes(new Date(), 30), 6),
+    setHours(setMinutes(new Date(), 0), 7),
+    setHours(setMinutes(new Date(), 30), 7),
+    setHours(setMinutes(new Date(), 0), 21),
+    setHours(setMinutes(new Date(), 30), 21),
+    setHours(setMinutes(new Date(), 0), 22),
+    setHours(setMinutes(new Date(), 30), 22),
+    setHours(setMinutes(new Date(), 0), 23),
+    setHours(setMinutes(new Date(), 30), 23),
+  ];
 
   dateFormat(selectedDate);
 
@@ -78,9 +108,29 @@ const D2 = () => {
       </Grid>
       <Grid container className="D2form">
         <Stack direction="column" className="D2caixa">
-          <TextField label="Nome Completo" variant="outlined" onChange={(event) => {setNewName(event.target.value)}}/>
-          <TextField label="Telefone" variant="outlined" onChange={(event) => {setNewPhone(event.target.value)}}/>
-          <TextField label="Conte como podemos te ajudar" variant="outlined" multiline rows={4} onChange={(event) => {setNewDescription(event.target.value)}}/>
+          <TextField
+            label="Nome Completo"
+            variant="outlined"
+            onChange={(event) => {
+              setNewName(event.target.value);
+            }}
+          />
+          <TextField
+            label="Telefone"
+            variant="outlined"
+            onChange={(event) => {
+              setNewPhone(event.target.value);
+            }}
+          />
+          <TextField
+            label="Conte como podemos te ajudar"
+            variant="outlined"
+            multiline
+            rows={4}
+            onChange={(event) => {
+              setNewDescription(event.target.value);
+            }}
+          />
         </Stack>
       </Grid>
       <Grid container>
@@ -88,32 +138,49 @@ const D2 = () => {
       </Grid>
       <Grid container className="D2botoes">
         <Stack direction="row">
-          <Button sx={{ marginRight: "70px" }} variant="contained" onClick={setTypePsicologa}>
+          <Button
+            sx={{ marginRight: "70px" }}
+            variant="contained"
+            onClick={setTypePsicologa}
+          >
             psicóloga
           </Button>
-          <Button variant="contained" onClick={setTypeAdvogada}>advogada</Button>
+          <Button variant="contained" onClick={setTypeAdvogada}>
+            advogada
+          </Button>
         </Stack>
       </Grid>
       <Grid container>
         <h2 className="D2titulo">Quando gostaria de ser atendida?</h2>
-        </Grid>
-          <Grid container>
-            <DatePicker 
-            selected={selectedDate} 
-            onChange={date => setSelectedDate(date)} 
-            placeholderText="Escolha um horário" 
-            className="D2caixa" 
+      </Grid>
+      <Grid container className="D2botoes">
+        <Grid item>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            placeholderText="Escolha um horário"
+            className="D2caixa"
             dateFormat="dd/MM/yyy"
+            locale="pt"
+            excludeTimes={horariosExcluidos}
             showTimeSelect
-            />
-          </Grid>
-          {/*       <Grid item>
+          />
+        </Grid>
+        <Grid item>
+          <PopUpD2
+            newDate={newDate}
+            newTime={newTime}
+            newName={newName}
+            newPhone={newPhone}
+            newDescription={newDescription}
+            newType={newType}
+          />
+        </Grid>
+      </Grid>
+      {/*       <Grid item>
           <img className="D2calendario" src={calendario} alt="calendário" />
           </Grid> */}
       <Grid container className="D2botoes">
-        <Grid item>
-          <PopUpD2 newDate={newDate} newTime={newTime} newName={newName} newPhone={newPhone} newDescription={newDescription} newType={newType} />
-        </Grid>
         <Grid className="EspacoInferior" />
       </Grid>
       <BotaoDoPanico />
