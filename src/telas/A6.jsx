@@ -1,16 +1,18 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
+import CircleIcon from "@mui/icons-material/Circle";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import ilustracao from "../assets/img/A1.svg";
+import ilustracao from "../assets/img/A6.svg";
 import "../assets/css/base.css";
 import "../assets/css/AB.css";
 
-const A1 = () => {
+
+const A5 = () => {
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(5);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -23,7 +25,7 @@ const A1 = () => {
   return (
     <Grid container>
       <Grid container className="tituloContainer">
-        <h1 className="tituloOnboarding">Bem-vinda!</h1>
+        <h1 className="tituloOnboarding">Caminho para o acolhimento</h1>
       </Grid>
 
       <Grid container item className="ilustracaoOnboarding">
@@ -31,9 +33,10 @@ const A1 = () => {
       </Grid>
 
       <Grid container item className="tituloContainer">
-        <p className="body2">
-        Olá! Seja bem-vinda ao aplicativo da Associação Marta.
-        Nossa missão é atuar na prevenção e conscientização da violência contra a mulher.
+        <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
+        Encontre o serviço de acolhimento mais perto de você e 
+        consulte informações como endereço, telefone e horário 
+        de atendimento. 
         </p>
       </Grid>
 
@@ -51,10 +54,10 @@ const A1 = () => {
           activeStep={activeStep}
           nextButton={
             <Button
-              href="A2"
+              href="B1"
               size="small"
               onClick={handleNext}
-              disabled={activeStep === 2}
+              disabled={activeStep === 6}
             >
               Avançar
               {theme.direction === "rtl" ? (
@@ -66,6 +69,7 @@ const A1 = () => {
           }
           backButton={
             <Button
+              href="A5"
               size="small"
               onClick={handleBack}
               disabled={activeStep === 0}
@@ -84,4 +88,4 @@ const A1 = () => {
   );
 };
 
-export default A1;
+export default A5;
