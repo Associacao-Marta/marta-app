@@ -48,10 +48,10 @@ const C1 = () => {
     //   </IconButton>
     // </Grid>
 
-    <Grid container>
-        <Header titulo="Artigos" />
+    <Grid container className="pageCContainer">
+        <Header titulo="Artigos" searchButton={true} />
+        
       <Grid container className="pageContainer">
-
         <Grid container className="carrosselContainer">
           <Grid item>
             <p className="tituloH2" style={{ color: "#337066" }}>

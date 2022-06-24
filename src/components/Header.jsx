@@ -1,13 +1,28 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import TopButton from "./TopButton";
+import BackButton from "./BackButton";
 import '../assets/css/base.css'
 
 const Header = (props) => {
+
+    const BackButtonActive = (props) => {
+        if(props.backButton === true){
+            return(
+            <BackButton destino={props.destino}></BackButton>)
+        }
+    }
+
+    const SearchButtonActive = (props) => {
+        if(props.searchButton === true){
+            return("")
+        }
+    }
+
     return(
     <Grid container className="containerHeader" >
         <Grid item>
-            <TopButton destino={props.destino}></TopButton>
+            <BackButtonActive backButton={props.backButton} destino={props.destino} />
+            <SearchButtonActive searchButton={props.searchButton}/>
         </Grid>
         <Grid item className="itemHeaderTitulo">
         <div className="tituloHeader">{props.titulo}</div>

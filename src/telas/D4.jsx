@@ -1,17 +1,18 @@
 import React from "react";
 import { Button, Stack, Grid, TextField } from "@mui/material";
-import TopButton from "../components/TopButton";
+import BackButton from "../components/BackButton";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import PopUpD4 from "../components/PopUpD4";
+import Header from "../components/Header";
 
 const D4 = () => {
   const [protocolo, setProtocolo] = React.useState("");
 
   return (
     <Grid container>
+      <Header titulo="Consultar atendimento" backButton={true} destino="D1" />
       <Grid item>
-        <TopButton className="D1voltar" />
       </Grid>
       <Grid className="EspacoInferior" />
       <Grid container className="D2form">

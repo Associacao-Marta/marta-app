@@ -1,0 +1,19 @@
+.ilustracao{
+    justify-content: center;
+    padding: 64px;
+}
+
+.tituloContainer{
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.buttonContainer{
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.agendarAtendimentoButton{
+    width: 312px;
+}

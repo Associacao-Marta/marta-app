@@ -1,42 +1,29 @@
 import React from "react";
 import { Card, Chip, Grid, Stack } from "@mui/material";
-import img from "../assets/img/C2ilustracao.svg";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 
 import "../assets/css/base.css";
-import TopButton from "../components/TopButton";
-import BotaoAcessibilidade from "../components/BotaoAcessibilidade";
+import BackButton from "../components/BackButton";
 import LeiaMais from "../components/LeiaMais";
+import img from "../assets/img/C2ilustracao.svg";
 
 import Header from "../components/Header";
+import "../assets/css/C.css";
+import HeaderTitulo from "../components/HeaderArtigo";
+
 
 const C2 = () => {
   return (
-    <Grid container className="container">
-      <Header titulo="Artigos"></Header>
-      <Grid container>
-        <a href="C1">
-          <TopButton />
-        </a>
-      </Grid>
-      <Grid>
-        <img src={img} />
-      </Grid>
-      <Grid container className="C2container">
-        <Grid>
-          <h2 className="C2titulo">
-            Por que essas relações de violência perduram tanto tempo?
-          </h2>
-          <Grid container direction="row" className="C2botoes">
-            <Chip label="Entenda melhor" color="primary" className="C2botoes" />
-            <BotaoAcessibilidade />
-          </Grid>
-        </Grid>
+    <Grid container className="">
+      <Header titulo="Artigos" destino="C1" backButton={true} ></Header>
+        <HeaderTitulo img={img}
+        titulo="Por que essas relações de violência perduram tanto tempo?"
+        chip="Entenda melhor" ></HeaderTitulo>
 
-        <BotaoDoPanico />
-        <Grid container className="C2p" id="target">
-          <div className="content">
+      <Grid container className="pageContainer">
+
+        <Grid container className="containerArtigo" id="target">
             <LeiaMais>
               <p>
                 Entre todas as causas, pode-se apontar como a maior delas
@@ -60,11 +47,10 @@ const C2 = () => {
               </p>
             </LeiaMais>
             <Grid className="EspacoInferior" />
-            <Grid className="EspacoInferior" />
-          </div>
         </Grid>
       </Grid>
 
+      <BotaoDoPanico />
       <MenuInferior />
     </Grid>
   );

@@ -1,11 +1,12 @@
 import React from "react";
 import { Button, Stack, Grid, TextField } from "@mui/material";
-import TopButton from "../components/TopButton";
+import BackButton from "../components/BackButton";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import calendario from "../assets/mock/Picker.svg";
 import PopUpD2 from "../components/PopUpD2.jsx";
 import { useState } from "react";
+import Header from "../components/Header";
 
 
 const D2 = () => {
@@ -24,8 +25,8 @@ const D2 = () => {
 
   return (
     <Grid container>
+        <Header titulo="Agendar atendimento" backButton={true} destino="D1"></Header>
       <Grid item>
-        <TopButton className="D1voltar" />
       </Grid>
 
       <Grid container>

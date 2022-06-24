@@ -5,7 +5,7 @@ import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import "../assets/css/base.css";
-import TopButton from "../components/TopButton";
+import BackButton from "../components/BackButton";
 import Mapa from "../components/mapa/mapa";
 
 const E1 = () => {

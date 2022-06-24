@@ -15,7 +15,6 @@ body{
 .itemHeaderTitulo {
     width: 100%;
     justify-content: center;
-    position: absolute;
 }
 
 .tituloHeader {
@@ -26,17 +25,24 @@ body{
 }
 
 .TopButton {
+    position: absolute;
     margin-top: 24px;
+    padding-left: 24px;
 }
 
 .tituloH1 {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .tituloH2 {
     font-size: 18px;
     font-weight: 500;
+}
+
+.body2{
+    font-weight: 600;
+    font-size: 14px;
 }
 
 
@@ -130,12 +136,7 @@ body{
     padding-bottom: 100px;
 }
 
-.read-or-hide {
-    background-color: #357F7880;
-    color: white;
-    padding: 0 10px;
-    cursor: pointer;
-}
+
 
 .A1pular{
     top: 644px; 
