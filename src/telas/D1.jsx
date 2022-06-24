@@ -2,11 +2,10 @@ import React from "react";
 import { Button, Grid } from "@mui/material";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
+import Header from "../components/Header";
 import img from "../assets/img/D1.svg";
-
 import "../assets/css/base.css";
 import "../assets/css/D.css";
-import Header from "../components/Header";
 
 const D1 = () => {
   return (
@@ -42,8 +41,6 @@ const D1 = () => {
       </Grid>
 
       <BotaoDoPanico />
-
-      {/* <Grid className="EspacoInferior" /> */}
       <MenuInferior />
     </Grid>
   );

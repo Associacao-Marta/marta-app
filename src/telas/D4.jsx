@@ -1,10 +1,11 @@
 import React from "react";
-import { Button, Stack, Grid, TextField } from "@mui/material";
-import BackButton from "../components/BackButton";
+import { Grid, TextField } from "@mui/material";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import PopUpD4 from "../components/PopUpD4";
 import Header from "../components/Header";
+import "../assets/css/base.css";
+import "../assets/css/D.css";
 
 const D4 = () => {
   const [protocolo, setProtocolo] = React.useState("");
@@ -12,30 +13,31 @@ const D4 = () => {
   return (
     <Grid container>
       <Header titulo="Consultar atendimento" backButton={true} destino="D1" />
-      <Grid item>
-      </Grid>
-      <Grid className="EspacoInferior" />
-      <Grid container className="D2form">
-        <TextField label="Protocolo" variant="outlined" className="D2caixa" onChange={(event) => {setProtocolo(event.target.value)}}/>
-      </Grid>
 
-      <Grid container>
-        <p className="D4p">
+      <Grid container className="pageContainer">
+      <Grid container className="protocoloContainer">
+        <TextField
+        required
+        fullWidth
+        label="Protocolo"
+        variant="outlined"
+        onChange={(event) => {setProtocolo(event.target.value)}}/>
+
+        <p className="body2" style={{textAlign: "justify"}}>
           Para confirmar data e horário do seu atendimento, basta inserir o
           número de protocolo que te enviamos por WhatsApp.
         </p>
       </Grid>
-      <Grid className="EspacoInferior" />
 
-      <Grid container className="D2botoes">
-        <Grid item>
+      <Grid container item className="buttonContainer">
           <PopUpD4 protocolo={protocolo}/>
-        </Grid>
-        <Grid className="EspacoInferior" />
       </Grid>
-      <BotaoDoPanico />
 
+    </Grid>
+
+      <BotaoDoPanico />
       <MenuInferior />
+
     </Grid>
   );
 };

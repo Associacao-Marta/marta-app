@@ -7,13 +7,25 @@
     justify-content: center;
     text-align: center;
     padding: 24px;
-}
-
-.buttonContainer{
-    justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .agendarAtendimentoButton{
     width: 312px;
+}
+
+.formContainer{
+    margin-right: 24px;
+    margin-top: 16px;
+}
+
+.textForm{
+    width: 312px;
+    margin-bottom: 16px;
+}
+
+.protocoloContainer{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-right: 24px;
 }

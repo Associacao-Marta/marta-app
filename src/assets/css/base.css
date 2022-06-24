@@ -38,11 +38,21 @@ body{
 .tituloH2 {
     font-size: 18px;
     font-weight: 500;
+
+}
+.subtitulo {
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .body2{
     font-weight: 600;
     font-size: 14px;
+}
+
+.buttonContainer{
+    justify-content: center;
+    margin-bottom: 16px;
 }
 
 

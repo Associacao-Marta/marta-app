@@ -23,8 +23,8 @@ const C2 = () => {
 
       <Grid container className="pageContainer">
 
-        <Grid container className="containerArtigo" id="target">
-            <LeiaMais>
+        <Grid container item className="containerArtigo" id="target">
+            <LeiaMais className="leiaMais">
               <p>
                 Entre todas as causas, pode-se apontar como a maior delas
                 justamente o risco ao se romper a relação. Além disso, procurar

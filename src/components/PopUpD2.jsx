@@ -30,7 +30,7 @@ export default function PopUpD2(props) {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen}>
+      <Button variant="contained" onClick={handleClickOpen} sx={{ borderRadius: 8 }}>
         Enviar
       </Button>
       <Dialog
