@@ -5,6 +5,7 @@ import MenuInferior from "../components/MenuInferior";
 import PopUpD2 from "../components/PopUpD2.jsx";
 import Header from "../components/Header";
 import { useState } from "react";
+import InputMask from "react-input-mask";
 import "../assets/css/base.css";
 import "../assets/css/D.css";
 
@@ -39,13 +40,23 @@ const D2 = () => {
                   setNewName(event.target.value);
                 }}
               />
-              <TextField
+              <InputMask
+                mask={"+55 (99) 99999-9999"}
+                label="Telefone"
+                onChange={(event) => {
+                  setNewPhone(event.target.value);
+                }}
+              >
+                <TextField />
+              </InputMask>
+              {/* <TextField
+                type="text"
                 label="Telefone"
                 variant="outlined"
                 onChange={(event) => {
                   setNewPhone(event.target.value);
                 }}
-              />
+              /> */}
               <TextField
                 label="Conte como podemos te ajudar"
                 variant="outlined"
@@ -67,14 +78,14 @@ const D2 = () => {
               <Stack direction="row" spacing={5}>
                 <Button
                   sx={{ borderRadius: 8 }}
-                  variant="contained"
+                  variant={newType != "psicólogas" ? "outlined" : "contained"}
                   onClick={setTypePsicologa}
                 >
                   psicóloga
                 </Button>
                 <Button
                   sx={{ borderRadius: 8 }}
-                  variant="contained"
+                  variant={newType != "advogadas" ? "outlined" : "contained"}
                   onClick={setTypeAdvogada}
                 >
                   advogada
@@ -95,13 +106,11 @@ const D2 = () => {
               newType={newType}
             />
           </Grid>
-
         </Grid>
       </Grid>
 
       <BotaoDoPanico />
       <MenuInferior />
-      
     </Grid>
   );
 };

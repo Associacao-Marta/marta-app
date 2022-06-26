@@ -25,7 +25,7 @@ export default function PopUpD4(props) {
   } else {
     setAtendimento([])
   }
-  };
+}
 
   const handleClickOpen = () => {
     getAtendimento();
@@ -36,9 +36,10 @@ export default function PopUpD4(props) {
     setOpen(false);
   };
 
+
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen} sx={{ borderRadius: 8 }}>
+      <Button variant="contained" onClick={handleClickOpen} sx={{ borderRadius: 8 }} disabled={!props.protocolo}>
         Consultar
       </Button>
 

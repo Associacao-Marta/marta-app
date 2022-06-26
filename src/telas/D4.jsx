@@ -8,7 +8,7 @@ import "../assets/css/base.css";
 import "../assets/css/D.css";
 
 const D4 = () => {
-  const [protocolo, setProtocolo] = React.useState("");
+  const [protocolo, setProtocolo] = React.useState();
 
   return (
     <Grid container>
@@ -28,12 +28,11 @@ const D4 = () => {
           número de protocolo que te enviamos por WhatsApp.
         </p>
       </Grid>
+    </Grid>
 
       <Grid container item className="buttonContainer">
           <PopUpD4 protocolo={protocolo}/>
       </Grid>
-
-    </Grid>
 
       <BotaoDoPanico />
       <MenuInferior />
