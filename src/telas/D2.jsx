@@ -6,9 +6,12 @@ import MenuInferior from "../components/MenuInferior";
 import calendario from "../assets/mock/Picker.svg";
 import PopUpD2 from "../components/PopUpD2.jsx";
 import { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-
+import DatePicker, {registerLocale} from "react-datepicker";
+import 'react-datepicker/dist/react-datepicker.css';
+import { ptBR } from "date-fns/locale";
+import { addDays, subDays } from 'date-fns';
+import setHours from "date-fns/setHours";
+import setMinutes from "date-fns/setMinutes";
 
 const D2 = () => {
   const [newName, setNewName] = useState("")
@@ -17,7 +20,9 @@ const D2 = () => {
   const [newType, setNewType] = useState("")
   const [selectedCalendar, setSelectedCalendar] = useState("");
   var formatedDate, formatedTime;
-  
+  registerLocale("ptBR", ptBR);
+  const [language, setLanguage] = React.useState("ptBR");
+
   const setTypePsicologa = () => {
     setNewType("psicólogas")
   }
@@ -40,7 +45,7 @@ const D2 = () => {
       if(day.length < 2){
         day = '0' + day;
       }
-         if(minutes === 0){
+      if(minutes === 0){
       minutes = minutes + "0";
       }
       
@@ -51,6 +56,8 @@ const D2 = () => {
   }
 
   setNewDateNewTime(selectedCalendar)
+  console.log(formatedDate)
+  console.log(formatedTime)
 
   return (
     <Grid container>
@@ -82,19 +89,44 @@ const D2 = () => {
       <Grid container>
         <h2 className="D2titulo">Quando gostaria de ser atendida?</h2>
         </Grid>
-          <Grid container>
-            <DatePicker 
+          <Grid container item>
+            {/* <DatePicker 
             selected={selectedCalendar} 
             onChange={(date) => setSelectedCalendar(date)} 
             placeholderText="Escolha um horário" 
             className="D2caixa" 
             dateFormat="dd/MM/yyyy"
             showTimeSelect
+            /> */}
+              
+             <DatePicker 
+              wrapperClassName="datePicker"
+              selected={selectedCalendar} 
+              onChange={(date) => setSelectedCalendar(date)} 
+              placeholderText="Escolha uma data" 
+              className="D2caixa" 
+              dateFormat="dd/MM/yyyy"
+              locale={language}
+              shouldCloseOnSelect={false}
+              includeDateIntervals={[
+                { start: new Date("2022/07/13"), end: addDays(new Date("2022/07/13"), 31) },
+              ]}
+            />
+            <DatePicker
+              wrapperClassName="timePicker"
+              selected={selectedCalendar}
+              onChange={(date) => setSelectedCalendar(date)}
+              showTimeSelect
+              showTimeSelectOnly
+              timeIntervals={30}
+              timeCaption="Horário"
+              dateFormat="h:mm aa"
+              placeholderText="Escolha um horário" 
+              shouldCloseOnSelect={false}
+              minTime={setHours(setMinutes(new Date(), 0), 8)}
+              maxTime={setHours(setMinutes(new Date(), 8), 17)}
             />
           </Grid>
-          {/*       <Grid item>
-          <img className="D2calendario" src={calendario} alt="calendário" />
-          </Grid> */}
       <Grid container className="D2botoes">
         <Grid item>
           <PopUpD2 newDate={formatedDate} newTime={formatedTime} newName={newName} newPhone={newPhone} newDescription={newDescription} newType={newType} />
