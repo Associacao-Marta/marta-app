@@ -7,6 +7,7 @@ import calendario from "../assets/mock/Picker.svg";
 import PopUpD2 from "../components/PopUpD2.jsx";
 import { useState } from "react";
 import DatePicker, {registerLocale} from "react-datepicker";
+import "../assets/css/calendario.css"
 import 'react-datepicker/dist/react-datepicker.css';
 import { ptBR } from "date-fns/locale";
 import { addDays, subDays } from 'date-fns';
@@ -98,7 +99,7 @@ const D2 = () => {
             dateFormat="dd/MM/yyyy"
             showTimeSelect
             /> */}
-              
+
              <DatePicker 
               wrapperClassName="datePicker"
               selected={selectedCalendar} 
@@ -111,7 +112,7 @@ const D2 = () => {
               includeDateIntervals={[
                 { start: new Date("2022/07/13"), end: addDays(new Date("2022/07/13"), 31) },
               ]}
-            />
+              />
             <DatePicker
               wrapperClassName="timePicker"
               selected={selectedCalendar}
@@ -125,7 +126,7 @@ const D2 = () => {
               shouldCloseOnSelect={false}
               minTime={setHours(setMinutes(new Date(), 0), 8)}
               maxTime={setHours(setMinutes(new Date(), 8), 17)}
-            />
+              />
           </Grid>
       <Grid container className="D2botoes">
         <Grid item>
