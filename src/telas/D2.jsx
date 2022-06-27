@@ -25,7 +25,7 @@ const D2 = () => {
 
   return (
     <Grid container>
-      <Header titulo="Agendar atendimento" backButton={true} destino="D1" />
+      <Header titulo="Agendar atendimento" backButton={true} destino="D1"/>
 
       <Grid container className="pageContainer">
         <Grid container className="formContainer">
@@ -49,14 +49,6 @@ const D2 = () => {
               >
                 <TextField />
               </InputMask>
-              {/* <TextField
-                type="text"
-                label="Telefone"
-                variant="outlined"
-                onChange={(event) => {
-                  setNewPhone(event.target.value);
-                }}
-              /> */}
               <TextField
                 label="Conte como podemos te ajudar"
                 variant="outlined"
@@ -105,6 +97,11 @@ const D2 = () => {
               newDescription={newDescription}
               newType={newType}
             />
+          </Grid>
+          <Grid container className="buttonContainer">
+            <Button href="D1">
+              Cancelar
+            </Button>
           </Grid>
         </Grid>
       </Grid>

@@ -45,12 +45,12 @@ export default function PopUpD2(props) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Olá! Muito obrigada por agendar um horário conosco! Estamos ansiosas
-            para te auxiliar da melhor forma possível!
+            Olá! Muito obrigada por agendar um horário conosco! <br/> <br/>
+            Estamos ansiosas para te auxiliar da melhor forma possível!
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" onClick={handleClose} autoFocus href="D1">
+          <Button variant="contained" onClick={handleClose} autoFocus href="D1" color="success" sx={{color: "#FFFFFF", borderRadius:8}}>
             OK
           </Button>
         </DialogActions>

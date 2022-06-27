@@ -54,14 +54,14 @@ export default function PopUpD4(props) {
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             Olá, {atendimento.name}! Seu atendimento com uma de nossas {atendimento.type} está marcado para {atendimento.hour}h{atendimento.minute}, 
-            do dia {atendimento.day} de {atendimento.month} de {atendimento.year}. 
+            do dia {atendimento.day} de {atendimento.month} de {atendimento.year}. <br/> <br/>
             Caso deseje desmarcar ou cancelar seu horário conosco, entre em contato por Whatsapp, pelo
             número (85) 98765-4321.
           </DialogContentText>
         </DialogContent>
 
         <DialogActions>
-          <Button variant="contained" onClick={handleClose} autoFocus>
+          <Button variant="contained" onClick={handleClose} autoFocus color="success" sx={{color: "#FFFFFF", borderRadius:8}}>
             OK
           </Button>
         </DialogActions>
