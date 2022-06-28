@@ -5,14 +5,14 @@ import MenuInferior from "../components/MenuInferior";
 import PopUpD2 from "../components/PopUpD2.jsx";
 import Header from "../components/Header";
 import { useState } from "react";
+import InputMask from "react-input-mask";
 import DatePicker, {registerLocale} from "react-datepicker";
-import "../assets/css/calendario.css"
-import 'react-datepicker/dist/react-datepicker.css';
-import { ptBR } from "date-fns/locale";
-import { addDays, subDays } from 'date-fns';
+import { addDays } from 'date-fns';
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
-import InputMask from "react-input-mask";
+import pt from "date-fns/locale/pt";
+import 'react-datepicker/dist/react-datepicker.css';
+import "../assets/css/calendario.css"
 import "../assets/css/base.css";
 import "../assets/css/D.css";
 
@@ -23,10 +23,9 @@ const D2 = () => {
   const [newDescription, setNewDescription] = useState("");
   const [newType, setNewType] = useState("");
   const [selectedCalendar, setSelectedCalendar] = useState("");
-  const [language, setLanguage] = React.useState("ptBR");
-
   var formatedDate, formatedTime;
-  registerLocale("ptBR", ptBR);
+  
+  registerLocale("pt", pt);
 
   const setTypePsicologa = () => {
     setNewType("psicólogas");
@@ -139,8 +138,8 @@ const D2 = () => {
               placeholderText="Escolha uma data" 
               className="D2caixa" 
               dateFormat="dd/MM/yyyy"
-              locale={language}
-              shouldCloseOnSelect={false}
+              locale="pt"
+              shouldCloseOnSelect={true}
               includeDateIntervals={[
                 { start: new Date("2022/07/13"), end: addDays(new Date("2022/07/13"), 31) },
               ]}
@@ -155,7 +154,7 @@ const D2 = () => {
               timeCaption="Horário"
               dateFormat="h:mm aa"
               placeholderText="Escolha um horário" 
-              shouldCloseOnSelect={false}
+              shouldCloseOnSelect={true}
               minTime={setHours(setMinutes(new Date(), 0), 8)}
               maxTime={setHours(setMinutes(new Date(), 8), 17)}
               />
@@ -163,6 +162,8 @@ const D2 = () => {
 
           <Grid container className="buttonContainer">
             <PopUpD2
+              newDate={formatedDate}
+              newTime={formatedTime}
               newName={newName}
               newPhone={newPhone}
               newDescription={newDescription}

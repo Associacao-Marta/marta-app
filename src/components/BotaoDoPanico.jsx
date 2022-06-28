@@ -5,9 +5,8 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { Checkbox } from "@mui/material";
 import { Fab, Grid } from "@mui/material";
-import GppMaybeIcon from "@mui/icons-material/GppMaybe";
+import Botao from "../assets/img/btn_panico.svg";
 import "../assets/css/base.css";
 
 export default function PopUpBotaoDoPanico() {
@@ -24,7 +23,7 @@ export default function PopUpBotaoDoPanico() {
   return (
     <Grid container className="BotaoDoPanico">
       <Fab color="warning" variant="contained" onClick={handleClickOpen}>
-        <GppMaybeIcon />
+        <img src={Botao} alt="Botão do Pânico" />
       </Fab>
 
       <Dialog
