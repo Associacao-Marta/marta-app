@@ -4,24 +4,36 @@ import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "../assets/css/base.css";
+import { useState } from "react";
 
 const MenuInferior = () => {
+  const pathname = window.location.pathname;
+  const [value, setValue] = useState(pathname);
+
+  const handleChange = (event, newValue) => {
+    setValue(event, newValue);
+  };
+
+
   return (
-    <BottomNavigation showLabels className="Menu">
+    <BottomNavigation showLabels value={value} onChange={handleChange} className="Menu">
       <BottomNavigationAction
         href="C1"
         label="Artigos"
-        icon={<FeedOutlinedIcon color="primary" />}
+        value={'/C1'}
+        icon={<FeedOutlinedIcon/>}
       />
       <BottomNavigationAction
         href="D1"
         label="Atendimento"
-        icon={<CalendarTodayIcon color="primary" />}
+        value={'/D1'}
+        icon={<CalendarTodayIcon/>}
       />
       <BottomNavigationAction
         href="E1"
         label="Local"
-        icon={<LocationOnIcon color="primary" />}
+        value={'/E1'}
+        icon={<LocationOnIcon/>}
       />
     </BottomNavigation>
   );

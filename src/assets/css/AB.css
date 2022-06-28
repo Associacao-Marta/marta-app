@@ -1,0 +1,25 @@
+.tituloContainer{
+    justify-content: center;
+    text-align: center;
+}
+
+.tituloOnboarding{
+    position: absolute;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.ilustracaoOnboarding{
+    justify-content: center;
+    padding-bottom: 32px;
+    padding-top: 150px;
+}
+
+.pularOnboarding{
+    position: absolute;
+    justify-content: center;
+    top: 600px;
+}

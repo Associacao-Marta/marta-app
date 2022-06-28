@@ -48,7 +48,7 @@ export default function PopUpBotaoDoPanico() {
           <Button onClick={handleClose} autoFocus sx={{ marginRight: "110px" }}>
             Cancelar
           </Button>
-          <Button href="tel:+55190" variant="contained" autoFocus color="warning">
+          <Button href="tel:+55190" variant="contained" autoFocus color="warning" sx={{ borderRadius: 8 }}>
             LIGAR
           </Button>
         </DialogActions>

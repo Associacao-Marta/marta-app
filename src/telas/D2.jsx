@@ -1,10 +1,9 @@
 import React from "react";
 import { Button, Stack, Grid, TextField } from "@mui/material";
-import TopButton from "../components/TopButton";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
-import calendario from "../assets/mock/Picker.svg";
 import PopUpD2 from "../components/PopUpD2.jsx";
+import Header from "../components/Header";
 import { useState } from "react";
 import DatePicker, {registerLocale} from "react-datepicker";
 import "../assets/css/calendario.css"
@@ -13,24 +12,29 @@ import { ptBR } from "date-fns/locale";
 import { addDays, subDays } from 'date-fns';
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
+import InputMask from "react-input-mask";
+import "../assets/css/base.css";
+import "../assets/css/D.css";
+
 
 const D2 = () => {
-  const [newName, setNewName] = useState("")
-  const [newPhone, setNewPhone] = useState("")
-  const [newDescription, setNewDescription] = useState("")
-  const [newType, setNewType] = useState("")
+  const [newName, setNewName] = useState("");
+  const [newPhone, setNewPhone] = useState("");
+  const [newDescription, setNewDescription] = useState("");
+  const [newType, setNewType] = useState("");
   const [selectedCalendar, setSelectedCalendar] = useState("");
-  var formatedDate, formatedTime;
-  registerLocale("ptBR", ptBR);
   const [language, setLanguage] = React.useState("ptBR");
 
+  var formatedDate, formatedTime;
+  registerLocale("ptBR", ptBR);
+
   const setTypePsicologa = () => {
-    setNewType("psicólogas")
-  }
+    setNewType("psicólogas");
+  };
 
   const setTypeAdvogada = () => {
-    setNewType("advogadas")
-  }
+    setNewType("advogadas");
+  };
 
   const setNewDateNewTime = (date) => {
     var d = new Date(date),
@@ -53,7 +57,7 @@ const D2 = () => {
       formatedDate = [day, month, year].join('/');
       formatedTime = (hour + ":" + minutes);
 
-      return (formatedDate, formatedTime)   
+      return (formatedDate, formatedTime);   
   }
 
   setNewDateNewTime(selectedCalendar)
@@ -62,44 +66,72 @@ const D2 = () => {
 
   return (
     <Grid container>
-      <Grid item>
-        <TopButton className="D1voltar" />
-      </Grid>
+      <Header titulo="Agendar atendimento" backButton={true} destino="D1"/>
 
-      <Grid container>
-        <h2 className="D2titulo">Nos conte um pouco sobre você</h2>
-      </Grid>
-      <Grid container className="D2form">
-        <Stack direction="column" className="D2caixa">
-          <TextField label="Nome Completo" variant="outlined" onChange={(event) => {setNewName(event.target.value)}}/>
-          <TextField label="Telefone" variant="outlined" onChange={(event) => {setNewPhone(event.target.value)}}/>
-          <TextField label="Conte como podemos te ajudar" variant="outlined" multiline rows={4} onChange={(event) => {setNewDescription(event.target.value)}}/>
-        </Stack>
-      </Grid>
-      <Grid container>
-        <h2 className="D2titulo">Com que profissional gostaria de falar?</h2>
-      </Grid>
-      <Grid container className="D2botoes">
-        <Stack direction="row">
-          <Button sx={{ marginRight: "70px" }} variant="contained" onClick={setTypePsicologa}>
-            psicóloga
-          </Button>
-          <Button variant="contained" onClick={setTypeAdvogada}>advogada</Button>
-        </Stack>
-      </Grid>
-      <Grid container>
-        <h2 className="D2titulo">Quando gostaria de ser atendida?</h2>
-        </Grid>
+      <Grid container className="pageContainer">
+        <Grid container className="formContainer">
+          <h3 className="subtitulo">Nos conte um pouco sobre você</h3>
+
+          <Grid container item className="textForm">
+            <Stack direction="column" className="textForm" spacing={2}>
+              <TextField
+                label="Nome Completo"
+                variant="outlined"
+                onChange={(event) => {
+                  setNewName(event.target.value);
+                }}
+              />
+              <InputMask
+                mask={"+55 (99) 99999-9999"}
+                label="Telefone"
+                onChange={(event) => {
+                  setNewPhone(event.target.value);
+                }}
+              >
+                <TextField />
+              </InputMask>
+              <TextField
+                label="Conte como podemos te ajudar"
+                variant="outlined"
+                multiline
+                rows={4}
+                onChange={(event) => {
+                  setNewDescription(event.target.value);
+                }}
+              />
+            </Stack>
+          </Grid>
+
+          <Grid container item className="typeForm">
+            <h3 className="subtitulo">
+              Com que profissional gostaria de falar?
+            </h3>
+
+            <Grid container className="buttonContainer">
+              <Stack direction="row" spacing={5}>
+                <Button
+                  sx={{ borderRadius: 8 }}
+                  variant={newType != "psicólogas" ? "outlined" : "contained"}
+                  onClick={setTypePsicologa}
+                >
+                  psicóloga
+                </Button>
+                <Button
+                  sx={{ borderRadius: 8 }}
+                  variant={newType != "advogadas" ? "outlined" : "contained"}
+                  onClick={setTypeAdvogada}
+                >
+                  advogada
+                </Button>
+              </Stack>
+            </Grid>
+          </Grid>
+
+          <Grid container className="dateForm">
+            <h3 className="subtitulo">Quando gostaria de ser atendida?</h3>
+          </Grid>
+
           <Grid container item>
-            {/* <DatePicker 
-            selected={selectedCalendar} 
-            onChange={(date) => setSelectedCalendar(date)} 
-            placeholderText="Escolha um horário" 
-            className="D2caixa" 
-            dateFormat="dd/MM/yyyy"
-            showTimeSelect
-            /> */}
-
              <DatePicker 
               wrapperClassName="datePicker"
               selected={selectedCalendar} 
@@ -128,14 +160,24 @@ const D2 = () => {
               maxTime={setHours(setMinutes(new Date(), 8), 17)}
               />
           </Grid>
-      <Grid container className="D2botoes">
-        <Grid item>
-          <PopUpD2 newDate={formatedDate} newTime={formatedTime} newName={newName} newPhone={newPhone} newDescription={newDescription} newType={newType} />
-        </Grid>
-        <Grid className="EspacoInferior" />
-      </Grid>
-      <BotaoDoPanico />
 
+          <Grid container className="buttonContainer">
+            <PopUpD2
+              newName={newName}
+              newPhone={newPhone}
+              newDescription={newDescription}
+              newType={newType}
+            />
+          </Grid>
+          <Grid container className="buttonContainer">
+            <Button href="D1">
+              Cancelar
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <BotaoDoPanico />
       <MenuInferior />
     </Grid>
   );

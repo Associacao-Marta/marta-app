@@ -7,6 +7,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
 
+//db
 import { db } from "../firebase-config.js"
 import { getDoc, doc} from "firebase/firestore"
 
@@ -16,11 +17,6 @@ export default function PopUpD4(props) {
 
   const getAtendimento =  async () => {
 
-    // const userCollectionRef = collection(db, "atendimento");
-  
-    // const data = await getDocs(userCollectionRef);
-    // setAtendimento(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-
     const docRef = doc(db, "atendimento", props.protocolo);
     const data = await getDoc(docRef);
 
@@ -29,7 +25,7 @@ export default function PopUpD4(props) {
   } else {
     setAtendimento([])
   }
-  };
+}
 
   const handleClickOpen = () => {
     getAtendimento();
@@ -40,17 +36,18 @@ export default function PopUpD4(props) {
     setOpen(false);
   };
 
+
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen}>
-        Enviar
+      <Button variant="contained" onClick={handleClickOpen} sx={{ borderRadius: 8 }} disabled={!props.protocolo}>
+        Consultar
       </Button>
+
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
+        aria-describedby="alert-dialog-description">
         <DialogTitle id="alert-dialog-title">
           {"Consulta de Atendimento"}
         </DialogTitle>
@@ -65,11 +62,13 @@ export default function PopUpD4(props) {
             número (85) 98765-4321.
           </DialogContentText>
         </DialogContent>
+
         <DialogActions>
-          <Button variant="contained" onClick={handleClose} autoFocus>
+          <Button variant="contained" onClick={handleClose} autoFocus color="success" sx={{color: "#FFFFFF", borderRadius:8}}>
             OK
           </Button>
         </DialogActions>
+        
       </Dialog>
     </div>
   );

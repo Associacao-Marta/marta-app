@@ -1,12 +1,12 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
-import "../assets/css/base.css";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import ilustracao from "../assets/img/A2.svg";
+import ilustracao from "../assets/img/A1.svg";
+import "../assets/css/base.css";
+import "../assets/css/AB.css";
 
 const A2 = () => {
   const theme = useTheme();
@@ -21,32 +21,33 @@ const A2 = () => {
   };
 
   return (
-    <Grid container className="containerMaior">
-      <Grid container className="container">
-        <h1 className="tituloOnboarding">Conhecimento nas suas mãos</h1>
+    <Grid container>
+      <Grid container className="tituloContainer">
+        <h1 className="tituloOnboarding">O que é a Associação Marta?</h1>
       </Grid>
-      <Grid container className="container">
-        <img src={ilustracao} className="ilustracao" />
+
+      <Grid container item className="ilustracaoOnboarding">
+        <img src={ilustracao} />
       </Grid>
-      <Grid item>
-        <body2 className="A1body2">
-          Aprenda a distinguir os tipos de violência de gênero, entenda como a
-          violência acontece e conheça as leis e serviços que garantem os
-          direitos das mulheres.
-        </body2>
+
+      <Grid container item className="tituloContainer">
+        <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
+        A Associação Marta é uma associação formada por
+        mulheres que promove o acolhimento de vítimas de violência contra a mulher. 
+        </p>
       </Grid>
-      <Grid container className="botaoOnboarding">
-        <Grid item>
-          <Button variant="contained" href="B1">
+
+      <Grid container className="pularOnboarding">
+          <Button href="B1">
             Pular
           </Button>
-        </Grid>
       </Grid>
+      
       <Grid item>
         <MobileStepper
           position="bottom"
           variant="dots"
-          steps={5}
+          steps={6}
           activeStep={activeStep}
           nextButton={
             <Button
