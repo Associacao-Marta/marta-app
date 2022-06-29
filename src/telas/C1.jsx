@@ -5,8 +5,6 @@ import MenuInferior from "../components/MenuInferior";
 import Carrossel from "../components/Carrossel";
 import CardArtigo from "../components/CardArtigo";
 import "../assets/css/base.css";
-import img1 from "../assets/img/C1artigo1.svg";
-import img2 from "../assets/img/C1artigo2.svg";
 import img3 from "../assets/img/C1artigo3.svg";
 
 import Header from "../components/Header";
@@ -62,17 +60,8 @@ const C1 = () => {
 
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack direction="row" spacing={2}>
-            {/* <a href="C2">
-              <img src={img1} />
-            </a>
-            <a href="C2">
-              <img src={img1} />
-            </a>
-            <a href="C2">
-              <img src={img3} />
-            </a> */}
-            <CardArtigo titulo="Por que essas relações de violência perduram tanto tempo?"/>
-            <CardArtigo titulo="Sinais de que a mulher está sofrendo violência doméstica"/>
+            <CardArtigo titulo="Por que essas relações de violência perduram tanto tempo?" tema="Entenda melhor" href="C2"/>
+            <CardArtigo titulo="Sinais de que a mulher está sofrendo violência doméstica" tema="Como identificar" href="C2"/>
           </Stack>
         </Grid>
 
@@ -88,13 +77,11 @@ const C1 = () => {
             </Stack>
           </Grid>
         </Grid>
-
       </Grid>
 
       <BotaoDoPanico />
-      <Grid item className="EspacoInferior" />
-
       <MenuInferior />
+
     </Grid>
   );
 };

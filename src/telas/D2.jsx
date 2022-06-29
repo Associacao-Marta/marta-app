@@ -110,14 +110,14 @@ const D2 = () => {
               <Stack direction="row" spacing={5}>
                 <Button
                   sx={{ borderRadius: 8 }}
-                  variant={newType != "psicólogas" ? "outlined" : "contained"}
+                  variant={newType !== "psicólogas" ? "outlined" : "contained"}
                   onClick={setTypePsicologa}
                 >
                   psicóloga
                 </Button>
                 <Button
                   sx={{ borderRadius: 8 }}
-                  variant={newType != "advogadas" ? "outlined" : "contained"}
+                  variant={newType !== "advogadas" ? "outlined" : "contained"}
                   onClick={setTypeAdvogada}
                 >
                   advogada
@@ -130,22 +130,19 @@ const D2 = () => {
             <h3 className="subtitulo">Quando gostaria de ser atendida?</h3>
           </Grid>
 
-          <Grid container item>
+          <Grid container item className="calendarioContainer">
              <DatePicker 
-              wrapperClassName="datePicker"
               selected={selectedCalendar} 
               onChange={(date) => setSelectedCalendar(date)} 
               placeholderText="Escolha uma data" 
-              className="D2caixa" 
               dateFormat="dd/MM/yyyy"
               locale="pt"
-              shouldCloseOnSelect={true}
+              shouldCloseOnSelect={false}
               includeDateIntervals={[
                 { start: new Date("2022/07/13"), end: addDays(new Date("2022/07/13"), 31) },
               ]}
               />
             <DatePicker
-              wrapperClassName="timePicker"
               selected={selectedCalendar}
               onChange={(date) => setSelectedCalendar(date)}
               showTimeSelect
@@ -154,13 +151,13 @@ const D2 = () => {
               timeCaption="Horário"
               dateFormat="h:mm aa"
               placeholderText="Escolha um horário" 
-              shouldCloseOnSelect={true}
+              shouldCloseOnSelect={false}
               minTime={setHours(setMinutes(new Date(), 0), 8)}
               maxTime={setHours(setMinutes(new Date(), 8), 17)}
               />
           </Grid>
 
-          <Grid container className="buttonContainer">
+          <Grid container className="buttonContainer" style={{marginTop: 30}}>
             <PopUpD2
               newDate={formatedDate}
               newTime={formatedTime}
@@ -170,16 +167,17 @@ const D2 = () => {
               newType={newType}
             />
           </Grid>
-          <Grid container className="buttonContainer">
+          <Grid container className="buttonContainer" >
             <Button href="D1">
               Cancelar
             </Button>
           </Grid>
         </Grid>
+      <Grid item className="EspacoInferior" />
       </Grid>
 
       <BotaoDoPanico />
-      <MenuInferior />
+      <MenuInferior/>
     </Grid>
   );
 };

@@ -12,6 +12,12 @@
     margin-top: 16px;
 }
 
+.calendarioContainer{
+    margin-right: 24px;
+    max-width: 312px;
+    margin-bottom: 40px;
+}
+
 .textForm{
     width: 312px;
     margin-bottom: 16px;
