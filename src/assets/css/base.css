@@ -33,16 +33,19 @@ body{
 .tituloH1 {
     font-size: 20px;
     font-weight: 700;
+    padding: 4px 0 4px 0;
 }
 
 .tituloH2 {
     font-size: 18px;
     font-weight: 500;
-
+    padding: 4px 0 4px 0;
 }
+
 .subtitulo {
     font-size: 16px;
     font-weight: 700;
+    padding: 4px 0 4px 0;
 }
 
 .body2{
@@ -55,6 +58,12 @@ body{
     margin-bottom: 16px;
 }
 
+.tituloContainer{
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    margin-bottom: 8px;
+}
 
 
 

@@ -1,6 +1,10 @@
-.tituloContainer{
+.conteudoContainer-Onboarding{
     justify-content: center;
-    text-align: center;
+    text-align: center;    
+    padding: 32px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 435px;
 }
 
 .tituloOnboarding{

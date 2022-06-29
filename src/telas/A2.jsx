@@ -30,8 +30,8 @@ const A2 = () => {
         <img src={ilustracao} />
       </Grid>
 
-      <Grid container item className="tituloContainer">
-        <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
+      <Grid container item className="conteudoContainer-Onboarding">
+        <p className="body2" >
         A Associação Marta é uma associação formada por
         mulheres que promove o acolhimento de vítimas de violência contra a mulher. 
         </p>

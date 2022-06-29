@@ -32,7 +32,7 @@ const A5 = () => {
         <img src={ilustracao} />
       </Grid>
 
-      <Grid container item className="tituloContainer">
+      <Grid container item className="conteudoContainer-Onboarding">
         <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
         Solicite ajuda de forma segura utilizando o botão de pânico. 
         Ao ser acionado, um número de emergência será discado no seu 

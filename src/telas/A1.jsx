@@ -30,7 +30,7 @@ const A1 = () => {
         <img src={ilustracao} />
       </Grid>
 
-      <Grid container item className="tituloContainer">
+      <Grid container item className="conteudoContainer-Onboarding">
         <p className="body2">
         Olá! Seja bem-vinda ao aplicativo da Associação Marta.
         Nossa missão é atuar na prevenção e conscientização da violência contra a mulher.

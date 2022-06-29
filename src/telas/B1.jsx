@@ -21,7 +21,7 @@ const B1 = () => {
         <img src={ilustracao} />
       </Grid>
       
-      <Grid container item className="tituloContainer">
+      <Grid container item className="conteudoContainer-Onboarding">
         <p className="body2">
           Antes de continuar, precisamos que leia e aceite os <stan style={{ color: "#337066" }}>Termos de Uso</stan>.
           <br />
@@ -32,7 +32,7 @@ const B1 = () => {
         </p>
       </Grid>
 
-      <Grid container className="buttonContainer">
+      <Grid container className="buttonContainer" sx={{position: "absolute", top: "638px"}}>
           <Button variant="contained" href="C1"
           disabled={checked != true} sx={{ borderRadius: 8 }}>
             Finalizar

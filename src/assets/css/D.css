@@ -3,13 +3,6 @@
     padding: 64px;
 }
 
-.tituloContainer{
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-    margin-bottom: 8px;
-}
-
 .agendarAtendimentoButton{
     width: 312px;
 }

@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Autocomplete,
-  Card,
-  Grid,
-  IconButton,
-  Stack,
-  TextField,
-} from "@mui/material";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import { Grid, Stack } from "@mui/material";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import Carrossel from "../components/Carrossel";
+import CardArtigo from "../components/CardArtigo";
 import "../assets/css/base.css";
 import img1 from "../assets/img/C1artigo1.svg";
 import img2 from "../assets/img/C1artigo2.svg";
@@ -54,9 +47,9 @@ const C1 = () => {
       <Grid container className="pageContainer">
         <Grid container className="carrosselContainer">
           <Grid item>
-            <p className="tituloH2" style={{ color: "#337066" }}>
+            <h2 className="tituloH2" style={{ color: "#337066" }}>
               Sobre a Associação Marta
-            </p>
+            </h2>
           </Grid>
           <Grid container className="carrossel">
             <Carrossel />
@@ -64,12 +57,12 @@ const C1 = () => {
         </Grid>
 
         <Grid item>
-          <p className="tituloH1">Artigos em destaque</p>
+          <h1 className="tituloH1">Artigos em destaque</h1>
         </Grid>
 
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack direction="row" spacing={2}>
-            <a href="C2">
+            {/* <a href="C2">
               <img src={img1} />
             </a>
             <a href="C2">
@@ -77,13 +70,15 @@ const C1 = () => {
             </a>
             <a href="C2">
               <img src={img3} />
-            </a>
+            </a> */}
+            <CardArtigo titulo="Por que essas relações de violência perduram tanto tempo?"/>
+            <CardArtigo titulo="Sinais de que a mulher está sofrendo violência doméstica"/>
           </Stack>
         </Grid>
 
         <Grid container>
           <Grid item>
-            <p className="tituloH1">Veja também</p>
+            <h1 className="tituloH1">Veja também</h1>
           </Grid>
           <Grid container dir="ltr">
             <Stack direction="row" spacing={2}>

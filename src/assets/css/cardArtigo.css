@@ -1,0 +1,14 @@
+.cardContainer{
+    width: 230px;
+    height: 116px;
+    background-color: #D3EBD3;
+    border-radius: 4px;
+}
+
+.iconContainer-cardArtigo{
+    padding: 0 8px 0 16px;
+}
+
+.tituloContainer-cardArtigo{
+    width: 150px;
+}

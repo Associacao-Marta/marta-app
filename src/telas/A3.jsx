@@ -32,7 +32,7 @@ const A3 = () => {
         <img src={ilustracao} />
       </Grid>
 
-      <Grid container item className="tituloContainer">
+      <Grid container item className="conteudoContainer-Onboarding">
         <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
         Aprenda a distinguir os tipos de violência de gênero, 
         entenda como a violência acontece e conheça as leis e 
