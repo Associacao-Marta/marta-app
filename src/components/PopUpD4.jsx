@@ -20,7 +20,7 @@ export default function PopUpD4(props) {
     const docRef = doc(db, "atendimento", props.protocolo);
     const data = await getDoc(docRef);
 
-    if (data.exists) {
+    if (data.exists()) {
       setAtendimento(data.data());
       setIsProtocol(true);
     } else {
@@ -69,7 +69,10 @@ export default function PopUpD4(props) {
                 98765-4321.
               </>
             ) : (
-              <>Protocolo não encontrado</>
+              <>Desculpe, mas não conseguimos encontrar seu agendamento. <br/><br/>
+                Por favor, verifique o número informado ou entre em contato por Whatsapp,
+                pelo número (85) 98765-4321.
+              </>
             )}
           </DialogContentText>
         </DialogContent>
