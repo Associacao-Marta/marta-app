@@ -3,7 +3,11 @@ import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import "../assets/css/base.css";
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import BookIcon from '@mui/icons-material/Book';
+import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';import "../assets/css/base.css";
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import { useState } from "react";
 
 const MenuInferior = () => {
@@ -21,19 +25,19 @@ const MenuInferior = () => {
         href="C1"
         label="Artigos"
         value={'/C1'}
-        icon={<FeedOutlinedIcon/>}
+        icon={value==='/C1'?<BookIcon/>:<BookOutlinedIcon/>}
       />
       <BottomNavigationAction
         href="D1"
         label="Atendimento"
         value={'/D1'}
-        icon={<CalendarTodayIcon/>}
+        icon={value==='/D1'?<CalendarMonthIcon/>:<CalendarMonthOutlinedIcon/>}
       />
       <BottomNavigationAction
         href="E1"
         label="Local"
         value={'/E1'}
-        icon={<LocationOnIcon/>}
+        icon={value==='/E1'?<LocationOnIcon/>:<LocationOnOutlinedIcon/>}
       />
     </BottomNavigation>
   );

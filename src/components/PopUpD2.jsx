@@ -7,7 +7,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
 import { db } from "../firebase-config.js"
-import { collection, addDoc} from "firebase/firestore"
+import { collection, addDoc, setDoc, doc} from "firebase/firestore"
 
 export default function PopUpD2(props) {
   const [open, setOpen] = React.useState(false);
@@ -15,7 +15,8 @@ export default function PopUpD2(props) {
   const enviarAgendamento = async () => {
     const docRef = collection(db, "atendimento");
 
-    await addDoc(docRef, {time: props.newTime, date: props.newDate, name: props.newName, phone: props.newPhone, description: props.newDescription, type: props.newType})
+    await setDoc(doc (docRef, props.newPhone),
+     {time: props.newTime, date: props.newDate, name: props.newName, phone: props.newPhone, description: props.newDescription, type: props.newType});
   }
 
   const handleClickOpen = () => {

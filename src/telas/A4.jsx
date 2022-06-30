@@ -32,7 +32,7 @@ const A4 = () => {
         <img src={ilustracao} />
       </Grid>
 
-      <Grid container item className="tituloContainer">
+      <Grid container item className="conteudoContainer-Onboarding">
         <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
         Marque um dia e horário para receber assistência da Associação Marta. 
         Obtenha conforto psicológico e orientação jurídica de profissionais. 

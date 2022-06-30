@@ -1,0 +1,17 @@
+.cardContainer{
+    min-width: 230px;
+    max-width: 230px;
+    min-height: 116px;
+    max-height: 116px;
+    background-color: #D3EBD3;
+    border-radius: 4px;
+}
+
+.iconContainer-cardArtigo{
+    padding: 35px 8px 0 16px;
+    justify-content: center;
+}
+
+.tituloContainer-cardArtigo{
+    width: 150px;
+}

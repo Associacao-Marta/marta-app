@@ -11,7 +11,7 @@ export default function Mapa() {
 
   const greenIcon = new LeafIcon({
     iconUrl:
-      "https://i.postimg.cc/XvYXV7Zx/location-Pin.png",
+      "https://i.postimg.cc/hPShFWR8/location-Pin.png",
       popupAnchor:  [23, 0]
   });
   

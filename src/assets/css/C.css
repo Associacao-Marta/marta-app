@@ -11,6 +11,15 @@
     top: -10px;
 }
 
+.carrosselArtigos {
+    display: flex;
+    overflow: auto;
+    flex: none;
+    flex-flow: row wrap;
+    scroll-snap-type: x mandatory;
+    padding-right: 24px;
+}
+
 .tituloArtigo{
     padding-left: 24px;
     padding-right: 50px;

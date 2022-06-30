@@ -32,7 +32,7 @@ const A5 = () => {
         <img src={ilustracao} />
       </Grid>
 
-      <Grid container item className="tituloContainer">
+      <Grid container item className="conteudoContainer-Onboarding">
         <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
         Encontre o serviço de acolhimento mais perto de você e 
         consulte informações como endereço, telefone e horário 
