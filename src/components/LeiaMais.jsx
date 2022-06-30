@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const LeiaMais = ({ children }) => {
+const  LeiaMais = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {
@@ -11,7 +11,7 @@ const LeiaMais = ({ children }) => {
     <p className="text">
       {isReadMore ? text.slice(0, 1) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
-        {isReadMore ? "Leia mais" : " mostre menos"}
+        {isReadMore ? "Leia mais" : " Mostre menos"}
       </span>
     </p>
   );

@@ -1,12 +1,14 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
-import "../assets/css/base.css";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import ilustracao from "../assets/img/A4.svg";
+import "../assets/css/base.css";
+import "../assets/css/AB.css";
+
 
 const A4 = () => {
   const theme = useTheme();
@@ -21,32 +23,33 @@ const A4 = () => {
   };
 
   return (
-    <Grid container className="containerMaior">
-      <Grid container className="container">
-        <h1 className="tituloOnboarding">Botão de Pânico</h1>
+    <Grid container>
+      <Grid container className="tituloContainer">
+        <h1 className="tituloOnboarding">Atendimentos gratuitos</h1>
       </Grid>
-      <Grid container className="container">
-        <img src={ilustracao} className="ilustracao" />
+
+      <Grid container item className="ilustracaoOnboarding">
+        <img src={ilustracao} />
       </Grid>
-      <Grid item>
-        <body2 className="A1body2">
-          Solicite ajuda de forma segura utilizando o botão de pânico. Ao ser
-          acionado, um número de emergência será discado no seu aplicativo de
-          chamadas.
-        </body2>
+
+      <Grid container item className="tituloContainer">
+        <p className="body2" style={{paddingLeft: 8, paddingRight: 8}}>
+        Marque um dia e horário para receber assistência da Associação Marta. 
+        Obtenha conforto psicológico e orientação jurídica de profissionais. 
+        </p>
       </Grid>
-      <Grid container className="botaoOnboarding">
-        <Grid item>
-          <Button variant="contained" href="B1">
+
+      <Grid container className="pularOnboarding">
+          <Button href="B1">
             Pular
           </Button>
-        </Grid>
       </Grid>
+
       <Grid item>
         <MobileStepper
           position="bottom"
           variant="dots"
-          steps={5}
+          steps={6}
           activeStep={activeStep}
           nextButton={
             <Button

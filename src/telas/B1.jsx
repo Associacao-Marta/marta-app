@@ -1,36 +1,44 @@
-import { Button, Grid, Checkbox } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
 import React from "react";
-import MenuInferior from "../components/MenuInferior";
-
+import { Button, Grid, Checkbox } from "@mui/material";
 import ilustracao from "../assets/img/B1.svg";
+import "../assets/css/base.css";
+import "../assets/css/AB.css";
 
 const B1 = () => {
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
+
   return (
-    <Grid container className="containerMaior">
-      <Grid container className="container">
+    <Grid container>
+      <Grid container className="tituloContainer">
         <h1 className="tituloOnboarding">Termos de Uso</h1>
       </Grid>
-      <Grid container className="container">
-        <img src={ilustracao} className="ilustracao" />
+
+      <Grid container item className="ilustracaoOnboarding">
+        <img src={ilustracao} />
       </Grid>
-      <Grid item>
-        <body2 className="A1body2">
-          Antes de continuar, precisamos que leia e aceite os Termos de Uso.
+      
+      <Grid container item className="tituloContainer">
+        <p className="body2">
+          Antes de continuar, precisamos que leia e aceite os <stan style={{ color: "#337066" }}>Termos de Uso</stan>.
           <br />
           <br />
           <br />
-          <Checkbox />
+          <Checkbox checked={checked} onChange={handleChange} />
           Li e Aceito os Termos de Uso.
-        </body2>
+        </p>
       </Grid>
-      <Grid container className="botaoOnboarding">
-        <Grid item>
-          <Button variant="contained" href="C1">
+
+      <Grid container className="buttonContainer">
+          <Button variant="contained" href="C1"
+          disabled={checked != true} sx={{ borderRadius: 8 }}>
             Finalizar
           </Button>
-        </Grid>
       </Grid>
+
     </Grid>
   );
 };

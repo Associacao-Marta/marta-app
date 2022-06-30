@@ -3,7 +3,7 @@ import { IconButton, Grid } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import "../assets/css/base.css"
 
-const TopButton = (props) => {
+const BackButton = (props) => {
   return (
     <div className="TopButton">
       <IconButton color="primary" variant="" aria-label="Voltar" href={props.destino}>
@@ -13,4 +13,4 @@ const TopButton = (props) => {
   );
 };
 
-export default TopButton;
+export default BackButton;

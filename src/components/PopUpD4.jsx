@@ -19,7 +19,6 @@ export default function PopUpD4(props) {
   const getAtendimento = async () => {
     const docRef = doc(db, "atendimento", props.protocolo);
     const data = await getDoc(docRef);
-    console.log({ docRef });
 
     if (data.exists) {
       setAtendimento(data.data());

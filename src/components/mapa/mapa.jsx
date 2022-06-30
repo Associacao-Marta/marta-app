@@ -1,8 +1,20 @@
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import * as L from "leaflet";
+
 import "../../assets/css/mapa.css";
 
 export default function Mapa() {
+  const LeafIcon = L.Icon.extend({
+    options: {}
+  });
+
+  const greenIcon = new LeafIcon({
+    iconUrl:
+      "https://i.postimg.cc/XvYXV7Zx/location-Pin.png",
+      popupAnchor:  [23, 0]
+  });
+  
   return (
     <MapContainer
       className="leaflet-container"
@@ -13,7 +25,7 @@ export default function Mapa() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker key={1} position={[-3.743922925095978, -38.541993132884365]}>
+      <Marker key={1} position={[-3.743922925095978, -38.541993132884365]} icon={greenIcon}>
         <Popup position={[-3.743922925095978, -38.541993132884365]}>
           <h2>
             Juizado de Violência Doméstica e Familiar Contra a Mulher de
@@ -32,7 +44,7 @@ export default function Mapa() {
         </Popup>
       </Marker>
 
-      <Marker key={2} position={[-3.7574475125827997, -38.5597002463776]}>
+      <Marker key={2} position={[-3.7574475125827997, -38.5597002463776]} icon={greenIcon}>
         <Popup position={[-3.7574475125827997, -38.5597002463776]}>
           <h2>Casa da Mulher Brasileira do Ceará</h2>
           <p>
@@ -47,7 +59,7 @@ export default function Mapa() {
         </Popup>
       </Marker>
 
-      <Marker key={3} position={[-3.7576203035266804, -38.559672895010564]}>
+      <Marker key={3} position={[-3.7576203035266804, -38.559672895010564]} icon={greenIcon}>
         <Popup position={[-3.7576203035266804, -38.559672895010564]}>
           <h2>Delegacia de Defesa da Mulher de Fortaleza (DDM-FOR)</h2>
           <p>
@@ -64,7 +76,7 @@ export default function Mapa() {
         </Popup>
       </Marker>
 
-      <Marker key={4} position={[-3.7370471888837784, -38.6521364445283]}>
+      <Marker key={4} position={[-3.7370471888837784, -38.6521364445283]} icon={greenIcon}>
         <Popup position={[-3.7370471888837784, -38.6521364445283]}>
           <h2>Delegacia de Defesa da Mulher de Caucaia (DDM-C)</h2>
           <p>
@@ -79,7 +91,7 @@ export default function Mapa() {
         </Popup>
       </Marker>
 
-      <Marker key={5} position={[-3.8742427892731737, -38.62722027521255]}>
+      <Marker key={5} position={[-3.8742427892731737, -38.62722027521255]} icon={greenIcon}>
         <Popup position={[-3.8742427892731737, -38.62722027521255]}>
           <h2>Delegacia de Defesa da Mulher de Maracanaú (DDM-M)</h2>
           <p>
@@ -95,7 +107,7 @@ export default function Mapa() {
         </Popup>
       </Marker>
 
-      <Marker key={6} position={[-3.890583666654657, -38.60849826107439]}>
+      <Marker key={6} position={[-3.890583666654657, -38.60849826107439]} icon={greenIcon}>
         <Popup position={[-3.890583666654657, -38.60849826107439]}>
           <h2>Delegacia de Defesa da Mulher de Pacatuba (DDM-PAC)</h2>
           <p>
@@ -110,7 +122,7 @@ export default function Mapa() {
         </Popup>
       </Marker>
 
-      <Marker key={7} position={[-3.727026031412932, -38.50320863103518]}>
+      <Marker key={7} position={[-3.727026031412932, -38.50320863103518]} icon={greenIcon}>
         <Popup position={[-3.727026031412932, -38.50320863103518]}>
           <h2>
             Centro de Referência e Apoio à Vítima de Violência - CRAVV / SPS
@@ -127,7 +139,7 @@ export default function Mapa() {
         </Popup>
       </Marker>
 
-      <Marker key={8} position={[-3.773119785664548, -38.47817404452804]}>
+      <Marker key={8} position={[-3.773119785664548, -38.47817404452804]} icon={greenIcon}>
         <Popup position={[-3.773119785664548, -38.47817404452804]}>
           <h2>Instituto Maria da Penha - IMP</h2>
           <p>

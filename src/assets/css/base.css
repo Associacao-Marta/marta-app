@@ -1,27 +1,62 @@
 body{
+    margin: 0;
+	padding: 0;
+	border: 0;
     position: display;
     justify-content: center;
     background-color: #F6F6F6;
     color: #1B1B1B;
 }
 
-.containerHeader {
+.pageContainer{
+    padding-left: 24px;
+}
+
+.itemHeaderTitulo {
+    width: 100%;
     justify-content: center;
 }
 
 .tituloHeader {
-    font-family: 'Poppins';
+    margin-top: 32px;
     font-weight: 600;
-    margin-top: 18px;
     font-size: 18px;
     text-align: center;
 }
 
 .TopButton {
-    margin-top: 11px;
-    position: relative;
-    left: -125px;
+    position: absolute;
+    margin-top: 24px;
+    padding-left: 24px;
 }
+
+.tituloH1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tituloH2 {
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.subtitulo {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.body2{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.buttonContainer{
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+
+
 
 .container {
     position: absolute;
@@ -35,7 +70,7 @@ body{
     width: 360px;
 }
 
-.ilustracao {
+.ilustraca {
     margin-top: 144px;
 }
 
@@ -50,7 +85,7 @@ body{
     text-transform: capitalize;
 }
 
-.tituloOnboarding {
+.tituloOnboardin {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -103,7 +138,7 @@ body{
     position: fixed;
     margin-bottom: 0;
     top: 744px;
-    width: 95%;
+    width: 100%;
     z-index: 9999;
 }
 
@@ -111,12 +146,7 @@ body{
     padding-bottom: 100px;
 }
 
-.read-or-hide {
-    background-color: #357F7880;
-    color: white;
-    padding: 0 10px;
-    cursor: pointer;
-}
+
 
 .A1pular{
     top: 644px; 
@@ -270,10 +300,7 @@ body{
     margin-bottom: 100px;
 }
 
-.D2calendario {
-    justify-content: center;
-    margin-left: 12px;
-}
+
 
 .D4p{
     margin: 10px 24px;
@@ -288,4 +315,3 @@ body{
     margin-left: 24px;
     margin-top: 24px; 
 }
-
