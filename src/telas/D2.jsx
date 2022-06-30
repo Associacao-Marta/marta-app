@@ -81,7 +81,7 @@ const D2 = () => {
                 }}
               />
               <InputMask
-                mask={"+55 (99) 99999-9999"}
+                mask={"99 99999-9999"}
                 label="Telefone"
                 onChange={(event) => {
                   setNewPhone(event.target.value);
