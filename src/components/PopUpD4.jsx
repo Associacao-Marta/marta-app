@@ -7,28 +7,27 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
 
-import { db } from "../firebase-config.js"
-import { getDoc, doc} from "firebase/firestore"
+//db
+import { db } from "../firebase-config.js";
+import { getDoc, doc } from "firebase/firestore";
 
 export default function PopUpD4(props) {
   const [open, setOpen] = useState(false);
   const [atendimento, setAtendimento] = useState([]);
+  const [isProtocol, setIsProtocol] = useState(false);
 
-  const getAtendimento =  async () => {
-
-    // const userCollectionRef = collection(db, "atendimento");
-  
-    // const data = await getDocs(userCollectionRef);
-    // setAtendimento(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-
+  const getAtendimento = async () => {
     const docRef = doc(db, "atendimento", props.protocolo);
     const data = await getDoc(docRef);
+    console.log({ docRef });
 
-    if(data.exists){
-    setAtendimento(data.data())
-  } else {
-    setAtendimento([])
-  }
+    if (data.exists) {
+      setAtendimento(data.data());
+      setIsProtocol(true);
+    } else {
+      setAtendimento([]);
+      setIsProtocol(false);
+    }
   };
 
   const handleClickOpen = () => {
@@ -42,9 +41,15 @@ export default function PopUpD4(props) {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen}>
-        Enviar
+      <Button
+        variant="contained"
+        onClick={handleClickOpen}
+        sx={{ borderRadius: 8 }}
+        disabled={!props.protocolo}
+      >
+        Consultar
       </Button>
+
       <Dialog
         open={open}
         onClose={handleClose}
@@ -56,17 +61,28 @@ export default function PopUpD4(props) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            {/* Olá! Seu atendimento com uma de nossas psicólogas está marcado para
-            15h45, do dia 25 de outubro de 2022. Caso deseje desmarcar ou
-            cancelar seu horário conosco, entre em contato por Whatsapp, pelo
-            número (85) 98765-4321. */}
-            Olá, {atendimento.name}! Seu atendimento com uma de nossas {atendimento.type} está marcado para o dia {atendimento.data} às {atendimento.hora}. 
-            Caso deseje desmarcar ou cancelar seu horário conosco, entre em contato por Whatsapp, pelo
-            número (85) 98765-4321.
+            {isProtocol ? (
+              <>
+                Olá, {atendimento.name}! Seu atendimento com uma de nossas{" "}
+                {atendimento.type} está marcado para o dia {atendimento.date} às{" "}
+                {atendimento.time}. Caso deseje desmarcar ou cancelar seu
+                horário conosco, entre em contato por Whatsapp, pelo número (85)
+                98765-4321.
+              </>
+            ) : (
+              <>Protocolo não encontrado</>
+            )}
           </DialogContentText>
         </DialogContent>
+
         <DialogActions>
-          <Button variant="contained" onClick={handleClose} autoFocus>
+          <Button
+            variant="contained"
+            onClick={handleClose}
+            autoFocus
+            color="success"
+            sx={{ color: "#FFFFFF", borderRadius: 8 }}
+          >
             OK
           </Button>
         </DialogActions>
