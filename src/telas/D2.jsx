@@ -3,6 +3,7 @@ import { Button, Stack, Grid, TextField } from "@mui/material";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import PopUpD2 from "../components/PopUpD2.jsx";
+import PopUpCancelarD2 from "../components/PopUpCancelarD2.jsx";
 import Header from "../components/Header";
 import { useState } from "react";
 import InputMask from "react-input-mask";
@@ -18,6 +19,12 @@ import "../assets/css/D.css";
 
 
 const D2 = () => {
+  const [errorText1, setErrorText1] = useState("");
+  const [errorText2, setErrorText2] = useState("");
+  const [errorText3, setErrorText3] = useState("");
+  const [newNameError, setNewNameError] = useState(false);
+  const [newPhoneError, setNewPhoneError] = useState(false);
+  const [newDescriptionError, setNewDescriptionError] = useState(false);
   const [newName, setNewName] = useState("");
   const [newPhone, setNewPhone] = useState("");
   const [newDescription, setNewDescription] = useState("");
@@ -34,6 +41,37 @@ const D2 = () => {
   const setTypeAdvogada = () => {
     setNewType("advogadas");
   };
+
+  const emptyValidator = () => {
+    setNewNameError(false);
+    if(newName == ''){
+      setNewNameError(true);
+      setErrorText1("Preencha o campo acima");
+    } else{
+      setErrorText1("");
+    }
+  }
+
+  const emptyValidator2 = () => {
+    setNewPhoneError(false);
+    if(newPhone.length < 15){
+      setNewPhoneError(true);
+      setErrorText2("Informe um número de telefone válido");
+    } else{
+      setErrorText2("");
+    }
+}
+
+  const emptyValidator3 = () => {
+    setNewDescriptionError(false);
+    if(newDescription == ''){
+      setNewDescriptionError(true);
+      setErrorText3("Preencha o campo acima");
+    } else{
+      setErrorText3("");
+    }
+}
+
 
   const setNewDateNewTime = (date) => {
     var d = new Date(date),
@@ -60,8 +98,6 @@ const D2 = () => {
   }
 
   setNewDateNewTime(selectedCalendar)
-  console.log(formatedDate)
-  console.log(formatedTime)
 
   return (
     <Grid container>
@@ -75,22 +111,32 @@ const D2 = () => {
             <Stack direction="column" className="textForm" spacing={2}>
               <TextField
                 label="Nome Completo"
+                error={newNameError}
+                onBlur={() => {emptyValidator()}}
+                helperText={errorText1}
                 variant="outlined"
                 onChange={(event) => {
                   setNewName(event.target.value);
                 }}
               />
               <InputMask
-                mask={"99 99999-9999"}
+                mask={"(99) 99999-9999"}
+                maskPlaceholder=""
+                error={newPhoneError}
+                onBlur={() => {emptyValidator2()}}
+                helperText={errorText2}
                 label="Telefone"
                 onChange={(event) => {
                   setNewPhone(event.target.value);
                 }}
               >
-                <TextField />
+                <TextField  />
               </InputMask>
               <TextField
                 label="Conte como podemos te ajudar"
+                error={newDescriptionError}
+                onBlur={() => {emptyValidator3()}}
+                helperText={errorText3}
                 variant="outlined"
                 multiline
                 rows={4}
@@ -132,6 +178,7 @@ const D2 = () => {
 
           <Grid container item className="calendarioContainer">
              <DatePicker 
+              autocomplete="off"
               selected={selectedCalendar} 
               onChange={(date) => setSelectedCalendar(date)} 
               placeholderText="Escolha uma data" 
@@ -143,6 +190,7 @@ const D2 = () => {
               ]}
               />
             <DatePicker
+              autocomplete="off"
               selected={selectedCalendar}
               onChange={(date) => setSelectedCalendar(date)}
               showTimeSelect
@@ -168,9 +216,17 @@ const D2 = () => {
             />
           </Grid>
           <Grid container className="buttonContainer" >
-            <Button href="D1">
+            <PopUpCancelarD2
+              newDate={formatedDate}
+              newTime={formatedTime}
+              newName={newName}
+              newPhone={newPhone}
+              newDescription={newDescription}
+              newType={newType}
+            />
+            {/* <Button href="D1">
               Cancelar
-            </Button>
+            </Button> */}
           </Grid>
         </Grid>
       <Grid item className="EspacoInferior" />

@@ -31,7 +31,7 @@ export default function PopUpD2(props) {
   return (
     <div>
       <Button variant="contained" onClick={handleClickOpen} sx={{ borderRadius: 8 }}
-      disabled={!props.newName || !props.newPhone || !props.newDescription || !props.newType}>
+      disabled={props.newTime == "NaN:NaN" || props.newDate == "NaN/NaN/NaN" || !props.newName || !props.newPhone || !props.newDescription || !props.newType}>
         Enviar
       </Button>
       <Dialog
