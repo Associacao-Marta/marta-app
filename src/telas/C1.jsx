@@ -6,7 +6,7 @@ import Carrossel from "../components/Carrossel";
 import CardArtigo from "../components/CardArtigo";
 import "../assets/css/base.css";
 import img3 from "../assets/img/C1artigo3.svg";
-
+import MenuArtigos from "../components/MenuArtigos";
 import Header from "../components/Header";
 import "../assets/css/C.css";
 
@@ -40,8 +40,7 @@ const C1 = () => {
     // </Grid>
 
     <Grid container className="pageCContainer">
-        <Header titulo="Artigos" searchButton={true} />
-        
+        <MenuArtigos />
       <Grid container className="pageContainer">
         <Grid container className="carrosselContainer">
           <Grid item>
