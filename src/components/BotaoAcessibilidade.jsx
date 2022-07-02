@@ -1,5 +1,7 @@
 import React from "react";
 import FontSizeChanger from "react-font-size-changer";
+import up from "../assets/img/btn_increase.svg"
+import down from "../assets/img/btn_decrease.svg"
 
 export default function BotaoAcessibilidade() {
   return (
@@ -13,17 +15,13 @@ export default function BotaoAcessibilidade() {
         range: 10,
       }}
       customButtons={{
-        up: (
-          <span style={{ fontSize: "24px" }}>
-            <b>A</b>
-          </span>
-        ),
-        down: <span style={{ fontSize: "14px" }}>A</span>,
+        up:
+          <img src={up} style={{scale: "1.2"}}/>
+        ,
+        down: <img src={down} style={{scale: "1.2"}}/>
+        ,
         style: {
-          backgroundColor: "#2196F380",
           border: "none",
-          color: "white",
-          borderRadius: "5px",
           width: "30px",
           height: "30px",
         },

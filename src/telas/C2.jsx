@@ -21,8 +21,10 @@ const C2 = () => {
         chip="Entenda melhor"
       ></HeaderTitulo>
 
+
       <Grid container className="pageContainer">
         <Grid container item className="containerArtigo" id="target">
+        <div className="content">
           <LeiaMais className="leiaMais">
             <p>
               Entre todas as causas, pode-se apontar como a maior delas
@@ -44,6 +46,7 @@ const C2 = () => {
               obstáculos que impedem o rompimento do ciclo de violência.
             </p>
           </LeiaMais>
+          </div>
         </Grid>
 
         <Grid container>

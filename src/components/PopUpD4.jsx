@@ -5,6 +5,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import icon from "../assets/img/icon_check.svg"
 import { useState } from "react";
 
 //db
@@ -49,7 +50,7 @@ export default function PopUpD4(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description">
         <DialogTitle id="alert-dialog-title">
-          {"Consulta de Atendimento"}
+        <img src={icon} style={{position: "relative", top: 5}} />  {"Nos vemos em breve"}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">

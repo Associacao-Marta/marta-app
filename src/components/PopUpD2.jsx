@@ -5,7 +5,8 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-
+import iconSuccess from "../assets/img/icon_check.svg"
+import iconFail from "../assets/img/icon_atencao.svg"
 import { db } from "../firebase-config.js"
 import { collection, addDoc, setDoc, doc} from "firebase/firestore"
 
@@ -41,12 +42,30 @@ export default function PopUpD2(props) {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Atendimento Agendado"}
+        {navigator.onLine === true ? (
+              <>
+            <img src={iconSuccess} style={{position: "relative", top: 5}} /> {"Atendimento Agendado"}
+              </>
+            ) : (
+              <>
+              <img src={iconFail} style={{position: "relative", top: 5}} /> {"Opa..."}
+              </>
+            )}
+        
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
+            {navigator.onLine === true ? (
+              <>
             Olá! Muito obrigada por agendar um horário conosco! <br/> <br/>
             Estamos ansiosas para te auxiliar da melhor forma possível!
+              </>
+            ) : (
+              <>
+              Ocorreu um erro inesperado. <br/><br/>
+              Por favor, conecte-se com a internet ou tente novamente mais tarde.
+              </>
+            )}
           </DialogContentText>
         </DialogContent>
         <DialogActions>

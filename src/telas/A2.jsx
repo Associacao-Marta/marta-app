@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import ilustracao from "../assets/img/A1.svg";
+import ilustracao from "../assets/img/A2.svg";
 import "../assets/css/base.css";
 import "../assets/css/AB.css";
 
