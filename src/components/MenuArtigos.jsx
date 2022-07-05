@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
+import "../assets/css/C.css"
 
 export default function MenuArtigos() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -17,29 +18,27 @@ export default function MenuArtigos() {
   return (
     <div>
       <Button
-        id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        variant="contained"
       >
         <SearchIcon />
       </Button>
       <Menu
-        id="basic-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}
+        
       >
         <MenuItem onClick={handleClose}>
-          <a href="C2">Entenda melhor</a>
+          <a className="menuArtigosLinks" href="C2">Entenda melhor</a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a href="C2">Como identificar</a>
+          <a className="menuArtigosLinks" href="C2">Como identificar</a>
         </MenuItem>
       </Menu>
     </div>

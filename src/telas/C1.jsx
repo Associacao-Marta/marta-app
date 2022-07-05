@@ -39,9 +39,16 @@ const C1 = () => {
     //   </IconButton>
     // </Grid>
 
+    
     <Grid container className="pageCContainer">
-        <MenuArtigos />
-      <Grid container className="pageContainer">
+
+      <Stack direction="row" className="headerContainer">
+      <MenuArtigos className="menuArtigos"/>    
+        <Header titulo="Artigos" searchButton={true} />     
+       
+        </Stack>
+
+        <Grid container className="pageContainer">
         <Grid container className="carrosselContainer">
           <Grid item>
             <h2 className="tituloH2" style={{ color: "#337066" }}>
