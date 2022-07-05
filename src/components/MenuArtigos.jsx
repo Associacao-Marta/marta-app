@@ -1,7 +1,8 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import SearchIcon from "@mui/icons-material/Search";
 
 export default function MenuArtigos() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -17,14 +18,13 @@ export default function MenuArtigos() {
     <div>
       <Button
         id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
+        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        variant="outlined"
-        sx={{paddingRight: "200px"}}
+        variant="contained"
       >
-        Buscar
+        <SearchIcon />
       </Button>
       <Menu
         id="basic-menu"
@@ -32,11 +32,15 @@ export default function MenuArtigos() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}><a href='C2'>Entenda melhor</a></MenuItem>
-        <MenuItem onClick={handleClose}><a href='C2'>Como identificar</a></MenuItem>
+        <MenuItem onClick={handleClose}>
+          <a href="C2">Entenda melhor</a>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <a href="C2">Como identificar</a>
+        </MenuItem>
       </Menu>
     </div>
   );
