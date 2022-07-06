@@ -1,5 +1,5 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
+import IconButton from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
@@ -17,14 +17,14 @@ export default function MenuArtigos() {
 
   return (
     <div>
-      <Button
+      <IconButton
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
         <SearchIcon />
-      </Button>
+      </IconButton>
       <Menu
         anchorEl={anchorEl}
         open={open}
