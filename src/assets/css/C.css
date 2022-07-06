@@ -2,6 +2,18 @@
     padding-bottom: 100px;
 }
 
+.headerContainer {
+    display: inline;
+    position: static;
+    justify-content: center;
+}
+
+.menuArtigosLinks {
+    text-decoration: none;
+    color: #1B1B1B;
+    width: 262px;
+}
+
 .carrosselContainer{
     margin-top: 5px;
 }
