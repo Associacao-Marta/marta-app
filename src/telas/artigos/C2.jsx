@@ -16,8 +16,8 @@ const C2 = () => {
       <Header titulo="Artigos" destino="C1" backButton={true}></Header>
       <HeaderTitulo
         img={img}
-        titulo="Por que essas relações de violência perduram tanto tempo?"
-        chip="Entenda melhor"
+        titulo="Quem somos"
+        chip="Sobre a associação"
       ></HeaderTitulo>
 
       <Grid container className="pageContainer">
@@ -25,24 +25,31 @@ const C2 = () => {
           <div className="content">
             <LeiaMais className="leiaMais">
               <p>
-                Entre todas as causas, pode-se apontar como a maior delas
-                justamente o risco ao se romper a relação. Além disso, procurar
-                ajuda é algo visto de maneira vergonhosa por muitas das vítimas
-                e gera muito medo.
+                Uma Associação composta apenas por mulheres, que empatiza com
+                a causa das vítimas da violência estrutural da sociedade, atuando na sua prevenção e conscientização.
               </p>
               <p>
-                Ainda, algo bastante comum é que sempre resta alguma esperança
-                de que tudo se resolva e que o agressor mude o seu comportamento
-                de maneira rápida.
+                A Associação Marta leva este nome em homenagem a uma mulher
+                anônima que, assim como muitas, já sofreu com a violência doméstica,
+                mas que tem uma história inspiradora de superação.
+              </p>
+              <b>O que fazemos?</b>
+              <p>               
+                Além de realizarmos palestras virtuais e presenciais, temos forte
+                presença nas redes sociais com o objetivo de conscientizar e educar os
+                estudantes e a comunidade, a fim de que se tornem cidadãos mais
+                responsáveis, sensíveis aos temas relacionados à causa da Associação.
               </p>
               <p>
-                Não se pode esquecer que, em muitos casos, a vítima encontra-se
-                depende financeiramente do agressor, está isolada da sua rede de
-                apoio e que a sociedade, como um todo, está despreparada para
-                lidar com essas situações, culpabilizando a vítima, inclusive,
-                por algo que ela está sofrendo, o que demonstra a existência de
-                muitos obstáculos que impedem o rompimento do ciclo de
-                violência.
+              Também promovemos projetos de assistência jurídica e psicológica gratuitas para vítimas de violência contra a mulher.
+              </p>
+              <b>Por que fazemos?</b>
+              <p>
+                Acreditamos na importância da conscientização por meio de palestras e
+                pelas redes sociais, tendo em vista que muitas mulheres e adolescentes
+                não sabem identificar as formas de violência, não estando preparadas
+                para se proteger delas. Ainda, este método nos possibilita capacitar o
+                público-alvo para perceber, se sensibilizar e dar suporte quando se depara com uma situação de violência.
               </p>
             </LeiaMais>
           </div>
