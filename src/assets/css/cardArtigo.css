@@ -7,11 +7,29 @@
     border-radius: 4px;
 }
 
+.cardContainerGrande{
+    min-width: 312px;
+    max-width: 312px;
+    min-height: 85px;
+    max-height: 85px;
+    background-color: #D3EBD3;
+    border-radius: 4px;
+    align-items: center;
+}
+
 .iconContainer-cardArtigo{
     padding: 35px 8px 0 16px;
     justify-content: center;
 }
 
+.iconContainer-cardArtigoGrande{
+    padding: 2px 16px 0 16px;
+}
+
 .tituloContainer-cardArtigo{
     width: 150px;
+}
+
+.tituloContainer-cardArtigoGrande{
+    width: 218px;
 }

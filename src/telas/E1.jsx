@@ -4,8 +4,6 @@ import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import Mapa from "../components/mapa/mapa";
 import "../assets/css/base.css";
-import Header from "../components/Header";
-import BackButton from "../components/BackButton";
 import { IconButton } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 

@@ -16,7 +16,7 @@ export default function MenuArtigos() {
   };
 
   return (
-    <div className="TopButton">
+    <div className="TopButton" style={{left:"-10px"}}>
       <IconButton
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
@@ -32,16 +32,16 @@ export default function MenuArtigos() {
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}
-        
+
       >
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C2">Sobre violência de gênero</a>
+          <a className="menuArtigosLinks" href="C16">Sobre violência de gênero</a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C2">Legislação</a>
+          <a className="menuArtigosLinks" href="C17">Legislação</a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C2">Conheça a aplicação</a>
+          <a className="menuArtigosLinks" href="C18">Conheça a aplicação</a>
         </MenuItem>
       </Menu>
     </div>

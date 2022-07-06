@@ -1,7 +1,5 @@
 import React from "react";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
-import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import BookIcon from '@mui/icons-material/Book';

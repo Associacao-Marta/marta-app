@@ -18,7 +18,7 @@ const C2 = () => {
         img={img}
         titulo="Por que essas relações de violência perduram tanto tempo?"
         chip="Entenda melhor"
-      ></HeaderTitulo>
+      />
 
       <Grid container className="pageContainer">
         <Grid container item className="containerArtigo" id="target">
