@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import BackButton from "./BackButton";
+import MenuArtigos from "../components/MenuArtigos";
 import '../assets/css/base.css'
 
 const Header = (props) => {
@@ -14,7 +15,9 @@ const Header = (props) => {
 
     const SearchButtonActive = (props) => {
         if(props.searchButton === true){
-            return("")
+            return(
+                <MenuArtigos/>
+            )
         }
     }
 
