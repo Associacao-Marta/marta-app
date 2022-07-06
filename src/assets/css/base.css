@@ -18,6 +18,7 @@ body{
 }
 
 .tituloHeader {
+    background-color: transparent;
     margin-top: 32px;
     font-weight: 600;
     font-size: 18px;
@@ -291,8 +292,9 @@ body{
 
 .D2botoes {
     justify-content: center;
-        margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 
 .D2botaoindividual {
     margin-bottom: 100px;
@@ -312,4 +314,16 @@ body{
     z-index: 9997;
     margin-left: 24px;
     margin-top: 24px; 
+}
+
+.MuiMobileStepper-dotActive{
+    background-color:#357F78
+}
+
+.css-oxfx9-MuiPaper-root-MuiMobileStepper-root{
+    background-color:transparent !important;
+}
+
+.css-rh92k-MuiPaper-root-MuiMobileStepper-root {
+    background-color:transparent !important;
 }
