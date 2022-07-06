@@ -3,12 +3,9 @@
 }
 
 .headerContainer {
-    position: relative;
+    display: inline;
+    position: static;
     justify-content: center;
-}
-
-.menuArtigos {
-    margin: 24px 0 0 -24px;
 }
 
 .menuArtigosLinks {
