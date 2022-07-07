@@ -12,7 +12,7 @@ const E1 = () => {
   return (
     <Grid container>
     <Grid className="containerBotao">
-     <IconButton color="primary" variant="" aria-label="Voltar" href="A1">
+     <IconButton color="primary" variant="" aria-label="Voltar" href="C1">
         <ArrowBackIosNewIcon />
       </IconButton>
     </Grid>

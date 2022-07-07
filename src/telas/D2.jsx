@@ -101,7 +101,13 @@ const D2 = () => {
 
   return (
     <Grid container>
-      <Header titulo="Agendar atendimento"/>
+      <Header titulo="Agendar atendimento" backButtonD2={true}
+              newDate={formatedDate}
+              newTime={formatedTime}
+              newName={newName}
+              newPhone={newPhone}
+              newDescription={newDescription}
+              newType={newType}/>
 
       <Grid container className="pageContainer">
         <Grid container className="formContainer">

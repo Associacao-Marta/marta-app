@@ -51,6 +51,7 @@ function App() {
         <Router>
           <Routes>
             <Route exact path="/" element={localData? <C1 /> : <A1 />} />
+            <Route exact path="A1" element={<A1 />} />
             <Route exact path="A2" element={<A2 />} />
             <Route exact path="A3" element={<A3 />} />
             <Route exact path="A4" element={<A4 />} />
