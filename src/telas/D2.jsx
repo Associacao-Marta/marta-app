@@ -101,7 +101,7 @@ const D2 = () => {
 
   return (
     <Grid container>
-      <Header titulo="Agendar atendimento" backButton={true} destino="D1"/>
+      <Header titulo="Agendar atendimento"/>
 
       <Grid container className="pageContainer">
         <Grid container className="formContainer">
@@ -229,8 +229,7 @@ const D2 = () => {
       <Grid item className="EspacoInferior" />
       </Grid>
 
-      <BotaoDoPanico />
-      <MenuInferior/>
+      <BotaoDoPanico alt={725}/>
     </Grid>
   );
 };

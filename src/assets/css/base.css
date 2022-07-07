@@ -75,7 +75,6 @@ body{
 
 .BotaoDoPanico {
     position: fixed;
-    top: 660px;
     z-index: 9998;
     border: none;
     outline: none;
