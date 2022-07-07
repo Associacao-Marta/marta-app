@@ -9,8 +9,10 @@ import { Fab, Grid } from "@mui/material";
 import Botao from "../assets/img/btn_panico.svg";
 import "../assets/css/base.css";
 
-export default function PopUpBotaoDoPanico() {
+export default function PopUpBotaoDoPanico(props) {
   const [open, setOpen] = React.useState(false);
+  let altura;
+  props.alt === undefined ? altura = 660 : altura = props.alt
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -20,8 +22,9 @@ export default function PopUpBotaoDoPanico() {
     setOpen(false);
   };
 
+
   return (
-    <Grid container className="BotaoDoPanico">
+    <Grid container className="BotaoDoPanico" style={{top:altura}}>
       <Fab color="warning" variant="contained" onClick={handleClickOpen}>
         <img src={Botao} alt="Botão do Pânico" />
       </Fab>

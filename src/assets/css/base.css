@@ -23,35 +23,40 @@ body{
     font-weight: 600;
     font-size: 18px;
     text-align: center;
+    letter-spacing: 0.02em;
 }
 
 .TopButton {
     position: absolute;
     margin-top: 24px;
-    padding-left: 24px;
+    padding-left: 15px;
 }
 
 .tituloH1 {
     font-size: 20px;
     font-weight: 700;
     padding: 4px 0 4px 0;
+    letter-spacing: 0.02em;
 }
 
 .tituloH2 {
     font-size: 18px;
     font-weight: 500;
     padding: 4px 0 4px 0;
+    letter-spacing: 0.02em;
 }
 
 .subtitulo {
     font-size: 16px;
     font-weight: 700;
     padding: 4px 0 4px 0;
+    letter-spacing: 0.02em;
 }
 
 .body2{
     font-weight: 600;
     font-size: 14px;
+    letter-spacing: 0.02em;
 }
 
 .buttonContainer{
@@ -64,12 +69,12 @@ body{
     text-align: center;
     padding: 24px;
     margin-bottom: 8px;
+    letter-spacing: 0.02em;
 }
 
 
 .BotaoDoPanico {
     position: fixed;
-    top: 660px;
     z-index: 9998;
     border: none;
     outline: none;
@@ -89,231 +94,6 @@ body{
 
 .EspacoInferior {
     padding-bottom: 100px;
-}
-
-
-
-.container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-}
-
-.containerMaior {
-    height: 800px;
-    width: 360px;
-}
-
-.ilustraca {
-    margin-top: 144px;
-}
-
-.botaoOnboarding {
-    justify-content: center;
-    margin-top: 580px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 36px;
-    text-align: center;
-    letter-spacing: 1.25px;
-    text-transform: capitalize;
-}
-
-.tituloOnboardin {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px;
-    text-align: center;
-}
-
-.A1body2{
-    position: absolute;
-    width: 312px;
-    left: calc(50% - 312px/2);
-    top: calc(50% - 84px/2 + 62px);
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    letter-spacing: 0.02em;
-}
-
-.Artigo {
-    padding: 15px 20px;
-}
-
-
-
-.A1pular{
-    top: 644px; 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 36px;
-    text-align: center;
-    letter-spacing: 1.25px;
-    text-transform: capitalize;
-}
-
-.B1ilustracao {
-    justify-content: center;
-    margin-top: 120px;
-}
-
-
-.B1body1{
-    position: relative;
-    align-items: center;
-    top: 528px;
-    letter-spacing: 0.5px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.B1body2 {
-    position: fixed;
-    width: 312px;
-    left: 24px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    letter-spacing: 0.02em;
-}
-
-
-.C1buscar{
-    align-items: center;
-    margin-left: 24px;
-    margin-top: 24px;
-}
-
-.C2botoes {
-    margin: 0 12px 6px 12px;
-}
-
-.C1chipindividual {
-    margin-right: 5px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;    
-}
-
-.C1titulo{
-    color: #357F78;
-}
-
-.C1container {
-    margin-left: 14px;
-}
-
-.C2container {
-    margin-left: -20px;
-    max-width: 360px;
-}
-.C2voltar {
-    margin-top:24px;
-    margin-left: 10px;
-}
-
-.C2titulo {
-    color: #1B1B1B;
-    margin-left: 24px;
-    
-}
-
-.C2p {
-    margin-left: 24px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: 0.02em;
-}
-
-
-.D1titulo {
-    color: #357F78;
-    width: 312px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 16px;
-    text-align: center;
-    
-}
-
-.D1container{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 380px;
-}
-
-.D1cards {
-    margin-top: 0;
-    margin-left: 12px;
-}
-
-.D1botoes {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    margin-top: 540px;
-}
-
-.D1botaoindividual {
-    padding-top: 30px;
-}
-
-.D2titulo {
-    margin-left: 24px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.D2form {
-    margin-left: 24px;
-}
-
-.D2caixa {
-    margin-bottom: 24px;
-    width: 300px;
-}
-
-.D2botoes {
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-
-.D2botaoindividual {
-    margin-bottom: 100px;
-}
-
-
-
-.D4p{
-    margin: 10px 24px;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
-}
-
-.E1voltar {
-    position: fixed; 
-    z-index: 9997;
-    margin-left: 24px;
-    margin-top: 24px; 
 }
 
 .MuiMobileStepper-dotActive{

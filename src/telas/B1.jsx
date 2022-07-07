@@ -7,6 +7,14 @@ import "../assets/css/AB.css";
 const B1 = () => {
   const [checked, setChecked] = React.useState(false);
 
+  React.useEffect(() => {
+    localStorage.setItem('checked', JSON.stringify(checked));
+    if (checked) {
+      setChecked(checked);
+    }
+  }, [checked]);
+
+  
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
