@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import A1 from "./telas/A1";
 import A2 from "./telas/A2";
@@ -33,12 +34,24 @@ import D4 from "./telas/D4";
 import E1 from "./telas/E1";
 
 function App() {
+  const [localData, setLocalData] = useState();
+
+  useEffect(() => {
+    setLocalData(JSON.parse(localStorage.getItem('checked')));
+    if (localData) {
+      setLocalData(localData);
+    }
+  });
+
+  console.log(localData);
+
   return (
     <div className="App">
       <Typography>
         <Router>
           <Routes>
-            <Route exact path="/" element={<A1 />} />
+            <Route exact path="/" element={localData? <C1 /> : <A1 />} />
+            <Route exact path="A1" element={<A1 />} />
             <Route exact path="A2" element={<A2 />} />
             <Route exact path="A3" element={<A3 />} />
             <Route exact path="A4" element={<A4 />} />

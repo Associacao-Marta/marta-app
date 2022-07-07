@@ -54,7 +54,7 @@ const D2 = () => {
 
   const emptyValidator2 = () => {
     setNewPhoneError(false);
-    if(newPhone.length < 15){
+    if(newPhone.length < 13){
       setNewPhoneError(true);
       setErrorText2("Informe um número de telefone válido");
     } else{
@@ -101,7 +101,13 @@ const D2 = () => {
 
   return (
     <Grid container>
-      <Header titulo="Agendar atendimento" backButton={true} destino="D1"/>
+      <Header titulo="Agendar atendimento" backButtonD2={true}
+              newDate={formatedDate}
+              newTime={formatedTime}
+              newName={newName}
+              newPhone={newPhone}
+              newDescription={newDescription}
+              newType={newType}/>
 
       <Grid container className="pageContainer">
         <Grid container className="formContainer">
@@ -120,7 +126,7 @@ const D2 = () => {
                 }}
               />
               <InputMask
-                mask={"(99) 99999-9999"}
+                mask={"99 99999-9999"}
                 maskPlaceholder=""
                 error={newPhoneError}
                 onBlur={() => {emptyValidator2()}}
@@ -224,16 +230,12 @@ const D2 = () => {
               newDescription={newDescription}
               newType={newType}
             />
-            {/* <Button href="D1">
-              Cancelar
-            </Button> */}
           </Grid>
         </Grid>
       <Grid item className="EspacoInferior" />
       </Grid>
 
-      <BotaoDoPanico />
-      <MenuInferior/>
+      <BotaoDoPanico alt={725}/>
     </Grid>
   );
 };

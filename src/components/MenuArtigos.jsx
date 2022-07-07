@@ -3,6 +3,7 @@ import IconButton from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
+import ListIcon from '@mui/icons-material/List';
 import "../assets/css/C.css"
 
 export default function MenuArtigos() {
@@ -16,14 +17,14 @@ export default function MenuArtigos() {
   };
 
   return (
-    <div className="TopButton">
+    <div className="TopButton" style={{left:"-10px"}}>
       <IconButton
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <SearchIcon />
+        <ListIcon />
       </IconButton>
       <Menu
         anchorEl={anchorEl}
@@ -32,16 +33,16 @@ export default function MenuArtigos() {
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}
-        
+
       >
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C2">Sobre violência de gênero</a>
+          <a className="menuArtigosLinks" href="C16">Sobre violência de gênero</a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C2">Legislação</a>
+          <a className="menuArtigosLinks" href="C17">Legislação</a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C2">Conheça a aplicação</a>
+          <a className="menuArtigosLinks" href="C18">Conheça a aplicação</a>
         </MenuItem>
       </Menu>
     </div>

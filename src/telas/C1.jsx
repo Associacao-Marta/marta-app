@@ -4,16 +4,10 @@ import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
 import Carrossel from "../components/Carrossel";
 import CardArtigo from "../components/CardArtigo";
-import "../assets/css/base.css";
 import img3 from "../assets/img/C1artigo3.svg";
 import Header from "../components/Header";
+import "../assets/css/base.css";
 import "../assets/css/C.css";
-
-const busca = [
-  { label: "Buscar" },
-  { label: "Entenda melhor" },
-  { label: "Como identificar" },
-];
 
 const C1 = () => {
   return (
