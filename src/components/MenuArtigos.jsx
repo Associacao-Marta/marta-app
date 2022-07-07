@@ -3,6 +3,7 @@ import IconButton from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
+import ListIcon from '@mui/icons-material/List';
 import "../assets/css/C.css"
 
 export default function MenuArtigos() {
@@ -23,7 +24,7 @@ export default function MenuArtigos() {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <SearchIcon />
+        <ListIcon />
       </IconButton>
       <Menu
         anchorEl={anchorEl}
