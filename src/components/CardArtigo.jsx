@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Stack, Link } from "@mui/material";
 import "../assets/css/cardArtigo.css";
 import "../assets/css/base.css";
-import icon_Artigo from "../assets/img/icon_artigo.svg";
+import icon_Artigo from "../assets/img/C5ilustracao.svg";
 import icon_Artigo2 from "../assets/img/icon_artigo2.svg";
 
 const CardArtigo = (props) => {

@@ -65,8 +65,9 @@ const C2 = () => {
               <CardArtigo
                 titulo="Sinais de que a mulher está sofrendo violência doméstica"
                 tema="Como identificar"
-                href="C2"
+                href="C6"
               />
+
             </Stack>
           </Grid>
         </Grid>
