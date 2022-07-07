@@ -16,7 +16,7 @@ const C9 = () => {
       <Header titulo="Artigos" destino="C1" backButton={true}></Header>
       <HeaderTitulo
         img={img}
-        titulo="Princípio da organização de atendimento público específico e especializado para mulheres e vítimas de violência doméstica no SUS"
+        titulo="Atendimento público específico e especializado no SUS"
         chip="Legislação"
       ></HeaderTitulo>
 
@@ -25,9 +25,10 @@ const C9 = () => {
           <div className="content">
             <LeiaMais className="leiaMais">
             <p>
-            O atendimento especializado para mulheres e vítimas de violência doméstica e sexual tornou-se um dos princípios do Sistema Único de Saúde (SUS) de forma a garantir, entre outros direitos, o acompanhamento psicológico e cirurgias plásticas reparadoras, se for o caso, como se pode ver em maiores detalhes a seguir:
-            <br />
-            <b><a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/L13427.htm">Lei 13.427/2015</a></b>
+            O atendimento especializado para mulheres e vítimas de violência doméstica e sexual tornou-se um dos princípios do Sistema Único de Saúde (SUS) de forma a garantir, entre outros direitos, o acompanhamento psicológico e cirurgias plásticas reparadoras, se for o caso, como se pode ver em maiores detalhes a seguir: 
+            </p>
+            <p>
+            <b><a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/L13427.htm">Lei 13.427/2017</a></b>
             </p>
             </LeiaMais>
           </div>

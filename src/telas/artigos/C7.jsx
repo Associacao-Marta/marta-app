@@ -30,7 +30,7 @@ const C7 = () => {
              <p>
              O Brasil é considerado o quinto país do mundo com maior número de feminicídios, fato este que demonstra por si só a importância dessa legislação que está entrou somente em 2015 e pode ser consultada no link a seguir:
              <br />
-             <b><a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13104.htm">Lei Federal 13.104/15</a></b>
+             <b><a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13104.htm">Lei Federal 13.104/2015</a></b>
              </p>
             </LeiaMais>
           </div>

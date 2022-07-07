@@ -16,7 +16,7 @@ const C15 = () => {
       <Header titulo="Artigos" destino="C1" backButton={true}></Header>
       <HeaderTitulo
         img={img}
-        titulo="Botão de Emergência"
+        titulo="Quem desenvolveu"
         chip="Conheça a aplicação"
       ></HeaderTitulo>
 
@@ -25,14 +25,13 @@ const C15 = () => {
           <div className="content">
             <LeiaMais className="leiaMais">
             <p>Essa aplicação foi desenvolvida para a disciplina de Projeto Integrado 1 do curso de Sistemas e Mídias Digitais da Universidade Federal do Ceará, em parceria com a Associação Marta. O produto foi projetado pela equipe Os Cappuccinos, composta pelo seguintes integrantes:</p>
-            <br />
-            <li>
-                <ul>Giselle Fonseca - Product Manager (<a href="https://www.linkedin.com/in/giselle-fonseca-b1a2561b9/">Linkedin</a>)</ul>
-                <ul>Jadson Alcantara - UX/UI Designer (<a href="https://www.linkedin.com/in/jadsonalcantara/">Linkedin</a>)</ul>
-                <ul>Lucas Xavier - Desenvolvedor e Lead Designer (<a href="https://www.linkedin.com/in/lucasemanuelx/">Linkedin</a>)</ul>
-                <ul>Lucas de Oliveira - Desenvolvedor, Analista de Requisitos e Arquiteto da Informação (<a href="https://www.linkedin.com/in/lucasmdoliveira/">Linkedin</a>)</ul>
-                <ul>Sami Nagahama - Desenvolvedora Full-Stack (<a href="https://www.linkedin.com/in/saminagahama/">Linkedin</a>)</ul>
-            </li>
+            
+            <p><b>Giselle Fonseca</b> - Product Manager (<a href="https://www.linkedin.com/in/giselle-fonseca-b1a2561b9/">Linkedin</a>)</p>
+            <p><b>Jadson Alcantara</b> - UX/UI Designer (<a href="https://www.linkedin.com/in/jadsonalcantara/">Linkedin</a>)</p>
+            <p><b>Lucas Xavier</b> - Desenvolvedor e Lead Designer (<a href="https://www.linkedin.com/in/lucasemanuelx/">Linkedin</a>)</p>
+            <p><b>Lucas de Oliveira</b> - Desenvolvedor, Analista de Requisitos e Arquiteto da Informação (<a href="https://www.linkedin.com/in/lucasmdoliveira/">Linkedin</a>)</p>
+            <p><b>Sami Nagahama</b> - Desenvolvedora Full-Stack (<a href="https://www.linkedin.com/in/saminagahama/">Linkedin</a>)</p>
+            
            </LeiaMais>
           </div>
         </Grid>

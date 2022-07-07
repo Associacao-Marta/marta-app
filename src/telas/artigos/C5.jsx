@@ -6,7 +6,7 @@ import CardArtigo from "../../components/CardArtigo";
 import HeaderTitulo from "../../components/HeaderArtigo";
 import LeiaMais from "../../components/LeiaMais";
 import Header from "../../components/Header";
-import img from "../../assets/img/C2ilustracao.svg";
+import img from "../../assets/img/C5ilustracao.svg";
 import "../../assets/css/base.css";
 import "../../assets/css/C.css";
 

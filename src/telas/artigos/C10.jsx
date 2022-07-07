@@ -30,7 +30,7 @@ const C10 = () => {
             <p>
             A Lei em questão prevê ações que conscientizem a sociedade sobre a violência contra as mulheres e ampliem as possibilidades de denúncia:
             <br />
-            <b><a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/Lei/L14192.htm">Lei 14.192/21</a></b>
+            <b><a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/Lei/L14192.htm">Lei 14.192/2021</a></b>
             </p>
             </LeiaMais>
           </div>
