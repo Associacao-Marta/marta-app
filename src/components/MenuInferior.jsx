@@ -16,20 +16,31 @@ const MenuInferior = () => {
     setValue(event, newValue);
   };
 
+  const valueArtigos = ['/','/C1','/C2','/C3','/C4','/C5','/C6','/C7','/C8','/C9'
+  ,'/C10','/C11','/C12','/C13','/C14','/C15','/C16','/C17','/C18']
+
+  const valueAtendimento = ['/D1','/D2',"/D3"]
+
+  let indexArtigos = valueArtigos.indexOf(window.location.pathname)
+  let indexAtendimento = valueAtendimento.indexOf(window.location.pathname)
+
 
   return (
     <BottomNavigation showLabels value={value} onChange={handleChange} className="Menu">
       <BottomNavigationAction
         href="C1"
         label="Artigos"
-        value={'/C1'}
-        icon={value==='/C1'?<BookIcon/>:<BookOutlinedIcon/>}
+        value={valueArtigos[indexArtigos]}
+
+        icon={value===valueArtigos[indexArtigos]?<BookIcon/>:<BookOutlinedIcon/>
+      }
       />
       <BottomNavigationAction
         href="D1"
         label="Atendimento"
-        value={'/D1'}
-        icon={value==='/D1'?<CalendarMonthIcon/>:<CalendarMonthOutlinedIcon/>}
+        value={valueAtendimento[indexAtendimento]}
+
+        icon={value===valueAtendimento[indexAtendimento]?<CalendarMonthIcon/>:<CalendarMonthOutlinedIcon/>}
       />
       <BottomNavigationAction
         href="E1"

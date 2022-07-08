@@ -1,12 +1,11 @@
 import React from "react";
-import { Grid, Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import BotaoDoPanico from "../../components/BotaoDoPanico";
 import MenuInferior from "../../components/MenuInferior";
-import CardArtigo from "../../components/CardArtigo";
-import HeaderTitulo from "../../components/HeaderArtigo";
-import LeiaMais from "../../components/LeiaMais";
+import HeaderTitulo from "../../components/C/HeaderArtigo";
+import LeiaMais from "../../components/C/LeiaMais";
 import Header from "../../components/Header";
-import img from "../../assets/img/C4ilustracao.svg";
+import img from "../../assets/img/artigos/C4_icon.svg";
 import "../../assets/css/base.css";
 import "../../assets/css/C.css";
 
@@ -15,6 +14,8 @@ const C4 = () => {
     <Grid container className="">
       <Header titulo="Artigos" destino="C1" backButton={true}></Header>
       <HeaderTitulo
+        margin_top="16px"
+        margin_bottom="75px"
         img={img}
         titulo="Doações"
         chip="Sobre a associação"
@@ -40,20 +41,6 @@ const C4 = () => {
         </Grid>
 
         <Grid container className="EspacoInferior" />
-        <Grid container>
-          <Grid item>
-            <h1 className="tituloH1">Veja também</h1>
-          </Grid>
-          <Grid container dir="ltr">
-            <Stack direction="row" spacing={2}>
-              <CardArtigo
-                titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tema="Como identificar"
-                href="C2"
-              />
-            </Stack>
-          </Grid>
-        </Grid>
       </Grid>
 
       <Grid container className="EspacoInferior" />

@@ -2,11 +2,11 @@ import React from "react";
 import { Grid, Stack } from "@mui/material";
 import BotaoDoPanico from "../../components/BotaoDoPanico";
 import MenuInferior from "../../components/MenuInferior";
-import CardArtigo from "../../components/CardArtigo";
-import HeaderTitulo from "../../components/HeaderArtigo";
-import LeiaMais from "../../components/LeiaMais";
+import CardArtigo from "../../components/C/CardArtigo";
+import HeaderTitulo from "../../components/C/HeaderArtigo";
+import LeiaMais from "../../components/C/LeiaMais";
 import Header from "../../components/Header";
-import img from "../../assets/img/C6ilustracao.svg";
+import img from "../../assets/img/artigos/C6_icon.svg";
 import "../../assets/css/base.css";
 import "../../assets/css/C.css";
 
@@ -17,7 +17,7 @@ const C6 = () => {
       <HeaderTitulo
         img={img}
         titulo="Sinais de que a mulher está sofrendo violência doméstica"
-        chip="Entenda melhor"
+        chip="Violência contra a mulher"
       ></HeaderTitulo>
 
       <Grid container className="pageContainer">
@@ -41,11 +41,7 @@ const C6 = () => {
           </Grid>
           <Grid container dir="ltr">
             <Stack direction="row" spacing={2}>
-              <CardArtigo
-                titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tema="Como identificar"
-                href="C2"
-              />
+            <CardArtigo titulo="Por que essas relações de violência perduram?" tela="C5" href="C5"/>
             </Stack>
           </Grid>
         </Grid>

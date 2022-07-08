@@ -2,11 +2,11 @@ import React from "react";
 import { Grid, Stack } from "@mui/material";
 import BotaoDoPanico from "../../components/BotaoDoPanico";
 import MenuInferior from "../../components/MenuInferior";
-import CardArtigo from "../../components/CardArtigo";
-import HeaderTitulo from "../../components/HeaderArtigo";
-import LeiaMais from "../../components/LeiaMais";
+import CardArtigo from "../../components/C/CardArtigo";
+import HeaderTitulo from "../../components/C/HeaderArtigo";
+import LeiaMais from "../../components/C/LeiaMais";
 import Header from "../../components/Header";
-import img from "../../assets/img/C12ilustracao.svg";
+import img from "../../assets/img/artigos/C11-12_icon.svg";
 import "../../assets/css/base.css";
 import "../../assets/css/C.css";
 
@@ -43,15 +43,14 @@ const C12 = () => {
           <Grid item>
             <h1 className="tituloH1">Veja também</h1>
           </Grid>
-          <Grid container dir="ltr">
-            <Stack direction="row" spacing={2}>
-              <CardArtigo
-                titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tema="Como identificar"
-                href="C2"
-              />
-            </Stack>
-          </Grid>
+          <Grid container className="carrosselArtigos" dir="ltr">
+          <Stack direction="row" spacing={2}>
+            <CardArtigo titulo="Artigos" tela="C11-12" href="C11"/>
+            <CardArtigo titulo="Locais de Apoio" tela="C13" href="C13"/>
+            <CardArtigo titulo="Botão de pânico" tela="C14" href="C14"/>
+            <CardArtigo titulo="Quem desenvolveu" tela="C15" href="C15"/>
+          </Stack>
+        </Grid>
         </Grid>
       </Grid>
 
