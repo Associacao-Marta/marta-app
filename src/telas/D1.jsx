@@ -36,7 +36,7 @@ const D1 = () => {
           </Button>
         </Grid>
         <Grid container className="buttonContainer">
-          <Button href="D4">Consultar Atendimento</Button>
+          <Button href="D3">Consultar Atendimento</Button>
         </Grid>
       </Grid>
 

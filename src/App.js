@@ -30,7 +30,7 @@ import C17 from "./telas/C17";
 import C18 from "./telas/C18";
 import D1 from "./telas/D1";
 import D2 from "./telas/D2";
-import D4 from "./telas/D4";
+import D3 from "./telas/D3";
 import E1 from "./telas/E1";
 
 function App() {
@@ -78,7 +78,7 @@ function App() {
             <Route exact path="C18" element={<C18 />} />
             <Route exact path="D1" element={<D1 />} />
             <Route exact path="D2" element={<D2 />} />
-            <Route exact path="D4" element={<D4 />} />
+            <Route exact path="D3" element={<D3 />} />
             <Route exact path="E1" element={<E1 />} />
           </Routes>
         </Router>

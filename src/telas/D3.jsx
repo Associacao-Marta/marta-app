@@ -2,13 +2,13 @@ import React from "react";
 import { Grid, TextField } from "@mui/material";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
-import PopUpD4 from "../components/D/PopUpD4";
+import PopUpD3 from "../components/D/PopUpD3";
 import Header from "../components/Header";
 import InputMask from "react-input-mask";
 import "../assets/css/base.css";
 import "../assets/css/D.css";
 
-const D4 = () => {
+const D3 = () => {
   const [protocolo, setProtocolo] = React.useState();
 
   return (
@@ -32,7 +32,7 @@ const D4 = () => {
     </Grid>
 
       <Grid container item className="buttonContainer">
-          <PopUpD4 protocolo={protocolo}/>
+          <PopUpD3 protocolo={protocolo}/>
       </Grid>
 
       <BotaoDoPanico />
@@ -42,4 +42,4 @@ const D4 = () => {
   );
 };
 
-export default D4;
+export default D3;
