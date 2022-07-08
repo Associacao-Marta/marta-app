@@ -12,7 +12,7 @@ import "../assets/css/base.css";
 export default function PopUpBotaoDoPanico(props) {
   const [open, setOpen] = React.useState(false);
   let altura;
-  props.alt === undefined ? altura = 660 : altura = props.alt
+  props.alt === undefined ? altura = "82.5vh" : altura = props.alt
 
   const handleClickOpen = () => {
     setOpen(true);

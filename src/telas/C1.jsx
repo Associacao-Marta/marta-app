@@ -49,7 +49,7 @@ const C1 = () => {
           </Stack>
         </Grid>
         </Grid>
-        <div style={{margin: "25px"}} />
+        <div style={{margin: "50px"}} />
       </Grid>
 
       <BotaoDoPanico />

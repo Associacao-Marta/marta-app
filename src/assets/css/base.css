@@ -72,16 +72,12 @@ body{
     letter-spacing: 0.02em;
 }
 
-.BotaoDoPanico {
+ .BotaoDoPanico {
     position: fixed;
     z-index: 9998;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    left: 280px;
-    padding-bottom: 16px;
-    border-radius: 10px;
-}
+    left: 77vw;
+} 
+
 
 .Menu {
     position: fixed;
