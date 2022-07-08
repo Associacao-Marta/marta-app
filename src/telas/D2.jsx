@@ -193,6 +193,9 @@ const D2 = () => {
               includeDateIntervals={[
                 { start: new Date("2022/07/13"), end: addDays(new Date("2022/07/13"), 31) },
               ]}
+              onKeyDown={(e) => {
+                e.preventDefault();
+             }}
               />
             <DatePicker
               autocomplete="off"
@@ -207,6 +210,9 @@ const D2 = () => {
               shouldCloseOnSelect={false}
               minTime={setHours(setMinutes(new Date(), 0), 8)}
               maxTime={setHours(setMinutes(new Date(), 8), 17)}
+              onKeyDown={(e) => {
+                e.preventDefault();
+             }}
               />
           </Grid>
 
