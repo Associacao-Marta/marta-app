@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../App.css";
 
 const  LeiaMais = ({ children }) => {
   const text = children;

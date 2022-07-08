@@ -5,9 +5,9 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import iconSuccess from "../assets/img/icon_check.svg"
-import iconFail from "../assets/img/icon_atencao.svg"
-import { db } from "../firebase-config.js"
+import iconSuccess from "../../assets/img/icon_check.svg"
+import iconFail from "../../assets/img/icon_atencao.svg"
+import { db } from "../../firebase-config.js"
 import { collection, addDoc, setDoc, doc} from "firebase/firestore"
 
 export default function PopUpD2(props) {

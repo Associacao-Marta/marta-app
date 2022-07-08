@@ -1,11 +1,10 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import ilustracao from "../assets/img/A5.svg";
+import ilustracao from "../assets/img/Onboarding/A5.svg";
 import "../assets/css/base.css";
 import "../assets/css/AB.css";
 

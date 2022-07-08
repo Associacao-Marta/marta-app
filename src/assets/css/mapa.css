@@ -4,11 +4,12 @@
 }
 
 .leaflet-left {
-    left:310px;
+    left:295px;
+    margin-top: 2px;
 }
 
 .containerBotao{
-    padding:10px;
+    padding:24px 0 0 16px;
     position:absolute;
     z-index:999;
 }

@@ -24,7 +24,7 @@ export default function PopUpCancelarD2(props) {
   };
 
   const href = () => {
-    if(props.newTime == "NaN:NaN" && props.newDate == "NaN/NaN/NaN" && !props.newName && !props.newPhone && !props.newDescription && !props.newType){
+    if(props.newTime === "NaN:NaN" && props.newDate == "NaN/NaN/NaN" && !props.newName && !props.newPhone && !props.newDescription && !props.newType){
       let href2 = "D1";
       return(href2)
     }

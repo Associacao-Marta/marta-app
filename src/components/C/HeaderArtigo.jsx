@@ -1,13 +1,13 @@
 import React from "react";
 import { Grid, Chip } from "@mui/material";
-import "../assets/css/base.css";
-import "../assets/css/C.css";
-import BotaoAcessibilidade from "../components/BotaoAcessibilidade";
+import "../../assets/css/base.css";
+import "../../assets/css/C.css"
+import BotaoAcessibilidade from "../C/BotaoAcessibilidade";
 
 const HeaderTitulo = (props) => {
   return (
     <Grid container>
-      <Grid container className="iconArtigo">
+      <Grid container className="iconArtigo" style={{marginTop: props.margin_top, marginBottom: props.margin_bottom}}>
         <img src={props.img} />
       </Grid>
       <Grid container className="circuloIcon"/>

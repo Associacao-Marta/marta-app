@@ -5,12 +5,12 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import iconCheck from "../assets/img/icon_check.svg"
-import iconAtencao from "../assets/img/icon_atencao.svg"
+import iconCheck from "../../assets/img/icon_check.svg"
+import iconAtencao from "../../assets/img/icon_atencao.svg"
 import { useState } from "react";
 
 //db
-import { db } from "../firebase-config.js";
+import { db } from "../../firebase-config.js";
 import { getDoc, doc } from "firebase/firestore";
 
 export default function PopUpD4(props) {
@@ -75,7 +75,8 @@ export default function PopUpD4(props) {
               <>
                 Olá, {atendimento.name}! Seu atendimento com uma de nossas{" "}
                 {atendimento.type} está marcado para o dia {atendimento.date} às{" "}
-                {atendimento.time}. Caso deseje desmarcar ou cancelar seu
+                {atendimento.time}. <br/><br/>
+                Caso deseje desmarcar ou reagendar seu
                 horário conosco, entre em contato por Whatsapp, pelo número (85)
                 98765-4321.
               </>

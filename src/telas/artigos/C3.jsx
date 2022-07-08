@@ -1,10 +1,9 @@
 import React from "react";
-import { Grid, Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import BotaoDoPanico from "../../components/BotaoDoPanico";
 import MenuInferior from "../../components/MenuInferior";
-import CardArtigo from "../../components/CardArtigo";
-import HeaderTitulo from "../../components/HeaderArtigo";
-import LeiaMais from "../../components/LeiaMais";
+import HeaderTitulo from "../../components/C/HeaderArtigo";
+import LeiaMais from "../../components/C/LeiaMais";
 import Header from "../../components/Header";
 import img from "../../assets/img/artigos/C3_icon.svg";
 import "../../assets/css/base.css";
@@ -15,6 +14,8 @@ const C3 = () => {
     <Grid container className="">
       <Header titulo="Artigos" destino="C1" backButton={true}></Header>
       <HeaderTitulo
+        margin_top="16px"
+        margin_bottom="75px"
         img={img}
         titulo="Marta Escuta"
         chip="Sobre a associação"

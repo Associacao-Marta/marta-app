@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Grid, Checkbox } from "@mui/material";
-import ilustracao from "../assets/img/B1.svg";
+import ilustracao from "../assets/img/Onboarding/B1.svg";
 import "../assets/css/base.css";
 import "../assets/css/AB.css";
 
@@ -42,7 +42,7 @@ const B1 = () => {
 
       <Grid container className="buttonContainer" sx={{position: "absolute", top: "638px"}}>
           <Button variant="contained" href="C1"
-          disabled={checked != true} sx={{ borderRadius: 8 }}>
+          disabled={checked !== true} sx={{ borderRadius: 8 }}>
             Finalizar
           </Button>
       </Grid>

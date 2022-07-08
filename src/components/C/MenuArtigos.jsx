@@ -2,9 +2,8 @@ import * as React from "react";
 import IconButton from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import SearchIcon from "@mui/icons-material/Search";
 import ListIcon from '@mui/icons-material/List';
-import "../assets/css/C.css"
+import "../../assets/css/C.css"
 
 export default function MenuArtigos() {
   const [anchorEl, setAnchorEl] = React.useState(null);

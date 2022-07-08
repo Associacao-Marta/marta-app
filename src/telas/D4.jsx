@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, TextField } from "@mui/material";
 import BotaoDoPanico from "../components/BotaoDoPanico";
 import MenuInferior from "../components/MenuInferior";
-import PopUpD4 from "../components/PopUpD4";
+import PopUpD4 from "../components/D/PopUpD4";
 import Header from "../components/Header";
 import InputMask from "react-input-mask";
 import "../assets/css/base.css";

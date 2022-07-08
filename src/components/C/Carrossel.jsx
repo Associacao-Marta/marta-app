@@ -5,23 +5,23 @@ import MobileStepper from "@mui/material/MobileStepper";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import img1 from "../assets/img/destaques/destaque_1.svg";
-import img2 from "../assets/img/destaques/destaque_2.svg";
-import img3 from "../assets/img/destaques/destaque_3.svg";
-import "../assets/css/base.css";
+import img1 from "../../assets/img/destaques/destaque_1.svg";
+import img2 from "../../assets/img/destaques/destaque_2.svg";
+import img3 from "../../assets/img/destaques/destaque_3.svg";
+import "../../assets/css/base.css";
 
 const steps = [
   {
     label: "Destaque 1",
-    description: <a href="C2"><img src={img1} /></a>,
+    description: <a href="C2"><img src={img1} style={{borderRadius: 4}}/></a>,
   },
   {
     label: "Destaque 2",
-    description: <a href="C3"><img src={img2} /></a>,
+    description: <a href="C3"><img src={img2} style={{borderRadius: 4}}/></a>,
   },
   {
     label: "Destaque 3",
-    description: <a href="C4"><img src={img3} /></a>,
+    description: <a href="C4"><img src={img3} style={{borderRadius: 4}}/></a>,
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Carrossel() {
   };
 
   return (
-    <Box>
+    <Box >
       <Box>{steps[activeStep].description}</Box>
       <MobileStepper
         variant="dots"

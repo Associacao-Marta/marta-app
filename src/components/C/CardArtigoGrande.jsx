@@ -1,17 +1,17 @@
 import React from "react";
-import { Grid, Stack, Link } from "@mui/material";
-import "../assets/css/cardArtigo.css";
-import "../assets/css/base.css";
-import C5_icon from "../assets/img/artigos/C5_icon.svg";
-import C6_icon from "../assets/img/artigos/C6_icon.svg";
-import C7_icon from "../assets/img/artigos/C7_icon.svg";
-import C8_icon from "../assets/img/artigos/C8_icon.svg";
-import C9_icon from "../assets/img/artigos/C9_icon.svg";
-import C10_icon from "../assets/img/artigos/C10_icon.svg";
-import C11_12_icon from "../assets/img/artigos/C11-12_icon.svg";
-import C13_icon from "../assets/img/artigos/C13_icon.svg";
-import C14_icon from "../assets/img/artigos/C14_icon.svg";
-import C15_icon from "../assets/img/artigos/C15_icon.svg";
+import { Grid, Link } from "@mui/material";
+import "../../assets/css/cardArtigo.css";
+import "../../assets/css/base.css";
+import C5_icon from "../../assets/img/artigos/C5_icon.svg";
+import C6_icon from "../../assets/img/artigos/C6_icon.svg";
+import C7_icon from "../../assets/img/artigos/C7_icon.svg";
+import C8_icon from "../../assets/img/artigos/C8_icon.svg";
+import C9_icon from "../../assets/img/artigos/C9_icon.svg";
+import C10_icon from "../../assets/img/artigos/C10_icon.svg";
+import C11_12_icon from "../../assets/img/artigos/C11-12_icon.svg";
+import C13_icon from "../../assets/img/artigos/C13_icon.svg";
+import C14_icon from "../../assets/img/artigos/C14_icon.svg";
+import C15_icon from "../../assets/img/artigos/C15_icon.svg";
 
 const CardArtigoGrande = (props) => {
 

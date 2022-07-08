@@ -1,7 +1,7 @@
 import React from "react";
 import FontSizeChanger from "react-font-size-changer";
-import up from "../assets/img/btn_increase.svg"
-import down from "../assets/img/btn_decrease.svg"
+import up from "../../assets/img/btn_increase.svg"
+import down from "../../assets/img/btn_decrease.svg"
 
 export default function BotaoAcessibilidade() {
   return (

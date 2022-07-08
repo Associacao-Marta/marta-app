@@ -1,11 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import { Button, Stack, Grid, TextField } from "@mui/material";
 import BotaoDoPanico from "../components/BotaoDoPanico";
-import MenuInferior from "../components/MenuInferior";
-import PopUpD2 from "../components/PopUpD2.jsx";
-import PopUpCancelarD2 from "../components/PopUpCancelarD2.jsx";
+import PopUpD2 from "../components/D/PopUpD2.jsx";
+import PopUpCancelarD2 from "../components/D/PopUpCancelarD2.jsx";
 import Header from "../components/Header";
-import { useState } from "react";
 import InputMask from "react-input-mask";
 import DatePicker, {registerLocale} from "react-datepicker";
 import { addDays } from 'date-fns';
@@ -44,7 +43,7 @@ const D2 = () => {
 
   const emptyValidator = () => {
     setNewNameError(false);
-    if(newName == ''){
+    if(newName === ''){
       setNewNameError(true);
       setErrorText1("Preencha o campo acima");
     } else{
@@ -64,7 +63,7 @@ const D2 = () => {
 
   const emptyValidator3 = () => {
     setNewDescriptionError(false);
-    if(newDescription == ''){
+    if(newDescription === ''){
       setNewDescriptionError(true);
       setErrorText3("Preencha o campo acima");
     } else{
