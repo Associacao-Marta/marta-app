@@ -29,7 +29,7 @@ const D1 = () => {
         </div>
       </Grid>
 
-      <Grid container className="menuAtendimento">
+      <Grid container >
         <Grid container className="buttonContainer">
           <Button href="D2" variant="contained" className="agendarAtendimentoButton"  sx={{ borderRadius: 8 }}>
             Agendar Atendimento
@@ -38,6 +38,7 @@ const D1 = () => {
         <Grid container className="buttonContainer">
           <Button href="D3">Consultar Atendimento</Button>
         </Grid>
+        <div style={{margin: "50px"}} />
       </Grid>
 
       <BotaoDoPanico />

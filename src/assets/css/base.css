@@ -9,7 +9,7 @@ body{
 }
 
 .pageContainer{
-    padding-left: 24px;
+    padding-left: 6.67vw;
 }
 
 .itemHeaderTitulo {
@@ -19,7 +19,7 @@ body{
 
 .tituloHeader {
     background-color: transparent;
-    margin-top: 32px;
+    margin-top: 4vh;
     font-weight: 600;
     font-size: 18px;
     text-align: center;
@@ -28,28 +28,28 @@ body{
 
 .TopButton {
     position: absolute;
-    margin-top: 24px;
-    padding-left: 15px;
+    margin-top: 3vh;
+    padding-left: 4.167vw;
 }
 
 .tituloH1 {
     font-size: 20px;
     font-weight: 700;
-    padding: 4px 0 4px 0;
+    padding: 0.5vw 0 0.5vw 0;
     letter-spacing: 0.02em;
 }
 
 .tituloH2 {
     font-size: 18px;
     font-weight: 500;
-    padding: 4px 0 4px 0;
+    padding: 0.5vw 0 0.5vw 0;
     letter-spacing: 0.02em;
 }
 
 .subtitulo {
     font-size: 16px;
     font-weight: 700;
-    padding: 4px 0 4px 0;
+    padding: 0.5vw 0 0.5vw 0;
     letter-spacing: 0.02em;
 }
 
@@ -61,14 +61,14 @@ body{
 
 .buttonContainer{
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 2vh;
 }
 
 .tituloContainer{
     justify-content: center;
     text-align: center;
-    padding: 24px;
-    margin-bottom: 8px;
+    padding: 3vh 6.67vw 3vh 6.67vw;
+    margin-bottom: 1vh;
     letter-spacing: 0.02em;
 }
 
@@ -79,16 +79,8 @@ body{
 } 
 
 
-.Menu {
-    position: fixed;
-    margin-bottom: 0;
-    top: 744px;
-    width: 100%;
-    z-index: 9999;
-}
-
 .EspacoInferior {
-    padding-bottom: 100px;
+    padding-bottom: 12.5vh;
 }
 
 .MuiMobileStepper-dotActive{

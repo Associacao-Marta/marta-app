@@ -1,15 +1,15 @@
 .leaflet-container {
-    width: 360px;
-    height: 800px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .leaflet-left {
-    left:295px;
-    margin-top: 2px;
+    left: 81.94vw;
+    margin-top: 0.25vh;
 }
 
 .containerBotao{
-    padding:24px 0 0 16px;
+    padding: 3vh 0 0 4.444vw;
     position:absolute;
     z-index:999;
 }
