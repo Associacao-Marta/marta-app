@@ -6,7 +6,7 @@ import CardArtigo from "../../components/CardArtigo";
 import HeaderTitulo from "../../components/HeaderArtigo";
 import LeiaMais from "../../components/LeiaMais";
 import Header from "../../components/Header";
-import img from "../../assets/img/C5ilustracao.svg";
+import img from "../../assets/img/artigos/C5_icon.svg";
 import "../../assets/css/base.css";
 import "../../assets/css/C.css";
 
@@ -16,8 +16,8 @@ const C5 = () => {
       <Header titulo="Artigos" destino="C1" backButton={true}></Header>
       <HeaderTitulo
         img={img}
-        titulo="Por que essas relações de violência perduram tanto tempo?"
-        chip="Entenda melhor"
+        titulo="Por que essas relações de violência perduram?"
+        chip="Violência contra a mulher"
       ></HeaderTitulo>
 
       <Grid container className="pageContainer">
@@ -55,11 +55,7 @@ const C5 = () => {
           </Grid>
           <Grid container dir="ltr">
             <Stack direction="row" spacing={2}>
-              <CardArtigo
-                titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tema="Como identificar"
-                href="C2"
-              />
+            <CardArtigo titulo="Sinais de que a mulher está sofrendo violência doméstica" tela="C6" href="C6"/>
             </Stack>
           </Grid>
         </Grid>

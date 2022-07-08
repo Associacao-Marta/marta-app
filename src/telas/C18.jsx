@@ -21,8 +21,11 @@ const C16 = () => {
 
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack spacing={2}>
-            <CardArtigoGrande titulo="Por que essas relações de violência perduram tanto tempo?" tema="Entenda melhor" href="C2"/>
-            <CardArtigoGrande titulo="Sinais de que a mulher está sofrendo violência doméstica" tema="Como identificar" href="C2"/>
+            <CardArtigoGrande titulo="Artigos" tela="C11-12" href="C11"/>
+            <CardArtigoGrande titulo="Atendimento" tela="C11-12" href="C12"/>
+            <CardArtigoGrande titulo="Locais de Apoio" tela="C13" href="C13"/>
+            <CardArtigoGrande titulo="Botão de pânico" tela="C14" href="C14"/>
+            <CardArtigoGrande titulo="Quem desenvolveu" tela="C15" href="C15"/>
           </Stack>
         </Grid>
       </Grid>

@@ -5,6 +5,8 @@
     max-height: 116px;
     background-color: #D3EBD3;
     border-radius: 4px;
+    align-items: center;
+
 }
 
 .cardContainerGrande{
@@ -18,7 +20,7 @@
 }
 
 .iconContainer-cardArtigo{
-    padding: 35px 8px 0 16px;
+    padding: 2px 12px 0 16px;
     justify-content: center;
 }
 

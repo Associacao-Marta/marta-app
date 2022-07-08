@@ -6,7 +6,7 @@ import CardArtigo from "../../components/CardArtigo";
 import HeaderTitulo from "../../components/HeaderArtigo";
 import LeiaMais from "../../components/LeiaMais";
 import Header from "../../components/Header";
-import img from "../../assets/img/C8ilustracao.svg";
+import img from "../../assets/img/artigos/C8_icon.svg";
 import "../../assets/css/base.css";
 import "../../assets/css/C.css";
 
@@ -41,15 +41,13 @@ const C8 = () => {
           <Grid item>
             <h1 className="tituloH1">Veja também</h1>
           </Grid>
-          <Grid container dir="ltr">
-            <Stack direction="row" spacing={2}>
-              <CardArtigo
-                titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tema="Como identificar"
-                href="C2"
-              />
-            </Stack>
-          </Grid>
+          <Grid container className="carrosselArtigos" dir="ltr">
+          <Stack direction="row" spacing={2}>
+            <CardArtigo titulo="Feminicídio " tela="C7" href="C7"/>
+            <CardArtigo titulo="Atendimento público específico e especializado no SUS" tela="C9" href="C9"/>
+            <CardArtigo titulo="Plano Nacional de Enfrentamento ao Feminicídio" tela="C10" href="C10"/>
+          </Stack>
+        </Grid>
         </Grid>
       </Grid>
 

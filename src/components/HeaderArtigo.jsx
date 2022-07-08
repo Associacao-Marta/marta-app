@@ -10,6 +10,7 @@ const HeaderTitulo = (props) => {
       <Grid container className="iconArtigo">
         <img src={props.img} />
       </Grid>
+      <Grid container className="circuloIcon"/>
 
       <Grid className="tituloArtigo">
         <Grid item className="detalheTitulo"></Grid>

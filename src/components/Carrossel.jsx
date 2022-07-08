@@ -2,28 +2,26 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import img1 from "../assets/img/destaques/destaque_1.svg";
+import img2 from "../assets/img/destaques/destaque_2.svg";
+import img3 from "../assets/img/destaques/destaque_3.svg";
 import "../assets/css/base.css";
-import img1 from "../assets/img/C1Carrossel1.svg";
-import img2 from "../assets/img/C1Carrossel2.svg";
-import img3 from "../assets/img/C1Carrossel3.svg";
 
 const steps = [
   {
-    label: "teste1",
-    description: <img src={img1} />,
+    label: "Destaque 1",
+    description: <a href="C2"><img src={img1} /></a>,
   },
   {
-    label: "teste2",
-    description: <img src={img2} />,
+    label: "Destaque 2",
+    description: <a href="C3"><img src={img2} /></a>,
   },
   {
-    label: "teste3",
-    description: <img src={img3} />,
+    label: "Destaque 3",
+    description: <a href="C4"><img src={img3} /></a>,
   },
 ];
 

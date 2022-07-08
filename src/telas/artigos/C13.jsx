@@ -6,7 +6,7 @@ import CardArtigo from "../../components/CardArtigo";
 import HeaderTitulo from "../../components/HeaderArtigo";
 import LeiaMais from "../../components/LeiaMais";
 import Header from "../../components/Header";
-import img from "../../assets/img/C13ilustracao.svg";
+import img from "../../assets/img/artigos/C13_icon.svg";
 import "../../assets/css/base.css";
 import "../../assets/css/C.css";
 
@@ -35,15 +35,14 @@ const C13 = () => {
           <Grid item>
             <h1 className="tituloH1">Veja também</h1>
           </Grid>
-          <Grid container dir="ltr">
-            <Stack direction="row" spacing={2}>
-              <CardArtigo
-                titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tema="Como identificar"
-                href="C2"
-              />
-            </Stack>
-          </Grid>
+          <Grid container className="carrosselArtigos" dir="ltr">
+          <Stack direction="row" spacing={2}>
+            <CardArtigo titulo="Artigos" tela="C11-12" href="C11"/>
+            <CardArtigo titulo="Atendimento" tela="C11-12" href="C12"/>
+            <CardArtigo titulo="Botão de pânico" tela="C14" href="C14"/>
+            <CardArtigo titulo="Quem desenvolveu" tela="C15" href="C15"/>
+          </Stack>
+        </Grid>
         </Grid>
       </Grid>
 

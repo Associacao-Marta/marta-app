@@ -56,11 +56,11 @@ export default function PopUpCancelarD2(props) {
           ></DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} autoFocus sx={{ marginRight: "120px" }}>
-            Cancelar
+          <Button onClick={handleClose} autoFocus sx={{ marginRight: "152px" }}>
+            Não
           </Button>
           <Button href="D1" variant="text" autoFocus sx={{  }}>
-            Sair
+            Sim
           </Button>
         </DialogActions>
       </Dialog>
