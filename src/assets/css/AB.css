@@ -27,3 +27,7 @@
     justify-content: center;
     top: 75vh;
 }
+
+.addButton {
+    position: absolute;
+}

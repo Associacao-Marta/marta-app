@@ -40,11 +40,16 @@ const B1 = () => {
         </p>
       </Grid>
 
-      <Grid container className="buttonContainer" sx={{position: "absolute", top: "638px"}}>
+      <Grid container className="buttonContainer" sx={{position: "absolute", top: "79.75vh"}}>
           <Button variant="contained" href="C1"
           disabled={checked !== true} sx={{ borderRadius: 8 }}>
             Finalizar
           </Button>
+      </Grid>
+      <Grid container className="buttonContainer" sx={{position: "absolute", top: "86.75vh"}}>
+      <Button className="add-button" variant="contained" disabled={checked !== true} sx={{ borderRadius: 8, paddingLeft: "17px", paddingRight: "17px" }}>
+            Instalar
+            </Button>
       </Grid>
 
     </Grid>
