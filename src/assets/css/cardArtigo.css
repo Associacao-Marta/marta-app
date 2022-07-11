@@ -1,0 +1,37 @@
+.cardContainer{
+    min-width: 230px;
+    max-width: 230px;
+    min-height: 116px;
+    max-height: 116px;
+    background-color: #D3EBD3;
+    border-radius: 4px;
+    align-items: center;
+
+}
+
+.cardContainerGrande{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 85px;
+    max-height: 85px;
+    background-color: #D3EBD3;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.iconContainer-cardArtigo{
+    padding: 2px 12px 0 16px;
+    justify-content: center;
+}
+
+.iconContainer-cardArtigoGrande{
+    padding: 2px 16px 0 16px;
+}
+
+.tituloContainer-cardArtigo{
+    width: 150px;
+}
+
+.tituloContainer-cardArtigoGrande{
+    width: 70%;
+}

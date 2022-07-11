@@ -1,0 +1,33 @@
+.conteudoContainer-Onboarding{
+    justify-content: center;
+    text-align: center;    
+    padding: 4vh 8.89vw;
+    margin-bottom: 1vh;
+    position: absolute;
+    top: 54.375vh;
+}
+
+.tituloOnboarding{
+    position: absolute;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.ilustracaoOnboarding{
+    justify-content: center;
+    padding-bottom: 4vh;
+    padding-top: 18.75vh;
+}
+
+.pularOnboarding{
+    position: absolute;
+    justify-content: center;
+    top: 75vh;
+}
+
+.addButton {
+    position: absolute;
+}

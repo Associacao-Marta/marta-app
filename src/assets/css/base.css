@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+	padding: 0;
+	border: 0;
+    position: display;
+    justify-content: center;
+    background-color: #F6F6F6;
+    color: #1B1B1B;
+}
+
+.pageContainer{
+    padding-left: 6.67vw;
+}
+
+.itemHeaderTitulo {
+    width: 100%;
+    justify-content: center;
+}
+
+.tituloHeader {
+    background-color: transparent;
+    margin-top: 4vh;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.TopButton {
+    position: absolute;
+    margin-top: 3vh;
+    padding-left: 4.167vw;
+}
+
+.tituloH1 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0.5vw 0 0.5vw 0;
+    letter-spacing: 0.02em;
+}
+
+.tituloH2 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0.5vw 0 0.5vw 0;
+    letter-spacing: 0.02em;
+}
+
+.subtitulo {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.5vw 0 0.5vw 0;
+    letter-spacing: 0.02em;
+}
+
+.body2{
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+.buttonContainer{
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.tituloContainer{
+    justify-content: center;
+    text-align: center;
+    padding: 3vh 6.67vw 3vh 6.67vw;
+    margin-bottom: 1vh;
+    letter-spacing: 0.02em;
+}
+
+ .BotaoDoPanico {
+    z-index: 9999;
+} 
+
+.Menu{
+    z-index: 9998;
+}
+
+
+.EspacoInferior {
+    padding-bottom: 12.5vh;
+}
+
+.MuiMobileStepper-dotActive{
+    background-color:#357F78
+}
+
+.css-oxfx9-MuiPaper-root-MuiMobileStepper-root{
+    background-color:transparent !important;
+}
+
+.css-rh92k-MuiPaper-root-MuiMobileStepper-root {
+    background-color:transparent !important;
+}

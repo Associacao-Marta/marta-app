@@ -1,0 +1,30 @@
+.ilustracao{
+    justify-content: center;
+    padding: 8vh 17.78vw;
+}
+
+.agendarAtendimentoButton{
+    width: 86.67vw;
+}
+
+.formContainer{
+    margin-right: 6.67vw;
+    margin-top: 2vh;
+}
+
+.calendarioContainer{
+    margin-right: 6.67vw;
+    max-width: 86.67vw;
+    margin-bottom: 5vh;
+}
+
+.textForm{
+    width: 86.67vw;
+    margin-bottom: 2vh;
+}
+
+.protocoloContainer{
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-right: 6.67vw;
+}
