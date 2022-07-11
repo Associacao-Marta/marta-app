@@ -13,7 +13,8 @@ const C4 = () => {
   return (
     <Grid container className="">
       <Header titulo="Artigos" destino="C1" backButton={true}></Header>
-      <HeaderTitulo
+      <HeaderTitulo        
+        margin_top_icon="0px"
         margin_top="16px"
         margin_bottom="75px"
         img={img}

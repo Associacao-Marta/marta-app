@@ -7,10 +7,10 @@ import BotaoAcessibilidade from "../C/BotaoAcessibilidade";
 const HeaderTitulo = (props) => {
   return (
     <Grid container>
-      <Grid container className="iconArtigo" style={{marginTop: props.margin_top, marginBottom: props.margin_bottom}}>
-        <img src={props.img} />
+      <Grid container className="iconArtigoContainer" style={{marginTop: props.margin_top, marginBottom: props.margin_bottom}}>
+      <Grid container className="circuloIcon" style={{marginTop: props.margin_top_icon}}/>
+        <img src={props.img} className="iconArtigo"/>
       </Grid>
-      <Grid container className="circuloIcon"/>
 
       <Grid className="tituloArtigo">
         <Grid item className="detalheTitulo"></Grid>
