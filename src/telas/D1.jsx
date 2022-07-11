@@ -17,16 +17,16 @@ const D1 = () => {
       </Grid>
 
       <Grid container className="tituloContainer">
-        <div
+        <Grid container
           className="tituloH1"
-          style={{ color: "#337066", paddingBottom: "8px" }}
+          style={{ color: "#337066", paddingBottom: "8px", justifyContent: "center" }}
         >
           Marque um horário gratuito com a Associação Marta
-        </div>
-        <div className="body2">
+        </Grid>
+        <Grid className="body2">
           Está precisando de ajuda? Temos serviços psicológicos e jurídicos
           gratuitos para você!
-        </div>
+        </Grid>
       </Grid>
 
       <Grid container >
