@@ -23,7 +23,7 @@ const C14 = () => {
       <Grid container className="pageContainer">
         <Grid container item className="containerArtigo" id="target">
           <div className="content">
-          <p>Em momentos de risco queremos garantir que você tenha um suporte, para isso o aplicativo permite que você solicite ajuda de forma rápida e segura através de um botão de pânico localizado no lado esquerdo inferior da sua tela, que ao ser acionado realiza a discagem de um número de emergência no seu aplicativo de chamadas.</p>
+          <p>Em momentos de risco queremos garantir que você tenha um suporte, para isso o aplicativo permite que você solicite ajuda de forma rápida e segura através de um botão de pânico localizado no lado direito inferior da sua tela, que ao ser acionado realiza a discagem de um número de emergência no seu aplicativo de chamadas.</p>
           </div>
         </Grid>
 

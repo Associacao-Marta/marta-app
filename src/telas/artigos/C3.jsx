@@ -41,7 +41,7 @@ const C3 = () => {
               Mulheres que sofrem ou já sofreram algum tipo de violência e estejam interessadas nos serviços da campanha.
               </p>
               <b>Como posso participar?</b>
-              <p>É possível participar realizando um agendamento disponível na página de Atendimento (icon), para saber melhor sobre como fazer um agendamento basta clicar aqui (vai pra página explicando sobre a tela de atendimento).
+              <p>É possível participar realizando um agendamento disponível na página de <a href="C12"><stan style={{ color: "#337066" }}>Atendimento</stan></a>, para saber melhor sobre como fazer um agendamento basta clicar aqui (vai pra página explicando sobre a tela de atendimento).
 </p>
             </LeiaMais>
           </div>
