@@ -10,7 +10,8 @@ Aplicativo em desenvolvimento pela equipe "Os Cappuccinos" na cadeira de Projeto
 
 ### Tecnologias utilizadas:
 **Front-end:** ReactJS
-**Back-end**: Firebase e PWA
+
+**Back-end:** Firebase e PWA
 
 
 ## Mapeamento de Funcionalidades
