@@ -57,12 +57,6 @@ Instale as dependências
 
 ```bash
   npm install
-  npm install @mui/material @emotion/react @emotion/styled
-  npm install @mui/icons-material
-  npm i react-router-dom
-  npm install react react-dom leaflet
-  npm install react-leaflet
-  npm install --save react-font-size-changer
 ```
 
 Inicie o servidor
