@@ -20,7 +20,7 @@ const C16 = () => {
         </Grid>
 
         <Grid container className="carrosselArtigos" dir="ltr">
-          <Stack spacing={2}>
+          <Stack spacing={2} style={{width: "100%"}}>
             <CardArtigoGrande titulo="Artigos" tela="C11" href="C11"/>
             <CardArtigoGrande titulo="Atendimento" tela="C12" href="C12"/>
             <CardArtigoGrande titulo="Locais de Apoio" tela="C13" href="C13"/>

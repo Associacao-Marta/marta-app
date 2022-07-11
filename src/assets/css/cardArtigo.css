@@ -10,8 +10,8 @@
 }
 
 .cardContainerGrande{
-    min-width: 312px;
-    max-width: 312px;
+    min-width: 100%;
+    max-width: 100%;
     min-height: 85px;
     max-height: 85px;
     background-color: #D3EBD3;
@@ -33,5 +33,5 @@
 }
 
 .tituloContainer-cardArtigoGrande{
-    width: 218px;
+    width: 70%;
 }

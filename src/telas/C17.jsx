@@ -20,7 +20,7 @@ const C16 = () => {
         </Grid>
 
         <Grid container className="carrosselArtigos" dir="ltr">
-          <Stack spacing={2}>
+          <Stack spacing={2} style={{width: "100%"}}>
             <CardArtigoGrande titulo="Feminicídio " tela="C7" href="C7"/>
             <CardArtigoGrande titulo="Maria da Penha" tela="C8" href="C8"/>
             <CardArtigoGrande titulo="Atendimento público específico e especializado no SUS" tela="C9" href="C9"/>  

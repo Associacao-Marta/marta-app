@@ -19,8 +19,8 @@ const C16 = () => {
           </h2>
         </Grid>
 
-        <Grid container className="carrosselArtigos" dir="ltr">
-          <Stack spacing={2}>
+        <Grid container className="carrosselArtigos" dir="ltr" >
+          <Stack spacing={2} style={{width: "100%"}}>
             <CardArtigoGrande titulo="Por que essas relações de violência perduram?" tela="C5" href="C5"/>
             <CardArtigoGrande titulo="Sinais de que a mulher está sofrendo violência doméstica" tela="C6" href="C6"/>
           </Stack>
