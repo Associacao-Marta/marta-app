@@ -47,6 +47,7 @@ const A3 = () => {
       
       <Grid item>
         <MobileStepper
+          style={{ backgroundColor: "transparent" }}
           position="bottom"
           variant="dots"
           steps={6}
