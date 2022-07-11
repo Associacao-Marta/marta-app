@@ -190,6 +190,8 @@ const D2 = () => {
               dateFormat="dd/MM/yyyy"
               locale="pt"
               shouldCloseOnSelect={false}
+              closeOnScroll={false}
+              disabledKeyboardNavigation={true}
               includeDateIntervals={[
                 { start: new Date("2022/07/13"), end: addDays(new Date("2022/07/13"), 31) },
               ]}
@@ -208,6 +210,8 @@ const D2 = () => {
               dateFormat="h:mm aa"
               placeholderText="Escolha um horário" 
               shouldCloseOnSelect={false}
+              closeOnScroll={false}
+              disabledKeyboardNavigation={true}
               minTime={setHours(setMinutes(new Date(), 0), 8)}
               maxTime={setHours(setMinutes(new Date(), 8), 17)}
               onKeyDown={(e) => {
