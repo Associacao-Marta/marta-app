@@ -21,13 +21,15 @@ const C16 = () => {
 
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack spacing={2}>
-            <CardArtigoGrande titulo="Artigos" tela="C11-12" href="C11"/>
-            <CardArtigoGrande titulo="Atendimento" tela="C11-12" href="C12"/>
+            <CardArtigoGrande titulo="Artigos" tela="C11" href="C11"/>
+            <CardArtigoGrande titulo="Atendimento" tela="C12" href="C12"/>
             <CardArtigoGrande titulo="Locais de Apoio" tela="C13" href="C13"/>
             <CardArtigoGrande titulo="Botão de pânico" tela="C14" href="C14"/>
             <CardArtigoGrande titulo="Quem desenvolveu" tela="C15" href="C15"/>
           </Stack>
         </Grid>
+
+        <Grid item className="EspacoInferior" />
       </Grid>
 
       <BotaoDoPanico />

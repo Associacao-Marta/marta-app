@@ -8,7 +8,8 @@ import C7_icon from "../../assets/img/artigos/C7_icon.svg";
 import C8_icon from "../../assets/img/artigos/C8_icon.svg";
 import C9_icon from "../../assets/img/artigos/C9_icon.svg";
 import C10_icon from "../../assets/img/artigos/C10_icon.svg";
-import C11_12_icon from "../../assets/img/artigos/C11-12_icon.svg";
+import C11_icon from "../../assets/img/artigos/C11_icon.svg";
+import C12_icon from "../../assets/img/artigos/C12_icon.svg";
 import C13_icon from "../../assets/img/artigos/C13_icon.svg";
 import C14_icon from "../../assets/img/artigos/C14_icon.svg";
 import C15_icon from "../../assets/img/artigos/C15_icon.svg";
@@ -33,8 +34,10 @@ const CardArtigo = (props) => {
                   ? C9_icon
                   : "" || props.tela === "C10"
                   ? C10_icon
-                  : "" || props.tela === "C11-12"
-                  ? C11_12_icon
+                  : "" || props.tela === "C11"
+                  ? C11_icon 
+                  : "" || props.tela === "C12"
+                  ? C12_icon 
                   : "" || props.tela === "C13"
                   ? C13_icon
                   : "" || props.tela === "C14"

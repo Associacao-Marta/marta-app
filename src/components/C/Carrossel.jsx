@@ -42,6 +42,7 @@ export default function Carrossel() {
     <Box >
       <Box>{steps[activeStep].description}</Box>
       <MobileStepper
+        style={{ backgroundColor: "transparent" }}
         variant="dots"
         steps={maxSteps}
         position="static"

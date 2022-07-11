@@ -41,7 +41,7 @@ const C11 = () => {
           </Grid>
           <Grid container className="carrosselArtigos" dir="ltr">
           <Stack direction="row" spacing={2}>
-            <CardArtigo titulo="Atendimento" tela="C11-12" href="C12"/>
+            <CardArtigo titulo="Atendimento" tela="C12" href="C12"/>
             <CardArtigo titulo="Locais de Apoio" tela="C13" href="C13"/>
             <CardArtigo titulo="Botão de pânico" tela="C14" href="C14"/>
             <CardArtigo titulo="Quem desenvolveu" tela="C15" href="C15"/>
