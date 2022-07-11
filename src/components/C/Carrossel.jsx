@@ -13,15 +13,15 @@ import "../../assets/css/base.css";
 const steps = [
   {
     label: "Destaque 1",
-    description: <a href="C2"><img src={img1} style={{borderRadius: 4}}/></a>,
+    description: <a href="C2"><img src={img1} style={{borderRadius: 4, width: "100%"}}/></a>,
   },
   {
     label: "Destaque 2",
-    description: <a href="C3"><img src={img2} style={{borderRadius: 4}}/></a>,
+    description: <a href="C3"><img src={img2} style={{borderRadius: 4, width: "100%"}}/></a>,
   },
   {
     label: "Destaque 3",
-    description: <a href="C4"><img src={img3} style={{borderRadius: 4}}/></a>,
+    description: <a href="C4"><img src={img3} style={{borderRadius: 4, width: "100%"}}/></a>,
   },
 ];
 
@@ -39,8 +39,8 @@ export default function Carrossel() {
   };
 
   return (
-    <Box >
-      <Box>{steps[activeStep].description}</Box>
+    <Box style={{width: "100%", paddingRight: "8%"}}>
+      <Box style={{width: "100%"}}>{steps[activeStep].description}</Box>
       <MobileStepper
         style={{ backgroundColor: "transparent" }}
         variant="dots"
