@@ -12,7 +12,7 @@ import "../assets/css/base.css";
 export default function PopUpBotaoDoPanico(props) {
   const [open, setOpen] = React.useState(false);
   let altura;
-  props.alt === undefined ? altura = "82.5vh" : altura = props.alt
+  props.alt === undefined ? altura = 80 : altura = props.alt
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -24,8 +24,8 @@ export default function PopUpBotaoDoPanico(props) {
 
 
   return (
-    <Grid container className="BotaoDoPanico" style={{top:altura}}>
-      <Fab color="warning" variant="contained" onClick={handleClickOpen}>
+    <Grid container className="BotaoDoPanico" >
+      <Fab color="warning" variant="contained" onClick={handleClickOpen} style={{position: "fixed", bottom: altura, right: 24}} >
         <img src={Botao} alt="Botão do Pânico" />
       </Fab>
 

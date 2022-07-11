@@ -73,9 +73,7 @@ body{
 }
 
  .BotaoDoPanico {
-    position: fixed;
     z-index: 9999;
-    left: 77vw;
 } 
 
 .Menu{

@@ -240,7 +240,7 @@ const D2 = () => {
       <Grid item className="EspacoInferior" />
       </Grid>
 
-      <BotaoDoPanico alt={725}/>
+      <BotaoDoPanico alt={24}/>
     </Grid>
   );
 };
