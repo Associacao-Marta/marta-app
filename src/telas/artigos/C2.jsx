@@ -22,7 +22,7 @@ const C2 = () => {
         chip="Sobre a associação"
       ></HeaderTitulo>
 
-      <Grid container className="pageContainer">
+      <Grid container className="pageContainer" style={{paddingRight: "6.67vw"}}>
         <Grid container item className="containerArtigo" id="target">
           <div className="content">
             <LeiaMais className="leiaMais">
