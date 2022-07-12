@@ -57,7 +57,8 @@ export default function PopUpD2(props) {
           <DialogContentText id="alert-dialog-description">
             {navigator.onLine === true ? (
               <>
-            Olá! Muito obrigada por agendar um horário conosco! <br/> <br/>
+            Olá! Muito obrigada por agendar um horário conosco! Você pode ver mais detalhes sobre seu atendimento
+            na área Consultar Atendimento, informando seu número de telefone. <br/> <br/>
             Estamos ansiosas para te auxiliar da melhor forma possível!
               </>
             ) : (
