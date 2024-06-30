@@ -1,8 +1,8 @@
-import React from "react";
-import { Button, Grid, Checkbox } from "@mui/material";
-import ilustracao from "../assets/img/Onboarding/B1.svg";
-import "../assets/css/base.css";
-import "../assets/css/AB.css";
+import React from 'react';
+import { Button, Grid, Checkbox } from '@mui/material';
+import ilustracao from '../assets/img/Onboarding/B1.svg';
+import '../assets/css/base.css';
+import '../assets/css/AB.css';
 
 const B1 = () => {
   const [checked, setChecked] = React.useState(false);
@@ -14,7 +14,6 @@ const B1 = () => {
     }
   }, [checked]);
 
-  
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
@@ -28,10 +27,11 @@ const B1 = () => {
       <Grid container item className="ilustracaoOnboarding">
         <img src={ilustracao} />
       </Grid>
-      
+
       <Grid container item className="conteudoContainer-Onboarding">
         <p className="body2">
-          Antes de continuar, precisamos que leia e aceite os <stan style={{ color: "#337066" }}>Termos de Uso</stan>.
+          Antes de continuar, precisamos que leia e aceite os{' '}
+          <stan style={{ color: '#337066' }}>Termos de Uso</stan>.
           <br />
           <br />
           <br />
@@ -40,12 +40,16 @@ const B1 = () => {
         </p>
       </Grid>
 
-      <Grid container className="buttonContainer" sx={{position: "absolute", top: "79.75vh"}}>
-          <Button variant="contained" href="C1"
+      <Grid container className="buttonContainer" sx={{ position: 'absolute', top: '79.75vh' }}>
+        <Button
+          variant="contained"
+          href="C1"
           className="addButton"
-          disabled={checked !== true} sx={{ borderRadius: 8 }}>
-            Finalizar
-          </Button>
+          disabled={checked !== true}
+          sx={{ borderRadius: 8 }}
+        >
+          Finalizar
+        </Button>
       </Grid>
     </Grid>
   );

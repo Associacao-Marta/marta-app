@@ -1,20 +1,19 @@
-import React from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import * as L from "leaflet";
+import React from 'react';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import * as L from 'leaflet';
 
-import "../../assets/css/mapa.css";
+import '../../assets/css/mapa.css';
 
 export default function Mapa() {
   const LeafIcon = L.Icon.extend({
-    options: {}
+    options: {},
   });
 
   const greenIcon = new LeafIcon({
-    iconUrl:
-      "https://i.postimg.cc/hPShFWR8/location-Pin.png",
-      popupAnchor:  [23, 0]
+    iconUrl: 'https://i.postimg.cc/hPShFWR8/location-Pin.png',
+    popupAnchor: [23, 0],
   });
-  
+
   return (
     <MapContainer
       className="leaflet-container"
@@ -27,13 +26,9 @@ export default function Mapa() {
       />
       <Marker key={1} position={[-3.743922925095978, -38.541993132884365]} icon={greenIcon}>
         <Popup position={[-3.743922925095978, -38.541993132884365]}>
-          <h2>
-            Juizado de Violência Doméstica e Familiar Contra a Mulher de
-            Fortaleza
-          </h2>
+          <h2>Juizado de Violência Doméstica e Familiar Contra a Mulher de Fortaleza</h2>
           <p>
-            <b>Endereço:</b> Av. da Universidade, 3281 - Benfica, Fortaleza -
-            CE, 60020-180
+            <b>Endereço:</b> Av. da Universidade, 3281 - Benfica, Fortaleza - CE, 60020-180
           </p>
           <p>
             <b>Horário de Funcionamento:</b> 8h às 18h de segunda à sexta
@@ -51,7 +46,7 @@ export default function Mapa() {
             <b>Endereço:</b> Rua Teles de Souza, s/n - Couto Fernandes
           </p>
           <p>
-            <b>Horário de Funcionamento:</b> Plantão 24h todos os dias{" "}
+            <b>Horário de Funcionamento:</b> Plantão 24h todos os dias{' '}
           </p>
           <p>
             <b>Contatos:</b> (85) 3108.2992 / (85) 3108.2931
@@ -63,12 +58,10 @@ export default function Mapa() {
         <Popup position={[-3.7576203035266804, -38.559672895010564]}>
           <h2>Delegacia de Defesa da Mulher de Fortaleza (DDM-FOR)</h2>
           <p>
-            <b>Endereço:</b> R. Tabuleiro do Norte, s/n - Couto Fernandes,
-            Fortaleza - CE, 60442-040
+            <b>Endereço:</b> R. Tabuleiro do Norte, s/n - Couto Fernandes, Fortaleza - CE, 60442-040
           </p>
           <p>
-            <b>Horário de Funcionamento:</b> Plantão 24h todos os dias Contatos:
-            (85)
+            <b>Horário de Funcionamento:</b> Plantão 24h todos os dias Contatos: (85)
           </p>
           <p>
             <b>Contato:</b> 3108- 2950 / (85) 3108-2952
@@ -95,8 +88,7 @@ export default function Mapa() {
         <Popup position={[-3.8742427892731737, -38.62722027521255]}>
           <h2>Delegacia de Defesa da Mulher de Maracanaú (DDM-M)</h2>
           <p>
-            <b>Endereço:</b> Rua Padre José Holanda do Vale, 1961 (Altos) -
-            Piratininga
+            <b>Endereço:</b> Rua Padre José Holanda do Vale, 1961 (Altos) - Piratininga
           </p>
           <p>
             <b>Horário de Funcionamento:</b> Plantão 24h todos os dias
@@ -124,9 +116,7 @@ export default function Mapa() {
 
       <Marker key={7} position={[-3.727026031412932, -38.50320863103518]} icon={greenIcon}>
         <Popup position={[-3.727026031412932, -38.50320863103518]}>
-          <h2>
-            Centro de Referência e Apoio à Vítima de Violência - CRAVV / SPS
-          </h2>
+          <h2>Centro de Referência e Apoio à Vítima de Violência - CRAVV / SPS</h2>
           <p>
             <b>Endereço:</b> Silva Paulet, nº 334, Meireles
           </p>

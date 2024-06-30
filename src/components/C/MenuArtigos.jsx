@@ -1,9 +1,9 @@
-import * as React from "react";
-import IconButton from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import * as React from 'react';
+import IconButton from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import ListIcon from '@mui/icons-material/List';
-import "../../assets/css/C.css"
+import '../../assets/css/C.css';
 
 export default function MenuArtigos() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -16,11 +16,11 @@ export default function MenuArtigos() {
   };
 
   return (
-    <div className="TopButton" style={{left:"-10px"}}>
+    <div className="TopButton" style={{ left: '-10px' }}>
       <IconButton
-        aria-controls={open ? "basic-menu" : undefined}
+        aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         <ListIcon />
@@ -30,18 +30,23 @@ export default function MenuArtigos() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          "aria-labelledby": "basic-button",
+          'aria-labelledby': 'basic-button',
         }}
-
       >
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C16">Sobre violência de gênero</a>
+          <a className="menuArtigosLinks" href="C16">
+            Sobre violência de gênero
+          </a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C17">Legislação</a>
+          <a className="menuArtigosLinks" href="C17">
+            Legislação
+          </a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C18">Conheça a aplicação</a>
+          <a className="menuArtigosLinks" href="C18">
+            Conheça a aplicação
+          </a>
         </MenuItem>
       </Menu>
     </div>

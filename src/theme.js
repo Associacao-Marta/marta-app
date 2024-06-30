@@ -1,29 +1,29 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#357F78",
-      light: "#4DB6AC",
-      lighter: "#70C4BC",
+      main: '#357F78',
+      light: '#4DB6AC',
+      lighter: '#70C4BC',
     },
     secondary: {
-      main: "#8CA18C",
-      light: "#888686",
-      lighter: "##D3EBD3",
+      main: '#8CA18C',
+      light: '#888686',
+      lighter: '##D3EBD3',
     },
     warning: {
-      main: "#FF5722",
+      main: '#FF5722',
     },
     error: {
-      main: "#FF5252",
+      main: '#FF5252',
     },
     success: {
-      main: "#4CAF50",
+      main: '#4CAF50',
     },
   },
   typography: {
-    fontFamily: "Poppins",
+    fontFamily: 'Poppins',
   },
   values: {
     xs: 0,
