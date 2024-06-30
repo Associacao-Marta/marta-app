@@ -1,25 +1,23 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { getDoc, doc } from 'firebase/firestore';
+import db from '../../firebase-config';
 import iconCheck from '../../assets/img/icon_check.svg';
 import iconAtencao from '../../assets/img/icon_atencao.svg';
-import { useState } from 'react';
-
-//db
-import { db } from '../../firebase-config.js';
-import { getDoc, doc } from 'firebase/firestore';
 
 export default function PopUpD3(props) {
   const [open, setOpen] = useState(false);
   const [atendimento, setAtendimento] = useState([]);
   const [isProtocol, setIsProtocol] = useState(false);
+  const { protocolo } = props;
 
   const getAtendimento = async () => {
-    const docRef = doc(db, 'atendimento', props.protocolo);
+    const docRef = doc(db, 'atendimento', protocolo);
     const data = await getDoc(docRef);
 
     if (data.exists()) {
@@ -46,8 +44,7 @@ export default function PopUpD3(props) {
         variant="contained"
         onClick={handleClickOpen}
         sx={{ borderRadius: 8 }}
-        disabled={!props.protocolo}
-      >
+        disabled={!protocolo}>
         Consultar
       </Button>
 
@@ -55,17 +52,17 @@ export default function PopUpD3(props) {
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
+        aria-describedby="alert-dialog-description">
         <DialogTitle id="alert-dialog-title">
           {isProtocol ? (
             <>
-              <img src={iconCheck} style={{ position: 'relative', top: 5 }} />{' '}
-              {'Nos vemos em breve'}
+              <img src={iconCheck} alt="confirmado" style={{ position: 'relative', top: 5 }} /> Nos
+              vemos em breve
             </>
           ) : (
             <>
-              <img src={iconAtencao} style={{ position: 'relative', top: 5 }} /> {'Opa...'}
+              <img src={iconAtencao} alt="atenção" style={{ position: 'relative', top: 5 }} />{' '}
+              Opa...
             </>
           )}
         </DialogTitle>
@@ -96,8 +93,7 @@ export default function PopUpD3(props) {
             onClick={handleClose}
             autoFocus
             color="success"
-            sx={{ color: '#FFFFFF', borderRadius: 8 }}
-          >
+            sx={{ color: '#FFFFFF', borderRadius: 8 }}>
             OK
           </Button>
         </DialogActions>

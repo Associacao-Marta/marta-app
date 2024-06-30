@@ -5,10 +5,10 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { collection, setDoc, doc } from 'firebase/firestore';
+import db from '../../firebase-config';
 import iconSuccess from '../../assets/img/icon_check.svg';
 import iconFail from '../../assets/img/icon_atencao.svg';
-import { db } from '../../firebase-config.js';
-import { collection, addDoc, setDoc, doc } from 'firebase/firestore';
 
 export default function PopUpD2(props) {
   const [open, setOpen] = React.useState(false);
@@ -42,31 +42,38 @@ export default function PopUpD2(props) {
         onClick={handleClickOpen}
         sx={{ borderRadius: 8 }}
         disabled={
-          props.newTime == 'NaN:NaN' ||
-          props.newDate == 'NaN/NaN/NaN' ||
+          props.newTime === 'NaN:NaN' ||
+          props.newDate === 'NaN/NaN/NaN' ||
           !props.newName ||
           !props.newPhone ||
           !props.newDescription ||
           !props.newType
-        }
-      >
+        }>
         Enviar
       </Button>
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
+        aria-describedby="alert-dialog-description">
         <DialogTitle id="alert-dialog-title">
           {navigator.onLine === true ? (
             <>
-              <img src={iconSuccess} style={{ position: 'relative', top: 5 }} />{' '}
-              {'Atendimento Agendado'}
+              <img
+                src={iconSuccess}
+                alt="confirmação do agendamento"
+                style={{ position: 'relative', top: 5 }}
+              />{' '}
+              Atendimento Agendado
             </>
           ) : (
             <>
-              <img src={iconFail} style={{ position: 'relative', top: 5 }} /> {'Opa...'}
+              <img
+                src={iconFail}
+                alt="falha no agendamento"
+                style={{ position: 'relative', top: 5 }}
+              />{' '}
+              Opa...
             </>
           )}
         </DialogTitle>
@@ -95,8 +102,7 @@ export default function PopUpD2(props) {
             autoFocus
             href="D1"
             color="success"
-            sx={{ color: '#FFFFFF', borderRadius: 8 }}
-          >
+            sx={{ color: '#FFFFFF', borderRadius: 8 }}>
             OK
           </Button>
         </DialogActions>
