@@ -11,7 +11,7 @@ import '../../assets/css/C.css';
 const Home = () => {
   return (
     <Grid container className="pageCContainer">
-      <Header titulo="Artigos" searchButton />
+      <Header searchButton />
 
       <Grid container className="pageContainer">
         <Grid container className="carrosselContainer">

@@ -11,17 +11,15 @@ import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import '../assets/css/base.css';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import '../assets/css/base.css';
-import { useState } from 'react';
 
 export default function FixedBottomNavigation() {
-  const pathname = window.location.pathname;
+  const { pathname } = window.location;
   const [value, setValue] = React.useState(pathname);
   const ref = React.useRef(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(event, newValue);
-  };
+  // const handleChange = (event, newValue) => {
+  //   setValue(event, newValue);
+  // };
 
   const valueArtigos = [
     '/',
@@ -47,8 +45,8 @@ export default function FixedBottomNavigation() {
 
   const valueAtendimento = ['/D1', '/D2', '/D3'];
 
-  let indexArtigos = valueArtigos.indexOf(window.location.pathname);
-  let indexAtendimento = valueAtendimento.indexOf(window.location.pathname);
+  const indexArtigos = valueArtigos.indexOf(window.location.pathname);
+  const indexAtendimento = valueAtendimento.indexOf(window.location.pathname);
 
   return (
     <Box sx={{ pb: 7 }} ref={ref} className="Menu">
@@ -58,8 +56,7 @@ export default function FixedBottomNavigation() {
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);
-          }}
-        >
+          }}>
           <BottomNavigationAction
             href="C1"
             label="Artigos"
@@ -79,10 +76,10 @@ export default function FixedBottomNavigation() {
             }
           />
           <BottomNavigationAction
-            href="E1"
+            href="mapa"
             label="Local"
-            value={'/E1'}
-            icon={value === '/E1' ? <LocationOnIcon /> : <LocationOnOutlinedIcon />}
+            value="/mapa"
+            icon={value === '/mapa' ? <LocationOnIcon /> : <LocationOnOutlinedIcon />}
           />
         </BottomNavigation>
       </Paper>

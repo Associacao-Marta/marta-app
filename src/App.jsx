@@ -22,10 +22,10 @@ import C15 from './telas/artigos/C15';
 import C16 from './telas/C16';
 import C17 from './telas/C17';
 import C18 from './telas/C18';
-import D1 from './telas/D1';
-import D2 from './telas/D2';
-import D3 from './telas/D3';
-import E1 from './telas/E1';
+import Scheduling from './telas/Scheduling/Scheduling';
+import SchedulingConfirmation from './telas/Scheduling/SchedulingConfirmation';
+import SchedulingContact from './telas/Scheduling/SchedulingContact';
+import Map from './telas/Map/Map';
 
 function App() {
   const [isTermChecked, setTermChecked] = useState(false);
@@ -44,6 +44,11 @@ function App() {
             <Route exact path="onboarding" element={<Onboarding />} />
             <Route exact path="termos-de-uso" element={<TermsOfUse />} />
             <Route exact path="inicio" element={<Home />} />
+            <Route exact path="agendamento" element={<Scheduling />} />
+            <Route exact path="confirmacao-agendamento" element={<SchedulingConfirmation />} />
+            <Route exact path="contato-agendamento" element={<SchedulingContact />} />
+            <Route exact path="mapa" element={<Map />} />
+
             <Route exact path="C2" element={<C2 />} />
             <Route exact path="C3" element={<C3 />} />
             <Route exact path="C4" element={<C4 />} />
@@ -61,10 +66,6 @@ function App() {
             <Route exact path="C16" element={<C16 />} />
             <Route exact path="C17" element={<C17 />} />
             <Route exact path="C18" element={<C18 />} />
-            <Route exact path="D1" element={<D1 />} />
-            <Route exact path="D2" element={<D2 />} />
-            <Route exact path="D3" element={<D3 />} />
-            <Route exact path="E1" element={<E1 />} />
           </Routes>
         </Router>
       </Typography>

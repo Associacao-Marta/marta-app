@@ -1,22 +1,21 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Stack, Grid, TextField } from '@mui/material';
-import BotaoDoPanico from '../components/BotaoDoPanico';
-import PopUpD2 from '../components/D/PopUpD2.jsx';
-import PopUpCancelarD2 from '../components/D/PopUpCancelarD2.jsx';
-import Header from '../components/Header';
+import setMinutes from 'date-fns/setMinutes';
+import setHours from 'date-fns/setHours';
 import InputMask from 'react-input-mask';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import { addDays } from 'date-fns';
-import setHours from 'date-fns/setHours';
-import setMinutes from 'date-fns/setMinutes';
 import pt from 'date-fns/locale/pt';
+import BotaoDoPanico from '../../components/BotaoDoPanico';
+import PopUpD2 from '../../components/D/PopUpD2';
+import PopUpCancelarD2 from '../../components/D/PopUpCancelarD2';
+import Header from '../../components/Header';
 import 'react-datepicker/dist/react-datepicker.css';
-import '../assets/css/calendario.css';
-import '../assets/css/base.css';
-import '../assets/css/D.css';
+import '../../assets/css/calendario.css';
+import '../../assets/css/base.css';
+import '../../assets/css/D.css';
 
-const D2 = () => {
+const SchedulingConfirmation = () => {
   const [errorText1, setErrorText1] = useState('');
   const [errorText2, setErrorText2] = useState('');
   const [errorText3, setErrorText3] = useState('');
@@ -28,7 +27,6 @@ const D2 = () => {
   const [newDescription, setNewDescription] = useState('');
   const [newType, setNewType] = useState('');
   const [selectedCalendar, setSelectedCalendar] = useState('');
-  var formatedDate, formatedTime;
 
   registerLocale('pt', pt);
 
@@ -71,36 +69,36 @@ const D2 = () => {
   };
 
   const setNewDateNewTime = (date) => {
-    var d = new Date(date),
-      month = '' + (d.getMonth() + 1),
-      day = '' + d.getDate(),
-      year = d.getFullYear(),
-      hour = d.getHours(),
-      minutes = d.getMinutes();
+    const d = new Date(date);
+    const month = d.getMonth() + 1;
+    const day = d.getDate();
+    const year = d.getFullYear();
+    const hour = d.getHours();
+    const minutes = d.getMinutes();
 
-    if (month.length < 2) {
-      month = '0' + month;
-    }
-    if (day.length < 2) {
-      day = '0' + day;
-    }
-    if (minutes === 0) {
-      minutes = minutes + '0';
-    }
+    // if (month.length < 2) {
+    //   month = '0' + month;
+    // }
+    // if (day.length < 2) {
+    //   day = '0' + day;
+    // }
+    // if (minutes === 0) {
+    //   minutes = minutes + '0';
+    // }
 
-    formatedDate = [day, month, year].join('/');
-    formatedTime = hour + ':' + minutes;
+    const formatedDate = [day, month, year].join('/');
+    const formatedTime = `${hour} : ${minutes}`;
 
-    return formatedDate, formatedTime;
+    return { formatedDate, formatedTime };
   };
 
-  setNewDateNewTime(selectedCalendar);
+  const { formatedDate, formatedTime } = setNewDateNewTime(selectedCalendar);
 
   return (
     <Grid container>
       <Header
         titulo="Agendar atendimento"
-        backButtonD2={true}
+        backButtonD2
         newDate={formatedDate}
         newTime={formatedTime}
         newName={newName}
@@ -128,7 +126,7 @@ const D2 = () => {
                 }}
               />
               <InputMask
-                mask={'99 99999-9999'}
+                mask="99 99999-9999"
                 maskPlaceholder=""
                 error={newPhoneError}
                 onBlur={() => {
@@ -138,8 +136,7 @@ const D2 = () => {
                 label="Telefone"
                 onChange={(event) => {
                   setNewPhone(event.target.value);
-                }}
-              >
+                }}>
                 <TextField />
               </InputMask>
               <TextField
@@ -167,15 +164,13 @@ const D2 = () => {
                 <Button
                   sx={{ borderRadius: 8 }}
                   variant={newType !== 'psicólogas' ? 'outlined' : 'contained'}
-                  onClick={setTypePsicologa}
-                >
+                  onClick={setTypePsicologa}>
                   psicóloga
                 </Button>
                 <Button
                   sx={{ borderRadius: 8 }}
                   variant={newType !== 'advogadas' ? 'outlined' : 'contained'}
-                  onClick={setTypeAdvogada}
-                >
+                  onClick={setTypeAdvogada}>
                   advogada
                 </Button>
               </Stack>
@@ -196,7 +191,7 @@ const D2 = () => {
               locale="pt"
               shouldCloseOnSelect={false}
               closeOnScroll={false}
-              disabledKeyboardNavigation={true}
+              disabledKeyboardNavigation
               includeDateIntervals={[
                 {
                   start: new Date('2022/07/13'),
@@ -219,7 +214,7 @@ const D2 = () => {
               placeholderText="Escolha um horário"
               shouldCloseOnSelect={false}
               closeOnScroll={false}
-              disabledKeyboardNavigation={true}
+              disabledKeyboardNavigation
               minTime={setHours(setMinutes(new Date(), 0), 8)}
               maxTime={setHours(setMinutes(new Date(), 8), 17)}
               onKeyDown={(e) => {
@@ -257,4 +252,4 @@ const D2 = () => {
   );
 };
 
-export default D2;
+export default SchedulingConfirmation;

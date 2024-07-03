@@ -43,7 +43,7 @@ const TermsOfUse = () => {
       <Grid container className="buttonContainer" sx={{ position: 'absolute', top: '79.75vh' }}>
         <Button
           variant="contained"
-          href="C1"
+          href="inicio"
           className="addButton"
           disabled={isTermChecked !== true}
           sx={{ borderRadius: 8 }}>

@@ -1,29 +1,28 @@
 import React from 'react';
 import { Grid, TextField } from '@mui/material';
-import BotaoDoPanico from '../components/BotaoDoPanico';
-import MenuInferior from '../components/MenuInferior';
-import PopUpD3 from '../components/D/PopUpD3';
-import Header from '../components/Header';
 import InputMask from 'react-input-mask';
-import '../assets/css/base.css';
-import '../assets/css/D.css';
+import BotaoDoPanico from '../../components/BotaoDoPanico';
+import MenuInferior from '../../components/MenuInferior';
+import PopUpD3 from '../../components/D/PopUpD3';
+import Header from '../../components/Header';
+import '../../assets/css/base.css';
+import '../../assets/css/D.css';
 
-const D3 = () => {
+const SchedulingContact = () => {
   const [protocolo, setProtocolo] = React.useState();
 
   return (
     <Grid container>
-      <Header titulo="Consultar atendimento" backButton={true} destino="D1" />
+      <Header titulo="Consultar atendimento" backButton destino="D1" />
 
       <Grid container className="pageContainer">
         <Grid container className="protocoloContainer">
           <InputMask
-            mask={'99 99999-9999'}
+            mask="99 99999-9999"
             label="Telefone"
             onChange={(event) => {
               setProtocolo(event.target.value);
-            }}
-          >
+            }}>
             <TextField fullWidth />
           </InputMask>
 
@@ -44,4 +43,4 @@ const D3 = () => {
   );
 };
 
-export default D3;
+export default SchedulingContact;
