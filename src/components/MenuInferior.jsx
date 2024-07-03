@@ -23,7 +23,7 @@ export default function FixedBottomNavigation() {
 
   const valueArtigos = [
     '/',
-    '/C1',
+    '/inicio',
     '/C2',
     '/C3',
     '/C4',
@@ -43,7 +43,7 @@ export default function FixedBottomNavigation() {
     '/C18',
   ];
 
-  const valueAtendimento = ['/D1', '/D2', '/D3'];
+  const valueAtendimento = ['/agendamento', '/confirmacao-agendamento', '/contato-agendamento'];
 
   const indexArtigos = valueArtigos.indexOf(window.location.pathname);
   const indexAtendimento = valueAtendimento.indexOf(window.location.pathname);
@@ -58,13 +58,13 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}>
           <BottomNavigationAction
-            href="C1"
+            href="inicio"
             label="Artigos"
             value={valueArtigos[indexArtigos]}
             icon={value === valueArtigos[indexArtigos] ? <BookIcon /> : <BookOutlinedIcon />}
           />
           <BottomNavigationAction
-            href="D1"
+            href="agendamento"
             label="Atendimento"
             value={valueAtendimento[indexAtendimento]}
             icon={

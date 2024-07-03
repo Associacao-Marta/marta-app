@@ -11,7 +11,7 @@ const Map = () => {
   return (
     <Grid container>
       <Grid className="containerBotao">
-        <IconButton color="primary" aria-label="Voltar" href="C1">
+        <IconButton color="primary" aria-label="Voltar" href="inicio">
           <ArrowBackIosNewIcon />
         </IconButton>
       </Grid>

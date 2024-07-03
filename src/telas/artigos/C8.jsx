@@ -13,8 +13,8 @@ import '../../assets/css/C.css';
 const C8 = () => {
   return (
     <Grid container className="">
-      <Header titulo="Artigos" destino="C1" backButton={true}></Header>
-      <HeaderTitulo img={img} titulo="Maria da Penha" chip="Legislação"></HeaderTitulo>
+      <Header titulo="Artigos" destino="inicio" backButton />
+      <HeaderTitulo img={img} titulo="Maria da Penha" chip="Legislação" />
 
       <Grid container className="pageContainer">
         <Grid container item className="containerArtigo" id="target">

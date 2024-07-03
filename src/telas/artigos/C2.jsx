@@ -12,7 +12,7 @@ import '../../assets/css/C.css';
 const C2 = () => {
   return (
     <Grid container className="">
-      <Header titulo="Artigos" destino="C1" backButton={true}></Header>
+      <Header titulo="Artigos" destino="inicio" backButton />
       <HeaderTitulo
         margin_top_icon="0px"
         margin_top="16px"
@@ -20,7 +20,7 @@ const C2 = () => {
         img={img}
         titulo="Quem somos"
         chip="Sobre a associação"
-      ></HeaderTitulo>
+      />
 
       <Grid container className="pageContainer" style={{ paddingRight: '6.67vw' }}>
         <Grid container item className="containerArtigo" id="target">

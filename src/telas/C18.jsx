@@ -10,7 +10,7 @@ import '../assets/css/C.css';
 const C16 = () => {
   return (
     <Grid container>
-      <Header titulo="Artigos" backButton destino="C1" />
+      <Header titulo="Artigos" backButton destino="inicio" />
 
       <Grid container className="pageContainer">
         <Grid item>

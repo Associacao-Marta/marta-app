@@ -13,12 +13,12 @@ import '../../assets/css/C.css';
 const C6 = () => {
   return (
     <Grid container className="">
-      <Header titulo="Artigos" destino="C1" backButton={true}></Header>
+      <Header titulo="Artigos" destino="inicio" backButton />
       <HeaderTitulo
         img={img}
         titulo="Sinais de que a mulher está sofrendo violência doméstica"
         chip="Violência contra a mulher"
-      ></HeaderTitulo>
+      />
 
       <Grid container className="pageContainer">
         <Grid container item className="containerArtigo" id="target">
