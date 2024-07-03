@@ -1,17 +1,17 @@
 import React from 'react';
 import { Grid, Stack } from '@mui/material';
-import BotaoDoPanico from '../components/BotaoDoPanico';
-import MenuInferior from '../components/MenuInferior';
-import Carrossel from '../components/C/Carrossel';
-import CardArtigo from '../components/C/CardArtigo';
-import Header from '../components/Header';
-import '../assets/css/base.css';
-import '../assets/css/C.css';
+import BotaoDoPanico from '../../components/BotaoDoPanico';
+import MenuInferior from '../../components/MenuInferior';
+import Carrossel from '../../components/C/Carrossel';
+import CardArtigo from '../../components/C/CardArtigo';
+import Header from '../../components/Header';
+import '../../assets/css/base.css';
+import '../../assets/css/C.css';
 
-const C1 = () => {
+const Home = () => {
   return (
     <Grid container className="pageCContainer">
-      <Header titulo="Artigos" searchButton={true} />
+      <Header titulo="Artigos" searchButton />
 
       <Grid container className="pageContainer">
         <Grid container className="carrosselContainer">
@@ -74,4 +74,4 @@ const C1 = () => {
   );
 };
 
-export default C1;
+export default Home;

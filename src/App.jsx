@@ -1,16 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 
-import A1 from './telas/A1';
-import A2 from './telas/A2';
-import A3 from './telas/A3';
-import A4 from './telas/A4';
-import A5 from './telas/A5';
-import A6 from './telas/A6';
-import B1 from './telas/B1';
-import C1 from './telas/C1';
+import Onboarding from './telas/Onboarding/Onboarding';
+import TermsOfUse from './telas/TermsOfUse/TermsOfUse';
+import Home from './telas/Home/Home';
 import C2 from './telas/artigos/C2';
 import C3 from './telas/artigos/C3';
 import C4 from './telas/artigos/C4';
@@ -34,31 +28,22 @@ import D3 from './telas/D3';
 import E1 from './telas/E1';
 
 function App() {
-  const [localData, setLocalData] = useState();
+  const [isTermChecked, setTermChecked] = useState(false);
+  const localStorageTerm = JSON.parse(localStorage.getItem('checked'));
 
   useEffect(() => {
-    setLocalData(JSON.parse(localStorage.getItem('checked')));
-    if (localData) {
-      setLocalData(localData);
-    }
-  });
-
-  console.log(localData);
+    setTermChecked(localStorageTerm);
+  }, []);
 
   return (
     <div className="App">
       <Typography>
         <Router>
           <Routes>
-            <Route exact path="/" element={localData ? <C1 /> : <A1 />} />
-            <Route exact path="A1" element={<A1 />} />
-            <Route exact path="A2" element={<A2 />} />
-            <Route exact path="A3" element={<A3 />} />
-            <Route exact path="A4" element={<A4 />} />
-            <Route exact path="A5" element={<A5 />} />
-            <Route exact path="A6" element={<A6 />} />
-            <Route exact path="B1" element={<B1 />} />
-            <Route exact path="C1" element={<C1 />} />
+            <Route exact path="/" element={isTermChecked ? <Home /> : <Onboarding />} />
+            <Route exact path="onboarding" element={<Onboarding />} />
+            <Route exact path="termos-de-uso" element={<TermsOfUse />} />
+            <Route exact path="inicio" element={<Home />} />
             <Route exact path="C2" element={<C2 />} />
             <Route exact path="C3" element={<C3 />} />
             <Route exact path="C4" element={<C4 />} />
