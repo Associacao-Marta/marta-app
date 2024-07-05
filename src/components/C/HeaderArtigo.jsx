@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Chip } from '@mui/material';
 import '../../assets/css/base.css';
 import '../../assets/css/C.css';
-import BotaoAcessibilidade from '../C/BotaoAcessibilidade';
+import BotaoAcessibilidade from './BotaoAcessibilidade';
 
 const HeaderTitulo = (props) => {
   return (
@@ -10,14 +10,13 @@ const HeaderTitulo = (props) => {
       <Grid
         container
         className="iconArtigoContainer"
-        style={{ marginTop: props.margin_top, marginBottom: props.margin_bottom }}
-      >
+        style={{ marginTop: props.margin_top, marginBottom: props.margin_bottom }}>
         <Grid container className="circuloIcon" style={{ marginTop: props.margin_top_icon }} />
-        <img src={props.img} className="iconArtigo" />
+        <img src={props.img} alt="ir para artigo" className="iconArtigo" />
       </Grid>
 
       <Grid className="tituloArtigo">
-        <Grid item className="detalheTitulo"></Grid>
+        <Grid item className="detalheTitulo" />
 
         <Grid item className="containerTituloArtigo">
           <div className="tituloH1">{props.titulo}</div>

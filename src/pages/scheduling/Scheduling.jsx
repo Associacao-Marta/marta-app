@@ -10,7 +10,7 @@ import '../../assets/css/D.css';
 const Scheduling = () => {
   return (
     <Grid container className="pageDContainer">
-      <Header titulo="Atendimento" backButton destino="inicio" />
+      <Header titulo="Atendimento" backButton destino="/" />
 
       <Grid item container className="ilustracao">
         <img src={img} alt="agendamento" />

@@ -14,24 +14,29 @@ const steps = [
   {
     label: 'Destaque 1',
     description: (
-      <a href="C2">
-        <img src={img1} style={{ borderRadius: 4, width: '100%' }} />
+      <a href="/artigos/quem-somos">
+        <img src={img1} alt="quem somos" style={{ borderRadius: 4, width: '100%' }} />
       </a>
     ),
   },
   {
     label: 'Destaque 2',
     description: (
-      <a href="C3">
-        <img src={img2} style={{ borderRadius: 4, width: '100%' }} />
+      <a href="/artigos/marta-escuta">
+        <img src={img2} alt="marta escuta" style={{ borderRadius: 4, width: '100%' }} />
       </a>
     ),
   },
   {
     label: 'Destaque 3',
     description: (
-      <a href="C4">
-        <img src={img3} style={{ borderRadius: 4, width: '100%' }} />
+      <a href="/artigos/doacoes">
+        <img
+          src={img3}
+          alt="doações
+      "
+          style={{ borderRadius: 4, width: '100%' }}
+        />
       </a>
     ),
   },

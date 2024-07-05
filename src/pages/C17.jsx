@@ -10,26 +10,31 @@ import '../assets/css/C.css';
 const C16 = () => {
   return (
     <Grid container>
-      <Header titulo="Artigos" backButton destino="inicio" />
+      <Header titulo="Artigos" backButton destino="/" />
 
       <Grid container className="pageContainer">
         <Grid item>
           <h2 className="tituloH2" style={{ color: '#337066' }}>
-            Conheça a aplicação
+            Legislação
           </h2>
         </Grid>
 
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack spacing={2} style={{ width: '100%' }}>
-            <CardArtigoGrande titulo="Artigos" tela="C11" href="C11" />
-            <CardArtigoGrande titulo="Atendimento" tela="C12" href="C12" />
-            <CardArtigoGrande titulo="Locais de Apoio" tela="C13" href="C13" />
-            <CardArtigoGrande titulo="Botão de pânico" tela="C14" href="C14" />
-            <CardArtigoGrande titulo="Quem desenvolveu" tela="C15" href="C15" />
+            <CardArtigoGrande titulo="Feminicídio " tela="C7" href="/artigos/feminicidio" />
+            <CardArtigoGrande titulo="Maria da Penha" tela="C8" href="/artigos/maria-da-penha" />
+            <CardArtigoGrande
+              titulo="Atendimento público específico e especializado no SUS"
+              tela="C9"
+              href="/artigos/atendimento-publico"
+            />
+            <CardArtigoGrande
+              titulo="Plano Nacional de Enfrentamento ao Feminicídio"
+              tela="C10"
+              href="/artigos/plano-nacional"
+            />
           </Stack>
         </Grid>
-
-        <Grid item className="EspacoInferior" />
       </Grid>
 
       <BotaoDoPanico />

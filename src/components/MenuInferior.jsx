@@ -23,21 +23,20 @@ export default function FixedBottomNavigation() {
 
   const valueArtigos = [
     '/',
-    '/inicio',
-    '/C2',
-    '/C3',
-    '/C4',
-    '/C5',
-    '/C6',
-    '/C7',
-    '/C8',
-    '/C9',
-    '/C10',
-    '/C11',
-    '/C12',
-    '/C13',
-    '/C14',
-    '/C15',
+    '/artigos/quem-somos',
+    '/artigos/marta-escuta',
+    '/artigos/doacoes',
+    '/artigos/por-que-essas-relacoes-de-violencia-perduram',
+    '/artigos/sinais-de-violencia-domestica',
+    '/artigos/feminicidio',
+    '/artigos/maria-da-penha',
+    '/artigos/atendimento-publico',
+    '/artigos/plano-nacional',
+    '/artigos/artigos',
+    '/artigos/atendimentos',
+    '/artigos/locais-de-apoio',
+    '/artigos/botao-de-emergencia',
+    '/artigos/quem-desenvolveu',
     '/C16',
     '/C17',
     '/C18',
@@ -58,7 +57,7 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}>
           <BottomNavigationAction
-            href="inicio"
+            href="/"
             label="Artigos"
             value={valueArtigos[indexArtigos]}
             icon={value === valueArtigos[indexArtigos] ? <BookIcon /> : <BookOutlinedIcon />}

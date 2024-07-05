@@ -18,8 +18,7 @@ export default function Mapa() {
     <MapContainer
       className="leaflet-container"
       center={[-3.744212747433668, -38.54183660836403]}
-      zoom={11}
-    >
+      zoom={11}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -10,7 +10,7 @@ import '../assets/css/C.css';
 const C16 = () => {
   return (
     <Grid container>
-      <Header titulo="Artigos" backButton destino="inicio" />
+      <Header titulo="Artigos" backButton destino="/" />
 
       <Grid container className="pageContainer">
         <Grid item>
@@ -24,12 +24,12 @@ const C16 = () => {
             <CardArtigoGrande
               titulo="Por que essas relações de violência perduram?"
               tela="C5"
-              href="C5"
+              href="/artigos/por-que-essas-relacoes-de-violencia-perduram"
             />
             <CardArtigoGrande
               titulo="Sinais de que a mulher está sofrendo violência doméstica"
               tela="C6"
-              href="C6"
+              href="/artigos/sinais-de-violencia-domestica"
             />
           </Stack>
         </Grid>

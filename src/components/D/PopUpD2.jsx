@@ -100,7 +100,7 @@ export default function PopUpD2(props) {
             variant="contained"
             onClick={handleClose}
             autoFocus
-            href="D1"
+            href="agendamento"
             color="success"
             sx={{ color: '#FFFFFF', borderRadius: 8 }}>
             OK

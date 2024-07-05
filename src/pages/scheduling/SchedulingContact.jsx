@@ -13,7 +13,7 @@ const SchedulingContact = () => {
 
   return (
     <Grid container>
-      <Header titulo="Consultar atendimento" backButton destino="D1" />
+      <Header titulo="Consultar atendimento" backButton destino="agendamento" />
 
       <Grid container className="pageContainer">
         <Grid container className="protocoloContainer">

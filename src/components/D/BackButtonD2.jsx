@@ -38,7 +38,7 @@ export default function PopUpCancelarD2(props) {
       !props.newDescription &&
       !props.newType
     ) {
-      let href2 = 'D1';
+      let href2 = 'agendamento';
       return href2;
     }
   };
@@ -53,8 +53,7 @@ export default function PopUpCancelarD2(props) {
           onClick={() => {
             handleClickOpen();
           }}
-          href={href()}
-        >
+          href={href()}>
           <ArrowBackIosNewIcon />
         </IconButton>
       </div>
@@ -64,8 +63,7 @@ export default function PopUpCancelarD2(props) {
           open={open}
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
+          aria-describedby="alert-dialog-description">
           <DialogTitle id="alert-dialog-title">{'Opa...'}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
@@ -76,14 +74,13 @@ export default function PopUpCancelarD2(props) {
             </DialogContentText>
             <DialogContentText
               id="alert-dialog-description"
-              sx={{ fontSize: '11px', marginTop: '12px', marginLeft: '-12px' }}
-            ></DialogContentText>
+              sx={{ fontSize: '11px', marginTop: '12px', marginLeft: '-12px' }}></DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} autoFocus sx={{ marginRight: '152px' }}>
               Não
             </Button>
-            <Button href="D1" variant="text" autoFocus sx={{}}>
+            <Button href="agendamento" variant="text" autoFocus sx={{}}>
               Sim
             </Button>
           </DialogActions>
