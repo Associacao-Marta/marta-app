@@ -47,8 +47,8 @@ const Article = () => {
             <Stack direction="row" spacing={2}>
               <CardArtigo
                 titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tela="C6"
-                href="C6"
+                tela="sinais"
+                href="/artigos/sinais-de-violencia-domestica"
               />
             </Stack>
           </Grid>

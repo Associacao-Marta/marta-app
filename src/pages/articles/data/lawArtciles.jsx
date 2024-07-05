@@ -1,7 +1,7 @@
-import feminicidioImage from '../../../assets/img/artigos/C7_icon.svg';
-import mariaDaPenhaImage from '../../../assets/img/artigos/C8_icon.svg';
-import atendimentoPublicoImage from '../../../assets/img/artigos/C9_icon.svg';
-import planoNacionalImage from '../../../assets/img/artigos/C10_icon.svg';
+import feminicidioImage from '../../../assets/img/artigos/feminicidio_icon.svg';
+import mariaDaPenhaImage from '../../../assets/img/artigos/maria_da_penha_icon.svg';
+import atendimentoPublicoImage from '../../../assets/img/artigos/atendimento_pulico_icon.svg';
+import planoNacionalImage from '../../../assets/img/artigos/plano_nacional_icon.svg';
 
 const lawArticlesData = [
   {

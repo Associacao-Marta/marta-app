@@ -33,12 +33,12 @@ const Home = () => {
           <Stack direction="row" spacing={2}>
             <CardArtigo
               titulo="Por que essas relações de violência perduram?"
-              tela="C5"
+              tela="motivos"
               href="/artigos/por-que-essas-relacoes-de-violencia-perduram"
             />
             <CardArtigo
               titulo="Sinais de que a mulher está sofrendo violência doméstica"
-              tela="C6"
+              tela="sinais"
               href="/artigos/sinais-de-violencia-domestica"
             />
           </Stack>
@@ -50,16 +50,20 @@ const Home = () => {
           </Grid>
           <Grid container className="carrosselArtigos" dir="ltr">
             <Stack direction="row" spacing={2}>
-              <CardArtigo titulo="Feminicídio " tela="C7" href="/artigos/feminicidio" />
-              <CardArtigo titulo="Maria da Penha" tela="C8" href="/artigos/maria-da-penha" />
+              <CardArtigo titulo="Feminicídio " tela="feminicidio" href="/artigos/feminicidio" />
+              <CardArtigo
+                titulo="Maria da Penha"
+                tela="mariaDaPenha"
+                href="/artigos/maria-da-penha"
+              />
               <CardArtigo
                 titulo="Atendimento público específico e especializado no SUS"
-                tela="C9"
+                tela="atendimentoPublico"
                 href="/artigos/atendimento-publico"
               />
               <CardArtigo
                 titulo="Plano Nacional de Enfrentamento ao Feminicídio"
-                tela="C10"
+                tela="planoNacional"
                 href="/artigos/plano-nacional"
               />
             </Stack>

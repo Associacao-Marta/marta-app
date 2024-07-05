@@ -21,16 +21,24 @@ const LawMenu = () => {
 
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack spacing={2} style={{ width: '100%' }}>
-            <CardArtigoGrande titulo="Feminicídio " tela="C7" href="/artigos/feminicidio" />
-            <CardArtigoGrande titulo="Maria da Penha" tela="C8" href="/artigos/maria-da-penha" />
+            <CardArtigoGrande
+              titulo="Feminicídio "
+              tela="feminicidio"
+              href="/artigos/feminicidio"
+            />
+            <CardArtigoGrande
+              titulo="Maria da Penha"
+              tela="mariaDaPenha"
+              href="/artigos/maria-da-penha"
+            />
             <CardArtigoGrande
               titulo="Atendimento público específico e especializado no SUS"
-              tela="C9"
+              tela="atendimentoPublico"
               href="/artigos/atendimento-publico"
             />
             <CardArtigoGrande
               titulo="Plano Nacional de Enfrentamento ao Feminicídio"
-              tela="C10"
+              tela="planoNacional"
               href="/artigos/plano-nacional"
             />
           </Stack>

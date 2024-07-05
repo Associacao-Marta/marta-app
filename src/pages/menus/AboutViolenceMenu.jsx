@@ -23,12 +23,12 @@ const AboutViolenceMenu = () => {
           <Stack spacing={2} style={{ width: '100%' }}>
             <CardArtigoGrande
               titulo="Por que essas relações de violência perduram?"
-              tela="C5"
+              tela="motivos"
               href="/artigos/por-que-essas-relacoes-de-violencia-perduram"
             />
             <CardArtigoGrande
               titulo="Sinais de que a mulher está sofrendo violência doméstica"
-              tela="C6"
+              tela="sinais"
               href="/artigos/sinais-de-violencia-domestica"
             />
           </Stack>

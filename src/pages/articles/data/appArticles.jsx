@@ -1,8 +1,8 @@
-import artigosImage from '../../../assets/img/artigos/C11_icon.svg';
-import atendimentosImage from '../../../assets/img/artigos/C12_icon.svg';
-import locaisDeApoioImage from '../../../assets/img/artigos/C13_icon.svg';
-import btnEmergenciaImage from '../../../assets/img/artigos/C14_icon.svg';
-import equipeImage from '../../../assets/img/artigos/C15_icon.svg';
+import artigosImage from '../../../assets/img/artigos/artigos_icon.svg';
+import atendimentosImage from '../../../assets/img/artigos/atendimento_icon.svg';
+import locaisDeApoioImage from '../../../assets/img/artigos/locais_de_apoio_icon.svg';
+import btnEmergenciaImage from '../../../assets/img/artigos/btn_de_panico_icon.svg';
+import equipeImage from '../../../assets/img/artigos/equipe_icon.svg';
 
 const appArticlesData = [
   {

@@ -1,5 +1,5 @@
-import motivosImage from '../../../assets/img/artigos/C5_icon.svg';
-import sinaisImage from '../../../assets/img/artigos/C6_icon.svg';
+import motivosImage from '../../../assets/img/artigos/motivos_icon.svg';
+import sinaisImage from '../../../assets/img/artigos/sinais_icon.svg';
 
 const violenceArticlesData = [
   {

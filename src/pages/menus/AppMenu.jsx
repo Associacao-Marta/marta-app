@@ -21,17 +21,25 @@ const AppMenu = () => {
 
         <Grid container className="carrosselArtigos" dir="ltr">
           <Stack spacing={2} style={{ width: '100%' }}>
-            <CardArtigoGrande titulo="Artigos" tela="C11" href="/artigos/artigos" />
-            <CardArtigoGrande titulo="Atendimento" tela="C12" href="/artigos/atendimentos" />
-            <CardArtigoGrande titulo="Locais de Apoio" tela="C13" href="/artigos/locais-de-apoio" />
+            <CardArtigoGrande titulo="Artigos" tela="artigos" href="/artigos/artigos" />
+            <CardArtigoGrande
+              titulo="Atendimento"
+              tela="atendimento"
+              href="/artigos/atendimentos"
+            />
+            <CardArtigoGrande
+              titulo="Locais de Apoio"
+              tela="locaisDeApoio"
+              href="/artigos/locais-de-apoio"
+            />
             <CardArtigoGrande
               titulo="Botão de pânico"
-              tela="C14"
+              tela="botaoDePanico"
               href="/artigos/botao-de-emergencia"
             />
             <CardArtigoGrande
               titulo="Quem desenvolveu"
-              tela="C15"
+              tela="equipe"
               href="/artigos/quem-desenvolveu"
             />
           </Stack>

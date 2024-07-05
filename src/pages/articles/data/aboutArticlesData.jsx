@@ -1,6 +1,6 @@
-import quemSomosImg from '../../../assets/img/artigos/C2_icon.svg';
-import martaEscutaImg from '../../../assets/img/artigos/C3_icon.svg';
-import doacoesImg from '../../../assets/img/artigos/C4_icon.svg';
+import quemSomosImg from '../../../assets/img/artigos/quem_somos_icon.svg';
+import martaEscutaImg from '../../../assets/img/artigos/marta_escuta_icon.svg';
+import doacoesImg from '../../../assets/img/artigos/doacoes_icon.svg';
 
 const aboutArticlesData = [
   {
