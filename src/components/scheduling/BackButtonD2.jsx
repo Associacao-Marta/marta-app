@@ -7,6 +7,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { IconButton, Grid } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+
 export default function PopUpCancelarD2(props) {
   const [open, setOpen] = React.useState(false);
 
@@ -32,15 +33,16 @@ export default function PopUpCancelarD2(props) {
   const href = () => {
     if (
       props.newTime === 'NaN:NaN' &&
-      props.newDate == 'NaN/NaN/NaN' &&
+      props.newDate === 'NaN/NaN/NaN' &&
       !props.newName &&
       !props.newPhone &&
       !props.newDescription &&
       !props.newType
     ) {
-      let href2 = 'agendamento';
+      const href2 = 'agendamento';
       return href2;
     }
+    return '';
   };
 
   return (
@@ -64,7 +66,7 @@ export default function PopUpCancelarD2(props) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description">
-          <DialogTitle id="alert-dialog-title">{'Opa...'}</DialogTitle>
+          <DialogTitle id="alert-dialog-title">Opa...</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               Percebi que você não concluiu seu agendamento.
@@ -74,7 +76,8 @@ export default function PopUpCancelarD2(props) {
             </DialogContentText>
             <DialogContentText
               id="alert-dialog-description"
-              sx={{ fontSize: '11px', marginTop: '12px', marginLeft: '-12px' }}></DialogContentText>
+              sx={{ fontSize: '11px', marginTop: '12px', marginLeft: '-12px' }}
+            />
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} autoFocus sx={{ marginRight: '152px' }}>

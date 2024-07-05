@@ -15,8 +15,8 @@ export default function BotaoAcessibilidade() {
         range: 10,
       }}
       customButtons={{
-        up: <img src={up} style={{ scale: '1.2' }} />,
-        down: <img src={down} style={{ scale: '1.2' }} />,
+        up: <img src={up} alt="up" style={{ scale: '1.2' }} />,
+        down: <img src={down} alt="down" style={{ scale: '1.2' }} />,
         style: {
           border: 'none',
           width: '30px',

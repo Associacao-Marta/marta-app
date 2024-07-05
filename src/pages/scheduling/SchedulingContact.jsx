@@ -3,7 +3,7 @@ import { Grid, TextField } from '@mui/material';
 import InputMask from 'react-input-mask';
 import BotaoDoPanico from '../../components/BotaoDoPanico';
 import MenuInferior from '../../components/MenuInferior';
-import PopUpD3 from '../../components/D/PopUpD3';
+import PopUpD3 from '../../components/scheduling/PopUpD3';
 import Header from '../../components/Header';
 import '../../assets/css/base.css';
 import '../../assets/css/D.css';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import BackButton from './BackButton';
-import BackButtonD2 from './D/BackButtonD2';
-import MenuArtigos from './C/MenuArtigos';
+import BackButtonD2 from './scheduling/BackButtonD2';
+import MenuArtigos from './article/MenuArtigos';
 import '../assets/css/base.css';
 
 const Header = (props) => {
