@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Onboarding from './pages/onboarding/Onboarding';
 import TermsOfUse from './pages/termsOfUse/TermsOfUse';
 
-import C16 from './pages/C16';
-import C17 from './pages/C17';
-import C18 from './pages/C18';
+import AboutViolenceMenu from './pages/menus/AboutViolenceMenu';
+import LawMenu from './pages/menus/LawMenu';
+import AppMenu from './pages/menus/AppMenu';
 import Scheduling from './pages/scheduling/Scheduling';
 import SchedulingConfirmation from './pages/scheduling/SchedulingConfirmation';
 
@@ -37,9 +37,9 @@ function App() {
             <Route exact path="contato-agendamento" element={<SchedulingContact />} />
             <Route exact path="mapa" element={<Map />} />
             <Route exact path="artigos/:id" element={<Article />} />
-            <Route exact path="C16" element={<C16 />} />
-            <Route exact path="C17" element={<C17 />} />
-            <Route exact path="C18" element={<C18 />} />
+            <Route exact path="sobre-violencia-domestica" element={<AboutViolenceMenu />} />
+            <Route exact path="legislacao" element={<LawMenu />} />
+            <Route exact path="sobre-o-app" element={<AppMenu />} />
           </Routes>
         </Router>
       </Typography>

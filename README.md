@@ -1,6 +1,6 @@
-# Associação Marta
+# Marta App
 
-Aplicativo em desenvolvimento pela equipe "Os Cappuccinos" na cadeira de Projeto Integrado I (2022.1) do curso de Sistemas e Mídias Digitais da UFC.
+Aplicativo em desenvolvimento que tem como finalidade informar sobre questões envolvendo violência doméstica e permitir o agendamento de consultas de apoio (jurídicas e psicológicas).
 
 ## Stack utilizada
 
@@ -41,18 +41,6 @@ Clone o projeto
 
 ```bash
   git clone https://github.com/osCappuccinos/Projeto-I.git
-```
-
-Entre no diretório do projeto
-
-```bash
-  cd projeto-I
-```
-
-Troque para a branch develop
-
-```bash
-  git checkout develop
 ```
 
 Instale as dependências

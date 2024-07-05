@@ -17,10 +17,6 @@ export default function FixedBottomNavigation() {
   const [value, setValue] = React.useState(pathname);
   const ref = React.useRef(0);
 
-  // const handleChange = (event, newValue) => {
-  //   setValue(event, newValue);
-  // };
-
   const valueArtigos = [
     '/',
     '/artigos/quem-somos',
@@ -37,9 +33,9 @@ export default function FixedBottomNavigation() {
     '/artigos/locais-de-apoio',
     '/artigos/botao-de-emergencia',
     '/artigos/quem-desenvolveu',
-    '/C16',
-    '/C17',
-    '/C18',
+    '/sobre-violencia-domestica',
+    '/legislacao',
+    '/sobre-o-app',
   ];
 
   const valueAtendimento = ['/agendamento', '/confirmacao-agendamento', '/contato-agendamento'];

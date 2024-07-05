@@ -21,8 +21,7 @@ export default function MenuArtigos() {
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
+        onClick={handleClick}>
         <ListIcon />
       </IconButton>
       <Menu
@@ -31,20 +30,19 @@ export default function MenuArtigos() {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
-        }}
-      >
+        }}>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C16">
+          <a className="menuArtigosLinks" href="sobre-violencia-domestica">
             Sobre violência de gênero
           </a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C17">
+          <a className="menuArtigosLinks" href="legislacao">
             Legislação
           </a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menuArtigosLinks" href="C18">
+          <a className="menuArtigosLinks" href="sobre-o-app">
             Conheça a aplicação
           </a>
         </MenuItem>

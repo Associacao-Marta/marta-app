@@ -1,13 +1,13 @@
 import React from 'react';
 import { Grid, Stack } from '@mui/material';
-import CardArtigoGrande from '../components/C/CardArtigoGrande';
-import BotaoDoPanico from '../components/BotaoDoPanico';
-import MenuInferior from '../components/MenuInferior';
-import Header from '../components/Header';
-import '../assets/css/base.css';
-import '../assets/css/C.css';
+import CardArtigoGrande from '../../components/C/CardArtigoGrande';
+import BotaoDoPanico from '../../components/BotaoDoPanico';
+import MenuInferior from '../../components/MenuInferior';
+import Header from '../../components/Header';
+import '../../assets/css/base.css';
+import '../../assets/css/C.css';
 
-const C16 = () => {
+const AppMenu = () => {
   return (
     <Grid container>
       <Header titulo="Artigos" backButton destino="/" />
@@ -46,4 +46,4 @@ const C16 = () => {
   );
 };
 
-export default C16;
+export default AppMenu;
