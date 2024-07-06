@@ -4,8 +4,6 @@ import { IconButton, Grid } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import * as Leaflet from 'leaflet';
-import BotaoDoPanico from '../../components/BotaoDoPanico';
-import MenuInferior from '../../components/MenuInferior';
 
 import '../../assets/css/mapa.css';
 import poiData from './data/POIData';
@@ -39,8 +37,6 @@ const Map = () => {
             <POI key={poi.id} lat={poi.lat} long={poi.long} text={poi.text} icon={greenIcon} />
           ))}
         </MapContainer>
-        <BotaoDoPanico />
-        <MenuInferior />
       </Grid>
     </Grid>
   );

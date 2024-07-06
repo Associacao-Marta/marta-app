@@ -1,7 +1,5 @@
 import React from 'react';
 import { Button, Grid } from '@mui/material';
-import BotaoDoPanico from '../../components/BotaoDoPanico';
-import MenuInferior from '../../components/MenuInferior';
 import Header from '../../components/Header';
 import img from '../../assets/img/atendimento.svg';
 import '../../assets/css/base.css';
@@ -13,7 +11,7 @@ const Scheduling = () => {
       <Header titulo="Atendimento" backButton destino="/" />
 
       <Grid item container className="ilustracao">
-        <img src={img} alt="agendamento" />
+        <img src={img} alt="atendimento" />
       </Grid>
 
       <Grid container className="tituloContainer">
@@ -31,7 +29,7 @@ const Scheduling = () => {
       <Grid container>
         <Grid container className="buttonContainer">
           <Button
-            href="confirmacao-agendamento"
+            href="confirmacao-atendimento"
             variant="contained"
             className="agendarAtendimentoButton"
             sx={{ borderRadius: 8 }}>
@@ -39,13 +37,10 @@ const Scheduling = () => {
           </Button>
         </Grid>
         <Grid container className="buttonContainer">
-          <Button href="contato-agendamento">Consultar Atendimento</Button>
+          <Button href="contato-atendimento">Consultar Atendimento</Button>
         </Grid>
         <div style={{ margin: '50px' }} />
       </Grid>
-
-      <BotaoDoPanico />
-      <MenuInferior />
     </Grid>
   );
 };

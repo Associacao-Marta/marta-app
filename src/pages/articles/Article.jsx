@@ -3,11 +3,9 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import '../../assets/css/base.css';
 import '../../assets/css/C.css';
-import BotaoDoPanico from '../../components/BotaoDoPanico';
 import HeaderTitulo from '../../components/article/HeaderArtigo';
 import LeiaMais from '../../components/article/LeiaMais';
 import Header from '../../components/Header';
-import MenuInferior from '../../components/MenuInferior';
 import allArticlesData from './data/allArticlesData';
 
 const Article = () => {
@@ -55,10 +53,6 @@ const Article = () => {
         </Grid>
       </Grid>
       */}
-
-      <Grid container className="EspacoInferior" />
-      <BotaoDoPanico />
-      <MenuInferior />
     </Grid>
   );
 };

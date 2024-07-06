@@ -39,7 +39,7 @@ export default function PopUpCancelarD2(props) {
       !props.newDescription &&
       !props.newType
     ) {
-      const href2 = 'agendamento';
+      const href2 = 'atendimento';
       return href2;
     }
     return '';
@@ -83,7 +83,7 @@ export default function PopUpCancelarD2(props) {
             <Button onClick={handleClose} autoFocus sx={{ marginRight: '152px' }}>
               Não
             </Button>
-            <Button href="agendamento" variant="text" autoFocus sx={{}}>
+            <Button href="atendimento" variant="text" autoFocus sx={{}}>
               Sim
             </Button>
           </DialogActions>

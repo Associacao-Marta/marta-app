@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid, TextField } from '@mui/material';
 import InputMask from 'react-input-mask';
-import BotaoDoPanico from '../../components/BotaoDoPanico';
-import MenuInferior from '../../components/MenuInferior';
 import PopUpD3 from '../../components/scheduling/PopUpD3';
 import Header from '../../components/Header';
 import '../../assets/css/base.css';
@@ -13,7 +11,7 @@ const SchedulingContact = () => {
 
   return (
     <Grid container>
-      <Header titulo="Consultar atendimento" backButton destino="agendamento" />
+      <Header titulo="Consultar atendimento" backButton destino="atendimento" />
 
       <Grid container className="pageContainer">
         <Grid container className="protocoloContainer">
@@ -36,9 +34,6 @@ const SchedulingContact = () => {
       <Grid container item className="buttonContainer">
         <PopUpD3 protocolo={protocolo} />
       </Grid>
-
-      <BotaoDoPanico />
-      <MenuInferior />
     </Grid>
   );
 };

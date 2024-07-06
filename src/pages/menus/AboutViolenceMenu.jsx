@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid, Stack } from '@mui/material';
 import CardArtigoGrande from '../../components/article/CardArtigoGrande';
-import BotaoDoPanico from '../../components/BotaoDoPanico';
-import MenuInferior from '../../components/MenuInferior';
 import Header from '../../components/Header';
 import '../../assets/css/base.css';
 import '../../assets/css/C.css';
@@ -34,9 +32,6 @@ const AboutViolenceMenu = () => {
           </Stack>
         </Grid>
       </Grid>
-
-      <BotaoDoPanico />
-      <MenuInferior />
     </Grid>
   );
 };

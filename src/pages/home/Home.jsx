@@ -1,7 +1,5 @@
 import React from 'react';
 import { Grid, Stack } from '@mui/material';
-import BotaoDoPanico from '../../components/BotaoDoPanico';
-import MenuInferior from '../../components/MenuInferior';
 import Carrossel from '../../components/article/Carrossel';
 import CardArtigo from '../../components/article/CardArtigo';
 import Header from '../../components/Header';
@@ -71,9 +69,6 @@ const Home = () => {
         </Grid>
         <div style={{ margin: '50px' }} />
       </Grid>
-
-      <BotaoDoPanico />
-      <MenuInferior />
     </Grid>
   );
 };

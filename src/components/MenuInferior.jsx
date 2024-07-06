@@ -38,7 +38,7 @@ export default function FixedBottomNavigation() {
     '/sobre-o-app',
   ];
 
-  const valueAtendimento = ['/agendamento', '/confirmacao-agendamento', '/contato-agendamento'];
+  const valueAtendimento = ['/atendimento', '/confirmacao-atendimento', '/contato-atendimento'];
 
   const indexArtigos = valueArtigos.indexOf(window.location.pathname);
   const indexAtendimento = valueAtendimento.indexOf(window.location.pathname);
@@ -59,7 +59,7 @@ export default function FixedBottomNavigation() {
             icon={value === valueArtigos[indexArtigos] ? <BookIcon /> : <BookOutlinedIcon />}
           />
           <BottomNavigationAction
-            href="agendamento"
+            href="atendimento"
             label="Atendimento"
             value={valueAtendimento[indexAtendimento]}
             icon={
