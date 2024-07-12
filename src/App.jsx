@@ -5,16 +5,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Onboarding from './pages/onboarding/Onboarding';
 import TermsOfUse from './pages/termsOfUse/TermsOfUse';
 
-import AboutViolenceMenu from './pages/menus/AboutViolenceMenu';
-import LawMenu from './pages/menus/LawMenu';
-import AppMenu from './pages/menus/AppMenu';
 import Scheduling from './pages/scheduling/Scheduling';
 import SchedulingForm from './pages/scheduling/SchedulingForm';
 
 import Map from './pages/map/Map';
-import Article from './pages/articles/Article';
+import Article from './pages/article/Article';
 import Home from './pages/home/Home';
 import Layout from './Layout';
+import Articles from './pages/articles/Articles';
 
 function App() {
   const [isTermChecked, setTermChecked] = useState(false);
@@ -36,10 +34,8 @@ function App() {
               <Route exact path="atendimento" element={<Scheduling />} />
               <Route exact path="atendimento-formulario" element={<SchedulingForm />} />
               <Route exact path="mapa" element={<Map />} />
+              <Route exact path="artigos" element={<Articles />} />
               <Route exact path="artigos/:id" element={<Article />} />
-              <Route exact path="sobre-violencia-domestica" element={<AboutViolenceMenu />} />
-              <Route exact path="legislacao" element={<LawMenu />} />
-              <Route exact path="sobre-o-app" element={<AppMenu />} />
             </Routes>
           </Router>
         </Layout>

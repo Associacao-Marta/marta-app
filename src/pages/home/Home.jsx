@@ -9,8 +9,7 @@ import '../../assets/css/C.css';
 const Home = () => {
   return (
     <Grid container className="pageCContainer">
-      <Header searchButton />
-
+      <Header />
       <Grid container className="pageContainer">
         <Grid container className="carrosselContainer">
           <Grid item>

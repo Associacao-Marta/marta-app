@@ -9,8 +9,11 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import BookIcon from '@mui/icons-material/Book';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import '../assets/css/base.css';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import HomeIcon from '@mui/icons-material/Home';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+
+import '../assets/css/base.css';
 
 export default function FixedBottomNavigation() {
   const { pathname } = window.location;
@@ -18,7 +21,7 @@ export default function FixedBottomNavigation() {
   const ref = React.useRef(0);
 
   const valueArtigos = [
-    '/',
+    '/artigos',
     '/artigos/quem-somos',
     '/artigos/marta-escuta',
     '/artigos/doacoes',
@@ -43,6 +46,10 @@ export default function FixedBottomNavigation() {
   const indexArtigos = valueArtigos.indexOf(window.location.pathname);
   const indexAtendimento = valueAtendimento.indexOf(window.location.pathname);
 
+  console.log('value', value);
+  console.log('value === valueArtigos[indexArtigos]', value === valueArtigos[indexArtigos]);
+  console.log('value === /', value === '/');
+
   return (
     <Box sx={{ pb: 7 }} ref={ref} className="Menu">
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
@@ -54,6 +61,12 @@ export default function FixedBottomNavigation() {
           }}>
           <BottomNavigationAction
             href="/"
+            label="Início"
+            value="/"
+            icon={value === '/' ? <HomeIcon /> : <HomeOutlinedIcon />}
+          />
+          <BottomNavigationAction
+            href="artigos"
             label="Artigos"
             value={valueArtigos[indexArtigos]}
             icon={value === valueArtigos[indexArtigos] ? <BookIcon /> : <BookOutlinedIcon />}
