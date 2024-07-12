@@ -11,8 +11,7 @@ const SchedulingContact = () => {
 
   return (
     <Grid container>
-      <Header titulo="Consultar atendimento" backButton destino="atendimento" />
-
+      <Header titulo="Consultar atendimento" />
       <Grid container className="pageContainer">
         <Grid container className="protocoloContainer">
           <InputMask

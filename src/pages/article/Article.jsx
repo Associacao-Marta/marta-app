@@ -15,7 +15,7 @@ const Article = () => {
 
   return (
     <Grid container className="">
-      <Header titulo="Artigos" destino="/" backButton />
+      <Header titulo="Artigo" />
       <HeaderTitulo
         margin_top_icon="0px"
         margin_top="16px"

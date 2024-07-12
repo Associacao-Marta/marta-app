@@ -46,10 +46,6 @@ export default function FixedBottomNavigation() {
   const indexArtigos = valueArtigos.indexOf(window.location.pathname);
   const indexAtendimento = valueAtendimento.indexOf(window.location.pathname);
 
-  console.log('value', value);
-  console.log('value === valueArtigos[indexArtigos]', value === valueArtigos[indexArtigos]);
-  console.log('value === /', value === '/');
-
   return (
     <Box sx={{ pb: 7 }} ref={ref} className="Menu">
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>

@@ -7,8 +7,8 @@ import CardArtigoGrande from '../../components/article/CardArtigoGrande';
 const Articles = () => {
   return (
     <Grid container>
-      <Header titulo="Artigos" backButton destino="/" />
-      <Grid container className="pageContainer">
+      <Header titulo="Artigos" />
+      <Grid container style={{ marginTop: '40px' }} className="pageContainer">
         <Grid item>
           <h2 className="tituloH2" style={{ color: '#337066' }}>
             Sobre violência de gênero

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { IconButton, Grid } from '@mui/material';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import { Grid } from '@mui/material';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import * as Leaflet from 'leaflet';
 
 import '../../assets/css/mapa.css';
 import poiData from './data/POIData';
+import BackButton from '../../components/BackButton';
 
 const Map = () => {
   const LeafIcon = Leaflet.Icon.extend({
@@ -20,11 +20,7 @@ const Map = () => {
   return (
     <div id="TESTEEEEE">
       <Grid container>
-        <Grid className="containerBotao">
-          <IconButton color="primary" aria-label="Voltar" href="/">
-            <ArrowBackIosNewIcon />
-          </IconButton>
-        </Grid>
+        <BackButton />
         <Grid container>
           <MapContainer
             className="leaflet-container"

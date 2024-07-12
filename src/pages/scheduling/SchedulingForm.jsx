@@ -16,7 +16,6 @@ import { initialForm } from './utils/Scheduling.utis';
 
 const SchedulingForm = () => {
   const [form, setForm] = useState(initialForm);
-  console.log('form', form);
 
   const handleChangeForm = (prop, value) => {
     setForm({ ...form, [prop]: value });
@@ -24,16 +23,7 @@ const SchedulingForm = () => {
 
   return (
     <Grid container>
-      <Header
-        titulo="Agendar atendimento"
-        backButtonD2
-        newDate={form.date}
-        newTime={form.date}
-        newName={form.name}
-        newPhone={form.phone}
-        newDescription={form.description}
-        newType={form.type}
-      />
+      <Header titulo="Agendar atendimento" />
       <Grid container className="pageContainer">
         <Grid container className="formContainer">
           <h3 className="subtitulo">Nos conte um pouco sobre você</h3>
