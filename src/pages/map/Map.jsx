@@ -18,27 +18,30 @@ const Map = () => {
     popupAnchor: [23, 0],
   });
   return (
-    <Grid container>
-      <Grid className="containerBotao">
-        <IconButton color="primary" aria-label="Voltar" href="/">
-          <ArrowBackIosNewIcon />
-        </IconButton>
-      </Grid>
+    <div id="TESTEEEEE">
       <Grid container>
-        <MapContainer
-          className="leaflet-container"
-          center={[-3.744212747433668, -38.54183660836403]}
-          zoom={11}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          {poiData.map((poi) => (
-            <POI key={poi.id} lat={poi.lat} long={poi.long} text={poi.text} icon={greenIcon} />
-          ))}
-        </MapContainer>
+        <Grid className="containerBotao">
+          <IconButton color="primary" aria-label="Voltar" href="/">
+            <ArrowBackIosNewIcon />
+          </IconButton>
+        </Grid>
+        <Grid container>
+          <MapContainer
+            className="leaflet-container"
+            style={{ zIndex: 0 }}
+            center={[-3.744212747433668, -38.54183660836403]}
+            zoom={11}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {poiData.map((poi) => (
+              <POI key={poi.id} lat={poi.lat} long={poi.long} text={poi.text} icon={greenIcon} />
+            ))}
+          </MapContainer>
+        </Grid>
       </Grid>
-    </Grid>
+    </div>
   );
 };
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const LeiaMais = ({ children }) => {
-  const smallText = children[0]?.props?.children[0];
-  const [isReadMore, setIsReadMore] = useState(true);
+  const smallText = children?.props?.children[0].props.children;
+  const [isReadMore, setIsReadMore] = useState(false);
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);
   };
