@@ -10,9 +10,10 @@ const HeaderTitulo = (props) => {
       <Grid
         container
         className="iconArtigoContainer"
-        style={{ marginTop: props.margin_top, marginBottom: props.margin_bottom }}>
-        <Grid container className="circuloIcon" style={{ marginTop: props.margin_top_icon }} />
-        <img src={props.img} alt="ir para artigo" className="iconArtigo" />
+        style={{ marginTop: '16px', marginBottom: '75px' }}>
+        <Grid container className="circuloIcon">
+          <img src={props.img} alt="ir para artigo" className="iconArtigo" />
+        </Grid>
       </Grid>
 
       <Grid className="tituloArtigo">

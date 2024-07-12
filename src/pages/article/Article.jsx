@@ -16,14 +16,7 @@ const Article = () => {
   return (
     <Grid container className="">
       <Header titulo="Artigo" />
-      <HeaderTitulo
-        margin_top_icon="0px"
-        margin_top="16px"
-        margin_bottom="75px"
-        img={image}
-        titulo={title}
-        chip={type}
-      />
+      <HeaderTitulo img={image} titulo={title} chip={type} />
 
       <Grid container className="pageContainer" style={{ paddingRight: '6.67vw' }}>
         <Grid container item className="containerArtigo" id="target">

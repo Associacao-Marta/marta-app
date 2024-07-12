@@ -62,7 +62,8 @@
   background-color: #d3ebd3;
   position: absolute;
   z-index: 0;
-  margin-top: -25px;
+  margin-top: 0px;
+  justify-content: center;
 }
 
 .iconArtigoContainer {
