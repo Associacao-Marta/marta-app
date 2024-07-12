@@ -7,42 +7,10 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Grid } from '@mui/material';
 
-export default function PopUpCancelarD2(props) {
+export default function CancelAppointment() {
   const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    if (
-      props.newTime !== 'NaN:NaN' ||
-      props.newDate !== 'NaN/NaN/NaN' ||
-      props.newName ||
-      props.newPhone ||
-      props.newDescription ||
-      props.newType
-    ) {
-      setOpen(true);
-    } else {
-      href();
-    }
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const href = () => {
-    if (
-      props.newTime === 'NaN:NaN' &&
-      props.newDate === 'NaN/NaN/NaN' &&
-      !props.newName &&
-      !props.newPhone &&
-      !props.newDescription &&
-      !props.newType
-    ) {
-      const href2 = 'atendimento';
-      return href2;
-    }
-    return '';
-  };
+  const handleClickOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
@@ -51,7 +19,6 @@ export default function PopUpCancelarD2(props) {
         onClick={() => {
           handleClickOpen();
         }}
-        href={href()}
         sx={{ borderRadius: 8 }}>
         Cancelar
       </Button>

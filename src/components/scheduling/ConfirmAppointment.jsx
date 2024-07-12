@@ -9,20 +9,23 @@ import { collection, setDoc, doc } from 'firebase/firestore';
 import db from '../../firebase-config';
 import iconSuccess from '../../assets/img/icon_check.svg';
 import iconFail from '../../assets/img/icon_atencao.svg';
+import { verifyForm } from '../../pages/scheduling/utils/Scheduling.utis';
 
-export default function PopUpD2(props) {
+export default function ConfirmAppointment(props) {
   const [open, setOpen] = React.useState(false);
+  const { name, phone, description, type, date } = props.form;
+  const isFormComplete = verifyForm(props.form);
 
   const enviarAgendamento = async () => {
     const docRef = collection(db, 'atendimento');
 
     await setDoc(doc(docRef, props.newPhone), {
-      time: props.newTime,
-      date: props.newDate,
-      name: props.newName,
-      phone: props.newPhone,
-      description: props.newDescription,
-      type: props.newType,
+      // time: props.newTime,
+      date,
+      name,
+      phone,
+      description,
+      type,
     });
   };
 
@@ -41,14 +44,7 @@ export default function PopUpD2(props) {
         variant="contained"
         onClick={handleClickOpen}
         sx={{ borderRadius: 8 }}
-        disabled={
-          props.newTime === 'NaN:NaN' ||
-          props.newDate === 'NaN/NaN/NaN' ||
-          !props.newName ||
-          !props.newPhone ||
-          !props.newDescription ||
-          !props.newType
-        }>
+        disabled={isFormComplete}>
         Enviar
       </Button>
       <Dialog

@@ -38,7 +38,7 @@ export default function FixedBottomNavigation() {
     '/sobre-o-app',
   ];
 
-  const valueAtendimento = ['/atendimento', '/confirmacao-atendimento', '/contato-atendimento'];
+  const valueAtendimento = ['/atendimento', '/atendimento-formulario', '/contato-atendimento'];
 
   const indexArtigos = valueArtigos.indexOf(window.location.pathname);
   const indexAtendimento = valueAtendimento.indexOf(window.location.pathname);

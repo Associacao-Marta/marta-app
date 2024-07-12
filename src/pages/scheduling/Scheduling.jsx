@@ -29,15 +29,12 @@ const Scheduling = () => {
       <Grid container>
         <Grid container className="buttonContainer">
           <Button
-            href="confirmacao-atendimento"
+            href="atendimento-formulario"
             variant="contained"
             className="agendarAtendimentoButton"
             sx={{ borderRadius: 8 }}>
             Agendar Atendimento
           </Button>
-        </Grid>
-        <Grid container className="buttonContainer">
-          <Button href="contato-atendimento">Consultar Atendimento</Button>
         </Grid>
         <div style={{ margin: '50px' }} />
       </Grid>

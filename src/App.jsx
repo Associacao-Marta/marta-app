@@ -9,12 +9,11 @@ import AboutViolenceMenu from './pages/menus/AboutViolenceMenu';
 import LawMenu from './pages/menus/LawMenu';
 import AppMenu from './pages/menus/AppMenu';
 import Scheduling from './pages/scheduling/Scheduling';
-import SchedulingConfirmation from './pages/scheduling/SchedulingConfirmation';
+import SchedulingForm from './pages/scheduling/SchedulingForm';
 
 import Map from './pages/map/Map';
 import Article from './pages/articles/Article';
 import Home from './pages/home/Home';
-import SchedulingContact from './pages/scheduling/SchedulingContact';
 import Layout from './Layout';
 
 function App() {
@@ -35,8 +34,7 @@ function App() {
               <Route exact path="onboarding" element={<Onboarding />} />
               <Route exact path="termos-de-uso" element={<TermsOfUse />} />
               <Route exact path="atendimento" element={<Scheduling />} />
-              <Route exact path="confirmacao-atendimento" element={<SchedulingConfirmation />} />
-              <Route exact path="contato-atendimento" element={<SchedulingContact />} />
+              <Route exact path="atendimento-formulario" element={<SchedulingForm />} />
               <Route exact path="mapa" element={<Map />} />
               <Route exact path="artigos/:id" element={<Article />} />
               <Route exact path="sobre-violencia-domestica" element={<AboutViolenceMenu />} />
