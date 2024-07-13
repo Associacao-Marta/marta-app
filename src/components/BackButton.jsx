@@ -7,7 +7,7 @@ import '../assets/css/base.css';
 
 const BackButton = () => {
   const navigate = useNavigate();
-  const handleGoBack = () => navigate(-1);
+  const handleGoBack = () => navigate('/');
   return (
     <Grid className="containerBotao">
       <IconButton color="primary" aria-label="Voltar" onClick={handleGoBack}>

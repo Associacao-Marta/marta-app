@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 import Onboarding from './pages/onboarding/Onboarding';
 import TermsOfUse from './pages/termsOfUse/TermsOfUse';
@@ -14,6 +14,17 @@ import Home from './pages/home/Home';
 import Layout from './Layout';
 import Articles from './pages/articles/Articles';
 
+const LayoutWrapper = ({ children }) => {
+  const localStorageTerm = JSON.parse(localStorage.getItem('checked'));
+
+  const location = useLocation();
+  const hideLayout =
+    (!localStorageTerm && location.pathname === '/') ||
+    location.pathname === '/onboarding' ||
+    location.pathname === '/termos-de-uso';
+  return hideLayout ? children : <Layout>{children}</Layout>;
+};
+
 function App() {
   const [isTermChecked, setTermChecked] = useState(false);
   const localStorageTerm = JSON.parse(localStorage.getItem('checked'));
@@ -25,11 +36,11 @@ function App() {
   return (
     <div className="App">
       <Typography>
-        <Layout>
-          <Router>
+        <Router>
+          <LayoutWrapper isTermChecked={isTermChecked}>
             <Routes>
-              <Route exact path="/" element={isTermChecked ? <Home /> : <Onboarding />} />
               <Route exact path="onboarding" element={<Onboarding />} />
+              <Route exact path="/" element={isTermChecked ? <Home /> : <Onboarding />} />
               <Route exact path="termos-de-uso" element={<TermsOfUse />} />
               <Route exact path="atendimento" element={<Scheduling />} />
               <Route exact path="atendimento-formulario" element={<SchedulingForm />} />
@@ -37,8 +48,8 @@ function App() {
               <Route exact path="artigos" element={<Articles />} />
               <Route exact path="artigos/:id" element={<Article />} />
             </Routes>
-          </Router>
-        </Layout>
+          </LayoutWrapper>
+        </Router>
       </Typography>
     </div>
   );
