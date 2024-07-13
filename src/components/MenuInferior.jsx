@@ -14,9 +14,11 @@ import HomeIcon from '@mui/icons-material/Home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 import '../assets/css/base.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function FixedBottomNavigation() {
   const { pathname } = window.location;
+  const navigate = useNavigate();
   const [value, setValue] = React.useState(pathname);
   const ref = React.useRef(0);
 
@@ -60,19 +62,22 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}>
           <BottomNavigationAction
-            href="/"
+            // href="/"
+            onClick={() => navigate('/')}
             label="Início"
             value="/"
             icon={value === '/' ? <HomeIcon /> : <HomeOutlinedIcon />}
           />
           <BottomNavigationAction
-            href="artigos"
+            // href="artigos"
+            onClick={() => navigate('/artigos')}
             label="Artigos"
             value={valueArtigos[indexArtigos]}
             icon={value === valueArtigos[indexArtigos] ? <BookIcon /> : <BookOutlinedIcon />}
           />
           <BottomNavigationAction
-            href="atendimento"
+            // href="atendimento"
+            onClick={() => navigate('/atendimento')}
             label="Atendimento"
             value={valueAtendimento[indexAtendimento]}
             icon={
@@ -84,7 +89,8 @@ export default function FixedBottomNavigation() {
             }
           />
           <BottomNavigationAction
-            href="mapa"
+            // href="mapa"
+            onClick={() => navigate('/mapa')}
             label="Local"
             value="/mapa"
             icon={value === '/mapa' ? <LocationOnIcon /> : <LocationOnOutlinedIcon />}
