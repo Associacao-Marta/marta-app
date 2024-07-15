@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import * as Leaflet from 'leaflet';
 
@@ -32,7 +32,14 @@ const Map = () => {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {poiData.map((poi) => (
-              <POI key={poi.id} lat={poi.lat} long={poi.long} text={poi.text} icon={greenIcon} />
+              <POI
+                key={poi.id}
+                phone={poi.phone}
+                lat={poi.lat}
+                long={poi.long}
+                text={poi.text}
+                icon={greenIcon}
+              />
             ))}
           </MapContainer>
         </Grid>
@@ -42,10 +49,22 @@ const Map = () => {
 };
 
 const POI = (props) => {
-  const { lat, long, icon, text } = props;
+  const { lat, long, icon, text, phone } = props;
   return (
     <Marker key={1} position={[lat, long]} icon={icon}>
-      <Popup position={[lat, long]}>{text}</Popup>
+      <Popup position={[lat, long]}>
+        <>
+          {text}
+          <Button
+            href={`tel:${phone}`}
+            variant="contained"
+            autoFocus
+            color="success"
+            style={{ color: 'white', borderRadius: 8 }}>
+            LIGAR
+          </Button>
+        </>
+      </Popup>
     </Marker>
   );
 };
