@@ -4,8 +4,8 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import Botao from '../assets/img/btn_panico.svg';
-import '../assets/css/base.css';
+import Botao from '../../assets/img/btn_panico.svg';
+import '../../assets/css/base.css';
 
 export default function PopUpBotaoDoPanico(props) {
   const [open, setOpen] = React.useState(false);
