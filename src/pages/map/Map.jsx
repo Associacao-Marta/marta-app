@@ -18,7 +18,7 @@ const Map = () => {
     popupAnchor: [23, 0],
   });
   return (
-    <div id="TESTEEEEE">
+    <div>
       <Grid container>
         <BackButton />
         <Grid container>

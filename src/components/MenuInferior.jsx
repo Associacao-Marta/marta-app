@@ -36,11 +36,8 @@ export default function FixedBottomNavigation() {
     '/artigos/artigos',
     '/artigos/atendimentos',
     '/artigos/locais-de-apoio',
-    '/artigos/botao-de-emergencia',
+    // '/artigos/botao-de-emergencia',
     '/artigos/quem-desenvolveu',
-    '/sobre-violencia-domestica',
-    '/legislacao',
-    '/sobre-o-app',
   ];
 
   const valueAtendimento = ['/atendimento', '/atendimento-formulario', '/contato-atendimento'];

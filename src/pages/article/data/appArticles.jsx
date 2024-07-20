@@ -1,16 +1,18 @@
 import artigosImage from '../../../assets/img/artigos/artigos_icon.svg';
 import atendimentosImage from '../../../assets/img/artigos/atendimento_icon.svg';
 import locaisDeApoioImage from '../../../assets/img/artigos/locais_de_apoio_icon.svg';
-import btnEmergenciaImage from '../../../assets/img/artigos/btn_de_panico_icon.svg';
+// import btnEmergenciaImage from '../../../assets/img/artigos/btn_de_panico_icon.svg';
 import equipeImage from '../../../assets/img/artigos/equipe_icon.svg';
 
 const appArticlesData = [
   {
     // C11
     id: 'artigos',
+    href: '/artigos/artigos',
     title: 'Artigos',
     type: 'Conheça a aplicação',
     image: artigosImage,
+    iconRef: 'artigos',
     text: (
       <>
         <p>
@@ -31,9 +33,11 @@ const appArticlesData = [
   {
     // C12
     id: 'atendimentos',
+    href: '/artigos/atendimentos',
     title: 'Atendimentos',
     type: 'Conheça a aplicação',
     image: atendimentosImage,
+    iconRef: 'atendimento',
     text: (
       <>
         <p>
@@ -66,9 +70,11 @@ const appArticlesData = [
   {
     // C13
     id: 'locais-de-apoio',
+    href: '/artigos/locais-de-apoio',
     title: 'Locais de Apoio',
     type: 'Conheça a aplicação',
     image: locaisDeApoioImage,
+    iconRef: 'locaisDeApoio',
     text: (
       <>
         <p>
@@ -85,27 +91,31 @@ const appArticlesData = [
       </>
     ),
   },
-  {
-    // C14
-    id: 'botao-de-emergencia',
-    title: 'Botão de Emergência',
-    type: 'Conheça a aplicação',
-    image: btnEmergenciaImage,
-    text: (
-      <p>
-        Em momentos de risco queremos garantir que você tenha um suporte, para isso o aplicativo
-        permite que você solicite ajuda de forma rápida e segura através de um botão de pânico
-        localizado no lado direito inferior da sua tela, que ao ser acionado realiza a discagem de
-        um número de emergência no seu aplicativo de chamadas.
-      </p>
-    ),
-  },
+  // {
+  //   // C14
+  //   id: 'botao-de-emergencia',
+  //   href: '/artigos/botao-de-emergencia',
+  //   title: 'Botão de Emergência',
+  //   type: 'Conheça a aplicação',
+  //   image: btnEmergenciaImage,
+  //   iconRef: 'botaoDePanico',
+  //   text: (
+  //     <p>
+  //       Em momentos de risco queremos garantir que você tenha um suporte, para isso o aplicativo
+  //       permite que você solicite ajuda de forma rápida e segura através de um botão de pânico
+  //       localizado no lado direito inferior da sua tela, que ao ser acionado realiza a discagem de
+  //       um número de emergência no seu aplicativo de chamadas.
+  //     </p>
+  //   ),
+  // },
   {
     // C15
     id: 'quem-desenvolveu',
+    href: '/artigos/quem-desenvolveu',
     title: 'Quem desenvolveu',
     type: 'Conheça a aplicação',
     image: equipeImage,
+    iconRef: 'equipe',
     text: (
       <>
         <p>

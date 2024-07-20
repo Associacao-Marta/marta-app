@@ -7,9 +7,11 @@ const lawArticlesData = [
   {
     // C7
     id: 'feminicidio',
+    href: '/artigos/feminicidio',
     title: 'Feminicídio',
     type: 'Legislação',
     image: feminicidioImage,
+    iconRef: 'feminicidio',
     text: (
       <>
         <p>
@@ -34,9 +36,11 @@ const lawArticlesData = [
   {
     // C8
     id: 'maria-da-penha',
+    href: '/artigos/maria-da-penha',
     title: 'Maria da Penha',
     type: 'Legislação',
     image: mariaDaPenhaImage,
+    iconRef: 'mariaDaPenha',
     text: (
       <>
         <p>
@@ -64,9 +68,11 @@ const lawArticlesData = [
   {
     // C9
     id: 'atendimento-publico',
+    href: '/artigos/atendimento-publico',
     title: 'Atendimento público específico e especializado no SUS',
     type: 'Legislação',
     image: atendimentoPublicoImage,
+    iconRef: 'atendimentoPublico',
     text: (
       <>
         <p>
@@ -88,9 +94,11 @@ const lawArticlesData = [
   {
     // C10
     id: 'plano-nacional',
+    href: '/artigos/plano-nacional',
     title: 'Plano Nacional de Enfrentamento ao Feminicídio',
     type: 'Legislação',
     image: planoNacionalImage,
+    iconRef: 'planoNacional',
     text: (
       <>
         <p>

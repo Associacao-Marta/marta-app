@@ -5,9 +5,11 @@ const violenceArticlesData = [
   {
     // C5
     id: 'por-que-essas-relacoes-de-violencia-perduram',
+    href: '/artigos/por-que-essas-relacoes-de-violencia-perduram',
     title: 'Por que essas relações de violência perduram?',
     type: 'Violência contra a mulher',
     image: motivosImage,
+    iconRef: 'motivos',
     text: (
       <>
         <p>
@@ -32,9 +34,11 @@ const violenceArticlesData = [
   {
     // C6
     id: 'sinais-de-violencia-domestica',
+    href: '/artigos/sinais-de-violencia-domestica',
     title: 'Sinais de que a mulher está sofrendo violência doméstica',
     type: 'Violência contra a mulher',
     image: sinaisImage,
+    iconRef: 'sinais',
     text: (
       <>
         <p>

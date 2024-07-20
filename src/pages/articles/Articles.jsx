@@ -28,7 +28,7 @@ const Articles = () => {
             />
           </Stack>
         </Grid>
-        <Grid item>
+        <Grid item style={{ marginTop: '30px' }}>
           <h2 className="tituloH2" style={{ color: '#337066' }}>
             Legislação
           </h2>
@@ -59,7 +59,7 @@ const Articles = () => {
         </Grid>
       </Grid>
       <Grid container className="pageContainer">
-        <Grid item>
+        <Grid item style={{ marginTop: '30px' }}>
           <h2 className="tituloH2" style={{ color: '#337066' }}>
             Conheça a aplicação
           </h2>
@@ -76,11 +76,6 @@ const Articles = () => {
               titulo="Locais de Apoio"
               tela="locaisDeApoio"
               href="/artigos/locais-de-apoio"
-            />
-            <CardArtigoGrande
-              titulo="Botão de pânico"
-              tela="botaoDePanico"
-              href="/artigos/botao-de-emergencia"
             />
             <CardArtigoGrande
               titulo="Quem desenvolveu"

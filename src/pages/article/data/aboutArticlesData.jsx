@@ -6,9 +6,11 @@ const aboutArticlesData = [
   {
     // C2
     id: 'quem-somos',
+    href: '/artigos/quem-somos',
     title: 'Quem somos',
     type: 'Sobre a associação',
     image: quemSomosImg,
+    iconRef: 'artigos',
     text: (
       <>
         <p>
@@ -64,9 +66,11 @@ const aboutArticlesData = [
   {
     // C3
     id: 'marta-escuta',
+    href: '/artigos/marta-escuta',
     title: 'Marta Escuta',
     type: 'Sobre a associação',
     image: martaEscutaImg,
+    iconRef: 'artigos',
     text: (
       <>
         <p>
@@ -110,9 +114,11 @@ const aboutArticlesData = [
   {
     // C4
     id: 'doacoes',
+    href: '/artigos/doacoes',
     title: 'Doações',
     type: 'Sobre a associação',
     image: doacoesImg,
+    iconRef: 'artigos',
     text: (
       <>
         <p>

@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import '../../assets/css/base.css';
@@ -7,11 +7,17 @@ import HeaderTitulo from '../../components/article/HeaderArtigo';
 import LeiaMais from '../../components/article/LeiaMais';
 import Header from '../../components/Header';
 import allArticlesData from './data/allArticlesData';
+import CardArtigo from '../../components/article/CardArtigo';
 
 const Article = () => {
   const { id } = useParams();
   const selectedArticle = allArticlesData.find((article) => article.id === id);
   const { title, type, image, text } = selectedArticle;
+
+  const otherSuggestions = allArticlesData.filter(
+    (article) => article.type === type && article.id !== id,
+  );
+  console.log('otherSuggestions', otherSuggestions);
 
   return (
     <Grid container className="">
@@ -26,26 +32,28 @@ const Article = () => {
         </Grid>
 
         <Grid container className="EspacoInferior" />
-      </Grid>
-
-      {/* 
-      <Grid container className="EspacoInferior" />
         <Grid container>
-          <Grid item>
-            <h1 className="tituloH1">Veja também</h1>
-          </Grid>
-          <Grid container dir="ltr">
-            <Stack direction="row" spacing={2}>
-              <CardArtigo
-                titulo="Sinais de que a mulher está sofrendo violência doméstica"
-                tela="sinais"
-                href="/artigos/sinais-de-violencia-domestica"
-              />
-            </Stack>
-          </Grid>
+          {!!otherSuggestions.length && (
+            <>
+              <Grid item>
+                <h1 className="tituloH1">Veja também</h1>
+              </Grid>
+              <Grid container dir="ltr">
+                <Stack direction="row" flexWrap="wrap" columnGap={2} rowGap={2}>
+                  {otherSuggestions.map((suggestion) => (
+                    <CardArtigo
+                      key={suggestion.id}
+                      titulo={suggestion.title}
+                      tela={suggestion.iconRef}
+                      href={suggestion.href}
+                    />
+                  ))}
+                </Stack>
+              </Grid>
+            </>
+          )}
         </Grid>
       </Grid>
-      */}
     </Grid>
   );
 };
