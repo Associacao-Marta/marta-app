@@ -5,50 +5,28 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { collection, setDoc, doc } from 'firebase/firestore';
-import db from '../../firebase-config';
 import iconSuccess from '../../assets/img/icon_check.svg';
 import iconFail from '../../assets/img/icon_atencao.svg';
-import { verifyForm } from '../../pages/scheduling/utils/Scheduling.utis';
 
-export default function ConfirmAppointment(props) {
-  const [open, setOpen] = React.useState(false);
-  const { name, phone, description, type, date } = props.form;
-  const isFormComplete = verifyForm(props.form);
+export default function ConfirmFormDialog(props) {
+  const { isOpen, handleClose } = props;
 
-  const enviarAgendamento = async () => {
-    const docRef = collection(db, 'atendimento');
-
-    await setDoc(doc(docRef, props.newPhone), {
-      // time: props.newTime,
-      date,
-      name,
-      phone,
-      description,
-      type,
-    });
-  };
-
-  const handleClickOpen = () => {
-    enviarAgendamento();
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const enviarAgendamento = async () => {
+  //   const docRef = collection(db, 'atendimento');
+  //   await setDoc(doc(docRef, props.newPhone), {
+  //     // time: props.newTime,
+  //     date,
+  //     name,
+  //     phone,
+  //     description,
+  //     type,
+  //   });
+  // };
 
   return (
     <div>
-      <Button
-        variant="contained"
-        onClick={handleClickOpen}
-        sx={{ borderRadius: 8 }}
-        disabled={isFormComplete}>
-        Enviar
-      </Button>
       <Dialog
-        open={open}
+        open={isOpen}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description">

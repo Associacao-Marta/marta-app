@@ -32,7 +32,7 @@ const Scheduling = () => {
             href="atendimento-formulario"
             variant="contained"
             className="agendarAtendimentoButton"
-            sx={{ borderRadius: 8 }}>
+            sx={{ borderRadius: 8, maxWidth: 220 }}>
             Agendar Atendimento
           </Button>
         </Grid>

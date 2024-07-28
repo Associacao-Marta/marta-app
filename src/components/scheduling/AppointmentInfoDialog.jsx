@@ -10,7 +10,7 @@ import db from '../../firebase-config';
 import iconCheck from '../../assets/img/icon_check.svg';
 import iconAtencao from '../../assets/img/icon_atencao.svg';
 
-export default function PopUpD3(props) {
+export default function AppointmentInfoDialog(props) {
   const [open, setOpen] = useState(false);
   const [atendimento, setAtendimento] = useState([]);
   const [isProtocol, setIsProtocol] = useState(false);

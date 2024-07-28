@@ -7,4 +7,5 @@ export const initialForm = {
 };
 
 export const verifyForm = (form) =>
-  Object.keys(initialForm).every((key) => form[key] !== initialForm[key]);
+  Object.keys(initialForm).every((key) => form[key] !== initialForm[key]) &&
+  form.phone.length === 13;

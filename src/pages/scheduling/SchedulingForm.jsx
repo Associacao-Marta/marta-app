@@ -5,17 +5,32 @@ import setHours from 'date-fns/setHours';
 import InputMask from 'react-input-mask';
 import DatePicker from 'react-datepicker';
 import { addDays } from 'date-fns';
-import ConfirmAppointment from '../../components/scheduling/ConfirmAppointment';
-import CancelAppointment from '../../components/scheduling/CancelAppointment';
+import ConfirmFormDialog from '../../components/scheduling/ConfirmFormDialog';
+import CancelFormDialog from '../../components/scheduling/CancelFormDialog';
 import Header from '../../components/Header';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../../assets/css/calendario.css';
 import '../../assets/css/base.css';
 import '../../assets/css/D.css';
-import { initialForm } from './utils/Scheduling.utis';
+import { initialForm, verifyForm } from './utils/Scheduling.utils';
+
+// name: pelo menos 3 caracteres e nenhum especial
+// phone: 11 caracteres
+// description: pelo menos 10 caracteres
+// type: psicólogas ou advogadas
+// date: data e hora definidas
 
 const SchedulingForm = () => {
   const [form, setForm] = useState(initialForm);
+  const [isConfirmOpen, setConfirmOpen] = React.useState(false);
+  const [isCancelOpen, setCancelOpen] = React.useState(false);
+  const isFormComplete = verifyForm(form);
+
+  const handleSubmit = () => {
+    // enviarAgendamento();
+    console.log('enviarAgendamento', form);
+    setConfirmOpen(true);
+  };
 
   const handleChangeForm = (prop, value) => {
     setForm({ ...form, [prop]: value });
@@ -31,24 +46,18 @@ const SchedulingForm = () => {
             <Stack direction="column" className="textForm" spacing={2}>
               <TextField
                 label="Nome Completo"
-                // error="error name"
-                helperText="Preencha o campo acima"
                 variant="outlined"
                 onChange={(event) => handleChangeForm('name', event.target.value)}
               />
               <InputMask
                 mask="99 99999-9999"
                 maskPlaceholder=""
-                // error="error phone"
-                helperText="Informe um número de telefone válido"
                 label="Telefone"
                 onChange={(event) => handleChangeForm('phone', event.target.value)}>
                 <TextField />
               </InputMask>
               <TextField
                 label="Conte como podemos te ajudar"
-                // error="error description"
-                helperText="Preencha o campo acima"
                 variant="outlined"
                 multiline
                 rows={4}
@@ -82,8 +91,8 @@ const SchedulingForm = () => {
             <DatePicker
               autocomplete="off"
               selected={form.date}
-              onChange={(date) => {
-                const selectedDateWithTime = setHours(setMinutes(date, 0), 8);
+              onChange={(selectedDate) => {
+                const selectedDateWithTime = setHours(setMinutes(selectedDate, 0), 8);
                 handleChangeForm('date', selectedDateWithTime);
               }}
               placeholderText="Escolha uma data"
@@ -106,7 +115,7 @@ const SchedulingForm = () => {
               autocomplete="off"
               disabled={!form.date}
               selected={form.date}
-              onChange={(date) => handleChangeForm('date', date)}
+              onChange={(selectedDate) => handleChangeForm('date', selectedDate)}
               showTimeSelect
               showTimeSelectOnly
               timeIntervals={30}
@@ -125,14 +134,29 @@ const SchedulingForm = () => {
             />
           </Grid>
           <Grid container className="buttonContainer" style={{ marginTop: 30 }}>
-            <ConfirmAppointment form={form} />
+            <Button
+              variant="contained"
+              onClick={handleSubmit}
+              sx={{ borderRadius: 8 }}
+              disabled={!isFormComplete}>
+              Enviar
+            </Button>
           </Grid>
           <Grid container className="buttonContainer">
-            <CancelAppointment />
+            <Button
+              variant="text"
+              onClick={() => {
+                setCancelOpen(true);
+              }}
+              sx={{ borderRadius: 8 }}>
+              Cancelar
+            </Button>
           </Grid>
         </Grid>
         <Grid item className="EspacoInferior" />
       </Grid>
+      <ConfirmFormDialog isOpen={isConfirmOpen} handleClose={() => setConfirmOpen(false)} />
+      <CancelFormDialog isOpen={isCancelOpen} handleClose={() => setCancelOpen(false)} />
     </Grid>
   );
 };

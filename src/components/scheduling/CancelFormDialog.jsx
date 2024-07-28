@@ -7,25 +7,14 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Grid } from '@mui/material';
 
-export default function CancelAppointment() {
-  const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+export default function CancelFormDialog(props) {
+  const { handleClose, isOpen } = props;
 
   return (
     <div>
-      <Button
-        variant="text"
-        onClick={() => {
-          handleClickOpen();
-        }}
-        sx={{ borderRadius: 8 }}>
-        Cancelar
-      </Button>
-
       <Grid container className="BotaoDoPanico">
         <Dialog
-          open={open}
+          open={isOpen}
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description">
