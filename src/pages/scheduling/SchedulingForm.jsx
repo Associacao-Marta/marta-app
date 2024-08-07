@@ -9,7 +9,7 @@ import CalendarContainer from './CalendarContainer';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../../assets/css/calendario.css';
 import '../../assets/css/base.css';
-import '../../assets/css/D.css';
+import '../../assets/css/scheduling.css';
 
 const SchedulingForm = () => {
   const [form, setForm] = useState(initialForm);

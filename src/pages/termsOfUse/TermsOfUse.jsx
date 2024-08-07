@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Button, Grid, Checkbox } from '@mui/material';
 import termImage from '../../assets/img/Onboarding/termImage.svg';
 import '../../assets/css/base.css';
-import '../../assets/css/AB.css';
+import '../../assets/css/onboarding.css';
 
 const TermsOfUse = () => {
   const [isTermChecked, setTermChecked] = React.useState(false);

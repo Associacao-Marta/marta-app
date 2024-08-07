@@ -3,7 +3,7 @@ import { Grid, Stack } from '@mui/material';
 import Carrossel from '../../components/article/Carrossel';
 import CardArtigo from '../../components/article/CardArtigo';
 import '../../assets/css/base.css';
-import '../../assets/css/C.css';
+import '../../assets/css/articles.css';
 
 const Home = () => {
   return (
