@@ -1,24 +1,15 @@
 import React, { useState } from 'react';
 import { Button, Stack, Grid, TextField } from '@mui/material';
-import setMinutes from 'date-fns/setMinutes';
-import setHours from 'date-fns/setHours';
 import InputMask from 'react-input-mask';
-import DatePicker from 'react-datepicker';
-import { addDays } from 'date-fns';
 import ConfirmFormDialog from '../../components/scheduling/ConfirmFormDialog';
 import CancelFormDialog from '../../components/scheduling/CancelFormDialog';
 import Header from '../../components/Header';
+import { initialForm, verifyForm } from './utils/Scheduling.utils';
+import CalendarContainer from './CalendarContainer';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../../assets/css/calendario.css';
 import '../../assets/css/base.css';
 import '../../assets/css/D.css';
-import { initialForm, verifyForm } from './utils/Scheduling.utils';
-
-// name: pelo menos 3 caracteres e nenhum especial
-// phone: 11 caracteres
-// description: pelo menos 10 caracteres
-// type: psicólogas ou advogadas
-// date: data e hora definidas
 
 const SchedulingForm = () => {
   const [form, setForm] = useState(initialForm);
@@ -27,8 +18,17 @@ const SchedulingForm = () => {
   const isFormComplete = verifyForm(form);
 
   const handleSubmit = () => {
-    // enviarAgendamento();
-    console.log('enviarAgendamento', form);
+    const formattedDate = {
+      date: form.date.toISOString().split('T')[0],
+      time: form.date.toTimeString().split(' ')[0].slice(0, 5),
+    };
+    const { date, ...rest } = form;
+    const formattedForm = {
+      ...rest,
+      date: formattedDate,
+    };
+
+    console.log('enviarAgendamento', formattedForm);
     setConfirmOpen(true);
   };
 
@@ -84,55 +84,7 @@ const SchedulingForm = () => {
               </Stack>
             </Grid>
           </Grid>
-          <Grid container className="dateForm">
-            <h3 className="subtitulo">Quando gostaria de ser atendida?</h3>
-          </Grid>
-          <Grid container item className="calendarioContainer">
-            <DatePicker
-              autocomplete="off"
-              selected={form.date}
-              onChange={(selectedDate) => {
-                const selectedDateWithTime = setHours(setMinutes(selectedDate, 0), 8);
-                handleChangeForm('date', selectedDateWithTime);
-              }}
-              placeholderText="Escolha uma data"
-              dateFormat="dd/MM/yyyy"
-              locale="pt"
-              shouldCloseOnSelect={false}
-              closeOnScroll={false}
-              disabledKeyboardNavigation
-              includeDateIntervals={[
-                {
-                  start: addDays(new Date(), 2),
-                  end: addDays(new Date(), 60),
-                },
-              ]}
-              onKeyDown={(e) => {
-                e.preventDefault();
-              }}
-            />
-            <DatePicker
-              autocomplete="off"
-              disabled={!form.date}
-              selected={form.date}
-              onChange={(selectedDate) => handleChangeForm('date', selectedDate)}
-              showTimeSelect
-              showTimeSelectOnly
-              timeIntervals={30}
-              timeCaption="Horário"
-              dateFormat="h:mm aa"
-              placeholderText="Escolha um horário"
-              shouldCloseOnSelect={false}
-              closeOnScroll={false}
-              initialDate={setHours(setMinutes(new Date(), 0), 8)}
-              disabledKeyboardNavigation
-              minTime={setHours(setMinutes(new Date(), 0), 8)}
-              maxTime={setHours(setMinutes(new Date(), 8), 17)}
-              onKeyDown={(e) => {
-                e.preventDefault();
-              }}
-            />
-          </Grid>
+          <CalendarContainer form={form} handleChangeForm={handleChangeForm} />
           <Grid container className="buttonContainer" style={{ marginTop: 30 }}>
             <Button
               variant="contained"
