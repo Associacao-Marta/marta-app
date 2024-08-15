@@ -124,7 +124,6 @@ const appArticlesData = [
           Marta. O produto foi projetado pela equipe Os Cappuccinos, composta pelo seguintes
           integrantes:
         </p>
-
         <p>
           <b>Giselle Fonseca</b> - Product Manager (
           <a href="https://www.linkedin.com/in/giselle-fonseca-b1a2561b9/">Linkedin</a>)
@@ -142,8 +141,23 @@ const appArticlesData = [
           (<a href="https://www.linkedin.com/in/lucasmdoliveira/">Linkedin</a>)
         </p>
         <p>
-          <b>Sami Nagahama</b> - Desenvolvedora Full-Stack (
+          <b>Sami Nagahama</b> - Desenvolvedora Full Stack (
           <a href="https://www.linkedin.com/in/saminagahama/">Linkedin</a>)
+        </p>
+        <p>
+          A aplicação contou ainda com a revisão de 2 desenvolvedores de software para o
+          desenvolvimento de melhorias e a garantia de sua manutenção.
+        </p>
+        <p>
+          <b>Eric Junqueira</b> - Desenvolvedor Full Stack (
+          <a href="https://www.linkedin.com/in/eric-junqueira-bb40091a7/">Linkedin</a>)
+        </p>
+        <p>
+          <b>Cláudio Guimarães </b> - Desenvolvedor Back-end (
+          <a href="https://www.linkedin.com/in/ant%C3%B4nio-cl%C3%A1udio-guimar%C3%A3es-6210651a3/">
+            Linkedin
+          </a>
+          )
         </p>
       </>
     ),

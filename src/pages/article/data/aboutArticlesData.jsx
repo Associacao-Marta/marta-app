@@ -7,58 +7,102 @@ const aboutArticlesData = [
     // C2
     id: 'quem-somos',
     href: '/artigos/quem-somos',
-    title: 'Quem somos',
+    title: 'Quem somos?',
     type: 'Sobre a associação',
     image: quemSomosImg,
     iconRef: 'artigos',
     text: (
       <>
         <p>
-          Uma Associação composta apenas por mulheres, que empatiza com a causa das vítimas da
-          violência estrutural da sociedade, atuando na sua prevenção e conscientização.
+          Somos uma organização formada por mulheres que atuam no enfrentamento à violência
+          estrutural contra a mulher.
+        </p>
+        <p>
+          Nossa missão é conscientizar, educar e empoderar estudantes e a comunidade para se
+          tornarem cidadãos mais responsáveis, conscientes e sensíveis ao tema. Além de oferecer
+          assistência jurídica e escuta psicológica gratuita às vítimas de violência.
         </p>
         <p>
           A Associação Marta leva este nome em homenagem a uma mulher anônima que, assim como
           muitas, já sofreu com a violência doméstica, mas que tem uma história inspiradora de
-          superação.
+          superação. Fundada em 2019 por 5 amigas que possuem o mesmo sonho em comum: colaborar com
+          o enfrentamento à violência contra mulher.
         </p>
-        <b>O que fazemos?</b>
         <p>
-          Além de realizarmos palestras virtuais e presenciais, temos forte presença nas redes
-          sociais com o objetivo de conscientizar e educar os estudantes e a comunidade, a fim de
-          que se tornem cidadãos mais responsáveis, sensíveis aos temas relacionados à causa da
-          Associação.
+          Somos uma Associação composta por mulheres, que enfatizam a causa das vítimas da violência
+          estrutural da sociedade, atuando na sua prevenção e conscientização. Além de realizarmos
+          palestras virtuais e presenciais, temos forte presença nas redes sociais com o objetivo de
+          conscientizar e educar os estudantes e a comunidade, a fim de que se tornem cidadãos mais
+          responsáveis, sensíveis aos temas relacionados à causa da Associação.
         </p>
         <p>
           Também promovemos projetos de assistência jurídica e psicológica gratuitas para vítimas de
-          violência contra a mulher.
+          violência contra a mulher. Utilizamos de exemplos práticos e linguagem de fácil
+          entendimento para que a mensagem seja entendida pelo maior número possível de pessoas.
         </p>
-        <b>Por que fazemos?</b>
         <p>
-          Acreditamos na importância da conscientização por meio de palestras e pelas redes sociais,
-          tendo em vista que muitas mulheres e adolescentes não sabem identificar as formas de
-          violência, não estando preparadas para se proteger delas. Ainda, este método nos
-          possibilita capacitar o público-alvo para perceber, se sensibilizar e dar suporte quando
-          se depara com uma situação de violência.
+          As palestras e os atendimentos jurídicos e psicológicos são realizados por nossas
+          associadas, previamente selecionadas e treinadas, com familiaridade sobre o assunto e o
+          público-alvo.
         </p>
-        <b>Contatos</b>
+        <br />
         <p>
-          Instagram:{' '}
-          <a href="https://www.instagram.com/associacaomarta/">
-            https://www.instagram.com/associacaomarta/
-          </a>{' '}
-          <br />
-          Facebook:{' '}
-          <a href="https://www.facebook.com/AssociacaoMarta/">
-            https://www.facebook.com/AssociacaoMarta/
-          </a>{' '}
-          <br />
-          E-mail:{' '}
-          <a href="mailto:contato.associacaomarta@gmail.com">
-            contato.associacaomarta@gmail.com
-          </a>{' '}
-          <br />
-          Whatsapp: <a href="tel:+558599612-0974">(85) 99612-0974</a>
+          <b>Quem é Marta?</b>
+        </p>
+        <p>
+          Ela pode ser você. Ela pode ser a mulher ao seu lado. Ela pode ser a mulher que sofre
+          violência enquanto você lê estas palavras. Ela é uma, mas pode ser muitas. Ela, assim como
+          todas nós, conseguiu encontrar uma maneira de mudar o rumo de sua vida. Sentiu que
+          enquanto havia chão para ela pisar, reuniria forças para lutar.{' '}
+        </p>
+        <p>
+          Marta Sarmento Bispo aprendeu desde nova que homens e mulheres exercem papéis diferentes
+          na sociedade. Por isso, quando conheceu seu ex-companheiro, normalizou que a sua vida
+          seria de muita batalha e que ela seria a única responsável pela felicidade do lar,
+          independente do que acontecesse.
+        </p>
+        <p>
+          No início, o relacionamento entre eles era um sonho. Ela foi a escolhida pelo rapaz
+          popular, engraçado, boa companhia e bonito. Sentia que, naquele momento, estava realizada.
+          Sua família, satisfeita, entregou a filha ao que eles esperavam ser um bom genro. Talvez,
+          um novo filho. Mas, apesar de qualquer dúvida, havia uma certeza: ela seria a esposa que
+          aprendeu a idealizar.
+        </p>
+        <p>
+          No entanto, não durou muito até que o oásis entre eles começasse a secar. Mas, assim como
+          nas histórias de terror, o vilão nos envolve em uma trama e nos deixa presa em um
+          labirinto de emoções difícil de escapar. Ao passo que Marta experimentava um momento
+          especial como a maternidade, foi obrigada a suportar as agruras de um homem ensandecido
+          que exigia cada vez mais de uma mulher que já lhe entregava a própria existência.
+        </p>
+        <p>
+          Pediu socorro em todos os locais em que acreditou ser possível buscar acolhimento e
+          proteção, mas encontrou apenas indiferença e abandono. Felizmente, tinha certeza de que
+          não estava destinada a viver uma vida de dor e sofrimento, mas não encontrava meios para
+          emergir e sair para um novo caminho. Na solidão da dor, viveu mais 22 anos com o homem que
+          lhe deu quatro filhos. Afinal, nascem flores até no deserto. Tentou algumas vezes decidir
+          seu próprio rumo, daí ela percebeu que uma decisão sempre comportará dificuldades em todo
+          o seu percurso de desenvolvimento. Conseguia sair dele, mas resistir depois da saída era
+          muito complexo. Por isso, sucumbia e voltava.
+        </p>
+        <p>
+          Foram anos de sofrimento, experimentou a dor física e psicológica em escalas que jamais
+          poderemos descrever, apenas quem experimenta sabe. Não fraquejou diante do luto dos
+          próprios sonhos, o afastamento dos filhos, ocasionado propositalmente pelo pai deles,
+          talvez tenha sido um dos momentos mais difíceis, mas, depois de todas as provações, ela
+          sabia que a única saída era resistir.
+        </p>
+        <p>
+          Após tantos anos afrontando as adversidades, Marta conseguiu mudar. Alcançou sonhos que
+          estavam longe e que, em muitos momentos, pareciam inatingíveis. Felizmente, ela conseguiu
+          reescrever seu futuro, tornando-se autora da própria história. Conseguiu a guarda dos
+          filhos, alcançou independência profissional e, principalmente, alforriou seu autoamor.
+          Hoje, tem satisfação e sede de viver.
+        </p>
+        <p>
+          Aqui, celebramos Marta pelo desfecho feliz após grandes passagens de sofrimento. A vida
+          venceu. Finalmente. Porém, poderíamos ter muitos finais inesperados, alguns mais felizes,
+          ou até mais tristes. Por esse motivo, nasceu a Associação Marta.
         </p>
       </>
     ),

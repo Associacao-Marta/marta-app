@@ -15,13 +15,15 @@ const LeiaMais = ({ children }) => {
 
   return (
     <>
-      <p className="text">{isReadMore ? children : smallText}</p>
+      <div style={{ marginBottom: '40px' }}>
+        <p className="text">{isReadMore ? children : smallText}</p>
+      </div>
       <span
         onClick={toggleReadMore}
         onKeyDown={handleKeyDown}
         role="button"
         tabIndex={0}
-        style={{ marginTop: '20px', cursor: 'pointer' }}
+        style={{ cursor: 'pointer' }}
         className="read-or-hide">
         {isReadMore ? 'Mostre menos' : 'Leia mais'}
       </span>
