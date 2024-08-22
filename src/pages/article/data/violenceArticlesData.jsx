@@ -143,7 +143,7 @@ const violenceArticlesData = [
         <p>
           <b>7. Perdeu a autoestima e está destruída psicologicamente:</b> Sinais como marcas no
           corpo da mulher. Mulher que aparece com bens de menor qualidade, com roupas que parecem
-          cobrá-la mais do que destacá-la.
+          cobri-la mais do que destacá-la.
         </p>
       </>
     ),
