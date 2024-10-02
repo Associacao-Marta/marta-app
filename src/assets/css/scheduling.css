@@ -18,6 +18,14 @@
   margin-bottom: 5vh;
 }
 
+.datepicker-enabled {
+  cursor: pointer;
+}
+
+.datepicker-disabled {
+  cursor: not-allowed;
+}
+
 .textForm {
   width: 86.67vw;
   margin-bottom: 2vh;

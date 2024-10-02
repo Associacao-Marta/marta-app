@@ -17,7 +17,7 @@ const SchedulingForm = () => {
   const [isCancelOpen, setCancelOpen] = React.useState(false);
   const isFormComplete = verifyForm(form);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const formattedDate = {
       date: form.date.toISOString().split('T')[0],
       time: form.date.toTimeString().split(' ')[0].slice(0, 5),
@@ -71,14 +71,14 @@ const SchedulingForm = () => {
               <Stack direction="row" spacing={5}>
                 <Button
                   sx={{ borderRadius: 8 }}
-                  variant={form.type !== 'psicólogas' ? 'outlined' : 'contained'}
-                  onClick={() => handleChangeForm('type', 'psicólogas')}>
+                  variant={form.type === 'psychological' ? 'contained' : 'outlined'}
+                  onClick={() => handleChangeForm('type', 'psychological')}>
                   psicóloga
                 </Button>
                 <Button
                   sx={{ borderRadius: 8 }}
-                  variant={form.type !== 'advogadas' ? 'outlined' : 'contained'}
-                  onClick={() => handleChangeForm('type', 'advogadas')}>
+                  variant={form.type === 'legal' ? 'contained' : 'outlined'}
+                  onClick={() => handleChangeForm('type', 'legal')}>
                   advogada
                 </Button>
               </Stack>

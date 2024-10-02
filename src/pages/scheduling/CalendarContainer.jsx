@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import DatePicker from 'react-datepicker';
-import { addDays, getDay } from 'date-fns';
+import { addDays } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 
-import dates from './utils/data/availableDates';
+import useGetAppointments from './hooks/useGetAppointments';
 
 const parseDateToBrasiliaTime = (dateString) => {
   const [year, month, day] = dateString.split('-').map(Number);
@@ -15,34 +15,30 @@ const parseDateToBrasiliaTime = (dateString) => {
   return utcDate;
 };
 
-const getAvailableDates = () => {
-  return dates
-    .filter((item) => item.timeSlots && item.timeSlots.length > 0)
-    .map((item) => new Date(parseDateToBrasiliaTime(item.date)));
+const getAvailableDates = (datesResponse) => {
+  return datesResponse
+    ?.filter((item) => item.timeSlots && item.timeSlots.length > 0)
+    ?.map((item) => new Date(parseDateToBrasiliaTime(item.date)));
 };
 
 const CalendarContainer = (props) => {
   const { form, handleChangeForm } = props;
   const [availableDates, setAvailableDates] = useState([]);
+  const { data: datesResponse } = useGetAppointments(form.type);
+  console.log('availableDates', availableDates);
 
   useEffect(() => {
-    setAvailableDates(getAvailableDates());
-  }, []);
+    setAvailableDates(getAvailableDates(datesResponse));
+  }, [datesResponse]);
 
-  const isAvailableDate = (date) => {
-    const day = getDay(date);
-    const isWeekDay = day !== 0 && day !== 6;
-    return (
-      isWeekDay &&
-      availableDates.some((availableDate) => availableDate.toDateString() === date.toDateString())
-    );
-  };
+  const isAvailableDate = (date) =>
+    availableDates?.some((availableDate) => availableDate.toDateString() === date.toDateString());
 
   const filterAvailableTime = (selectedDate) => {
     const dateStr = selectedDate.toISOString().split('T')[0]; // YYYY-MM-DD
     const timeStr = selectedDate.toTimeString().split(' ')[0].slice(0, 5); // HH:mm
 
-    const dateEntry = dates.find((entry) => entry.date === dateStr);
+    const dateEntry = datesResponse?.find((entry) => entry.date === dateStr);
     if (dateEntry) {
       return dateEntry.timeSlots.includes(timeStr);
     }
@@ -58,6 +54,7 @@ const CalendarContainer = (props) => {
       <div>
         <Grid container className="calendarioContainer">
           <DatePicker
+            disabled={!form.type}
             placeholderText="Escolha uma data"
             locale={ptBR}
             selected={form.date}
@@ -71,19 +68,16 @@ const CalendarContainer = (props) => {
             ]}
             filterDate={(date) => isAvailableDate(date)}
             shouldCloseOnSelect
-            calendarContainer={CalendarPopper}
             showTimeSelect
             timeIntervals={60}
             filterTime={filterAvailableTime}
+            cursor="pointer"
+            className={!form.type ? 'datepicker-disabled' : 'datepicker-enabled'}
           />
         </Grid>
       </div>
     </>
   );
-};
-
-const CalendarPopper = ({ className, children }) => {
-  return <div className={className}>{children}</div>;
 };
 
 export default CalendarContainer;
