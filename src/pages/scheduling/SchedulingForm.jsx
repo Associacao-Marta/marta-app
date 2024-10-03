@@ -10,26 +10,41 @@ import 'react-datepicker/dist/react-datepicker.css';
 import '../../assets/css/calendario.css';
 import '../../assets/css/base.css';
 import '../../assets/css/scheduling.css';
+import usePostAppointment from './hooks/usePostAppointment';
 
 const SchedulingForm = () => {
   const [form, setForm] = useState(initialForm);
   const [isConfirmOpen, setConfirmOpen] = React.useState(false);
   const [isCancelOpen, setCancelOpen] = React.useState(false);
   const isFormComplete = verifyForm(form);
+  const { mutate } = usePostAppointment();
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     const formattedDate = {
       date: form.date.toISOString().split('T')[0],
       time: form.date.toTimeString().split(' ')[0].slice(0, 5),
     };
-    const { date, ...rest } = form;
-    const formattedForm = {
-      ...rest,
-      date: formattedDate,
-    };
 
-    console.log('enviarAgendamento', formattedForm);
-    setConfirmOpen(true);
+    mutate(
+      {
+        category: form.type,
+        appointment: {
+          attender_name: form.name,
+          attender_phone_number: form.phone,
+          date: formattedDate.date,
+          time_slot: formattedDate.time,
+          details: form.description,
+        },
+      },
+      {
+        onSuccess: () => {
+          setConfirmOpen(true);
+        },
+        onError: (error) => {
+          console.error('Error:', error);
+        },
+      },
+    );
   };
 
   const handleChangeForm = (prop, value) => {

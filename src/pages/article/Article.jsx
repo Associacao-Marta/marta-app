@@ -17,7 +17,6 @@ const Article = () => {
   const otherSuggestions = allArticlesData.filter(
     (article) => article.type === type && article.id !== id,
   );
-  console.log('otherSuggestions', otherSuggestions);
 
   return (
     <Grid container className="">

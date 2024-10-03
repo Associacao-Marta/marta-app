@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 
-const useGetAppointments = (appointmentType) => {
-  console.log('appointmentType', appointmentType);
+const BASE_URL = process.env.REACT_APP_MARTA_API_URL;
 
+const useGetAppointments = (appointmentType) => {
   const { data, isLoading, error } = useQuery({
     queryKey: ['getAppointments', appointmentType],
     queryFn: async () => {

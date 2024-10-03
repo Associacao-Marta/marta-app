@@ -25,7 +25,6 @@ const CalendarContainer = (props) => {
   const { form, handleChangeForm } = props;
   const [availableDates, setAvailableDates] = useState([]);
   const { data: datesResponse } = useGetAppointments(form.type);
-  console.log('availableDates', availableDates);
 
   useEffect(() => {
     setAvailableDates(getAvailableDates(datesResponse));
