@@ -1,8 +1,8 @@
 import { Grid, Stack } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import '../../assets/css/base.css';
-import '../../assets/css/articles.css';
+import '../../styles/base.css';
+import '../../styles/articles.css';
 import HeaderTitulo from '../../components/article/HeaderArtigo';
 import LeiaMais from '../../components/article/LeiaMais';
 import Header from '../../components/Header';

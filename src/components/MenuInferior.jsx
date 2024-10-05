@@ -13,7 +13,7 @@ import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined
 import HomeIcon from '@mui/icons-material/Home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
-import '../assets/css/base.css';
+import '../styles/base.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function FixedBottomNavigation() {

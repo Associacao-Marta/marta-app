@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Link } from '@mui/material';
-import '../../assets/css/cardArtigo.css';
-import '../../assets/css/base.css';
+import '../../styles/cardArtigo.css';
+import '../../styles/base.css';
 import motivosIcon from '../../assets/img/artigos/motivos_icon.svg';
 import sinaisIcon from '../../assets/img/artigos/sinais_icon.svg';
 import feminicidioIcon from '../../assets/img/artigos/feminicidio_icon.svg';

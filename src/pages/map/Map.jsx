@@ -4,7 +4,7 @@ import { Button, Grid } from '@mui/material';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import * as Leaflet from 'leaflet';
 
-import '../../assets/css/mapa.css';
+import '../../styles/mapa.css';
 import poiData from './data/POIData';
 import BackButton from '../../components/BackButton';
 

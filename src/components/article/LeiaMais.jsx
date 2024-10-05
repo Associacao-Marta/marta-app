@@ -24,7 +24,7 @@ const LeiaMais = ({ children }) => {
         role="button"
         tabIndex={0}
         style={{ cursor: 'pointer' }}
-        className="read-or-hide">
+        className="readOrHide">
         {isReadMore ? 'Mostre menos' : 'Leia mais'}
       </span>
     </>

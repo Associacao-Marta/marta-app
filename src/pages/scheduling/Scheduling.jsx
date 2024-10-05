@@ -2,8 +2,8 @@ import React from 'react';
 import { Button, Grid } from '@mui/material';
 import Header from '../../components/Header';
 import img from '../../assets/img/atendimento.svg';
-import '../../assets/css/base.css';
-import '../../assets/css/scheduling.css';
+import '../../styles/base.css';
+import '../../styles/scheduling.css';
 
 const Scheduling = () => {
   return (

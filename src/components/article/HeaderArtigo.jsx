@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Chip } from '@mui/material';
-import '../../assets/css/base.css';
-import '../../assets/css/articles.css';
+import '../../styles/base.css';
+import '../../styles/articles.css';
 import BotaoAcessibilidade from './BotaoAcessibilidade';
 
 const HeaderTitulo = (props) => {

@@ -1,6 +1,6 @@
 import { Grid, Stack } from '@mui/material';
-import '../../assets/css/base.css';
-import '../../assets/css/articles.css';
+import '../../styles/base.css';
+import '../../styles/articles.css';
 import Header from '../../components/Header';
 import CardArtigoGrande from '../../components/article/CardArtigoGrande';
 

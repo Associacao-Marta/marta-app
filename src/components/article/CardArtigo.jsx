@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Link } from '@mui/material';
-import '../../assets/css/cardArtigo.css';
-import '../../assets/css/base.css';
+import '../../styles/cardArtigo.css';
+import '../../styles/base.css';
 import { icons } from './CardArtigoGrande';
 
 const CardArtigo = (props) => {

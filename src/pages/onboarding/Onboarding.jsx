@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import MobileStepper from '@mui/material/MobileStepper';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import '../../assets/css/base.css';
-import '../../assets/css/onboarding.css';
+import '../../styles/base.css';
+import '../../styles/onboarding.css';
 import onBoardingData from './OnBoardingData';
 
 const Onboarding = () => {

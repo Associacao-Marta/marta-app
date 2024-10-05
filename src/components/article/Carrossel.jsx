@@ -8,7 +8,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import img1 from '../../assets/img/destaques/destaque_1.svg';
 import img2 from '../../assets/img/destaques/destaque_2.svg';
 import img3 from '../../assets/img/destaques/destaque_3.svg';
-import '../../assets/css/base.css';
+import '../../styles/base.css';
 
 const steps = [
   {

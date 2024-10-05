@@ -2,12 +2,12 @@ import React from 'react';
 import { Grid, Stack } from '@mui/material';
 import Carrossel from '../../components/article/Carrossel';
 import CardArtigo from '../../components/article/CardArtigo';
-import '../../assets/css/base.css';
-import '../../assets/css/articles.css';
+import '../../styles/base.css';
+import '../../styles/articles.css';
 
 const Home = () => {
   return (
-    <Grid container className="pageCContainer">
+    <Grid container className="homeContainer">
       <Grid container className="pageContainer">
         <Grid container className="carrosselContainer">
           <Grid item>

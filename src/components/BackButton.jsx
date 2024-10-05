@@ -3,7 +3,7 @@ import { Grid, IconButton } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
-import '../assets/css/base.css';
+import '../styles/base.css';
 
 const BackButton = () => {
   const navigate = useNavigate();
