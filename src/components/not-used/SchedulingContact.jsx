@@ -1,10 +1,9 @@
 import React from 'react';
 import { Grid, TextField } from '@mui/material';
 import InputMask from 'react-input-mask';
-import PopUpD3 from '../../components/scheduling/PopUpD3';
-import Header from '../../components/Header';
-import '../../assets/css/base.css';
-import '../../assets/css/D.css';
+import Header from '../Header';
+import '../../styles/base.css';
+import '../../styles/scheduling.css';
 
 const SchedulingContact = () => {
   const [protocolo, setProtocolo] = React.useState();
@@ -31,7 +30,7 @@ const SchedulingContact = () => {
       </Grid>
 
       <Grid container item className="buttonContainer">
-        <PopUpD3 protocolo={protocolo} />
+        {/* <PopUpD3 protocolo={protocolo} /> */}
       </Grid>
     </Grid>
   );
