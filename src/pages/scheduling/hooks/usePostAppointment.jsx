@@ -3,7 +3,6 @@ import { useMutation } from '@tanstack/react-query';
 const BASE_URL = process.env.REACT_APP_MARTA_API_URL;
 
 const usePostAppointment = () => {
-  console.log(BASE_URL);
   const { mutate, data, isLoading, error } = useMutation({
     mutationFn: async ({ category, appointment }) => {
       const response = await fetch(`${BASE_URL}api/v1/appointments/${category}`, {

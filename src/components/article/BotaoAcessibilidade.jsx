@@ -7,9 +7,6 @@ export default function BotaoAcessibilidade() {
   return (
     <FontSizeChanger
       targets={['#target .content']}
-      onChange={(element, newValue, oldValue) => {
-        console.log(element, newValue, oldValue);
-      }}
       options={{
         stepSize: 1,
         range: 10,
