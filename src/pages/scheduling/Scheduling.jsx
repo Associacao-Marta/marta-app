@@ -9,11 +9,9 @@ const Scheduling = () => {
   return (
     <Grid container className="pageDContainer">
       <Header titulo="Atendimento" />
-
       <Grid item container className="ilustracao">
         <img src={img} alt="atendimento" />
       </Grid>
-
       <Grid container className="tituloContainer">
         <Grid
           container
@@ -25,7 +23,6 @@ const Scheduling = () => {
           Está precisando de ajuda? Temos serviços psicológicos e jurídicos gratuitos para você!
         </Grid>
       </Grid>
-
       <Grid container>
         <Grid container className="buttonContainer">
           <Button
