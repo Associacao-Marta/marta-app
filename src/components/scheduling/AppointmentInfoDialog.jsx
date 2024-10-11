@@ -5,8 +5,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { getDoc, doc } from 'firebase/firestore';
-import db from '../../firebase-config';
+// import { getDoc, doc } from 'firebase/firestore';
 import iconCheck from '../../assets/img/icon_check.svg';
 import iconAtencao from '../../assets/img/icon_atencao.svg';
 
@@ -17,8 +16,11 @@ export default function AppointmentInfoDialog(props) {
   const { protocolo } = props;
 
   const getAtendimento = async () => {
-    const docRef = doc(db, 'atendimento', protocolo);
-    const data = await getDoc(docRef);
+    // const docRef = doc(db, 'atendimento', protocolo);
+    // const data = await getDoc(docRef);
+    const data = {
+      data: [],
+    };
 
     if (data.exists()) {
       setAtendimento(data.data());
