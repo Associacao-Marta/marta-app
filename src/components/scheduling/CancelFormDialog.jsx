@@ -32,7 +32,7 @@ export default function CancelFormDialog(props) {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose} autoFocus sx={{ marginRight: '152px' }}>
+            <Button onClick={handleClose} autoFocus>
               Não
             </Button>
             <Button href="atendimento" variant="text" autoFocus sx={{}}>

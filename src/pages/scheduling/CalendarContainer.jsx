@@ -6,21 +6,6 @@ import ptBR from 'date-fns/locale/pt-BR';
 
 import useGetAppointments from './hooks/useGetAppointments';
 
-const parseDateToBrasiliaTime = (dateString) => {
-  const [year, month, day] = dateString.split('-').map(Number);
-  const utcDate = new Date(Date.UTC(year, month - 1, day));
-  const timezoneOffset = +3;
-
-  utcDate.setHours(utcDate.getHours() + timezoneOffset);
-  return utcDate;
-};
-
-const getAvailableDates = (datesResponse) => {
-  return datesResponse
-    ?.filter((item) => item.timeSlots && item.timeSlots.length > 0)
-    ?.map((item) => new Date(parseDateToBrasiliaTime(item.date)));
-};
-
 const CalendarContainer = (props) => {
   const { form, handleChangeForm } = props;
   const [availableDates, setAvailableDates] = useState([]);
@@ -58,7 +43,10 @@ const CalendarContainer = (props) => {
             locale={ptBR}
             selected={form.date}
             dateFormat="dd/MM/yyyy - HH:mm"
-            onChange={(selectedDate) => handleChangeForm('date', selectedDate)}
+            onChange={(selectedDate) => {
+              const updatedDateWithTime = getEarliestTimeSlot(selectedDate, datesResponse);
+              handleChangeForm('date', updatedDateWithTime);
+            }}
             includeDateIntervals={[
               {
                 start: new Date(),
@@ -72,6 +60,7 @@ const CalendarContainer = (props) => {
             filterTime={filterAvailableTime}
             cursor="pointer"
             className={!form.type ? 'datepicker-disabled' : 'datepicker-enabled'}
+            withPortal
           />
         </Grid>
       </div>
@@ -80,3 +69,35 @@ const CalendarContainer = (props) => {
 };
 
 export default CalendarContainer;
+
+const parseDateToBrasiliaTime = (dateString) => {
+  const [year, month, day] = dateString.split('-').map(Number);
+  const utcDate = new Date(Date.UTC(year, month - 1, day));
+  const timezoneOffset = +3;
+
+  utcDate.setHours(utcDate.getHours() + timezoneOffset);
+  return utcDate;
+};
+
+const getAvailableDates = (datesResponse) => {
+  return datesResponse
+    ?.filter((item) => item.timeSlots && item.timeSlots.length > 0)
+    ?.map((item) => new Date(parseDateToBrasiliaTime(item.date)));
+};
+
+const getEarliestTimeSlot = (selectedDate, datesResponse) => {
+  const dateStr = selectedDate.toISOString().split('T')[0]; // YYYY-MM-DD
+  const dateEntry = datesResponse?.find((entry) => entry.date === dateStr);
+
+  if (dateEntry && dateEntry.timeSlots.length > 0) {
+    const earliestTime = dateEntry.timeSlots[0];
+    const [hours, minutes] = earliestTime.split(':').map(Number);
+
+    const updatedDate = new Date(selectedDate);
+    updatedDate.setHours(hours);
+    updatedDate.setMinutes(minutes);
+    return updatedDate;
+  }
+
+  return selectedDate;
+};

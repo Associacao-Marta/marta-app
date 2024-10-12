@@ -6,11 +6,12 @@ import CancelFormDialog from '../../components/scheduling/CancelFormDialog';
 import Header from '../../components/Header';
 import { initialForm, verifyForm } from './utils/Scheduling.utils';
 import CalendarContainer from './CalendarContainer';
+import usePostAppointment from './hooks/usePostAppointment';
+
 import 'react-datepicker/dist/react-datepicker.css';
-import '../../styles/calendario.css';
 import '../../styles/base.css';
 import '../../styles/scheduling.css';
-import usePostAppointment from './hooks/usePostAppointment';
+import '../../styles/calendar.css';
 
 const SchedulingForm = () => {
   const [form, setForm] = useState(initialForm);
