@@ -25,7 +25,14 @@ const Home = () => {
         </Grid>
 
         <Grid container className="carrosselArtigos" dir="ltr">
-          <Stack direction="row" spacing={2}>
+          <Stack
+            direction="row"
+            sx={{
+              overflowX: 'auto',
+              width: '100%',
+              boxSizing: 'border-box',
+            }}
+            spacing={2}>
             <CardArtigo
               titulo="Por que essas relações de violência perduram?"
               tela="motivos"
@@ -44,7 +51,14 @@ const Home = () => {
             <h1 className="tituloH1">Veja também</h1>
           </Grid>
           <Grid container className="carrosselArtigos" dir="ltr">
-            <Stack direction="row" spacing={2}>
+            <Stack
+              direction="row"
+              sx={{
+                overflowX: 'auto',
+                width: '100%',
+                boxSizing: 'border-box',
+              }}
+              spacing={2}>
               <CardArtigo titulo="Feminicídio " tela="feminicidio" href="/artigos/feminicidio" />
               <CardArtigo
                 titulo="Maria da Penha"

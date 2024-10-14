@@ -6,6 +6,13 @@
   min-height: 100vh;
 }
 
+.homeArticles {
+  overflow-x: 'auto';
+  width: '100%';
+  padding: '0 16px';
+  box-sizing: 'border-box';
+}
+
 .headerContainer {
   display: inline;
   position: static;
