@@ -12,6 +12,12 @@ const CalendarContainer = (props) => {
   const { data: datesResponse } = useGetAppointments(form.type);
 
   useEffect(() => {
+    if (form.type && form.date) {
+      handleChangeForm('date', null);
+    }
+  }, [form.type]);
+
+  useEffect(() => {
     setAvailableDates(getAvailableDates(datesResponse));
   }, [datesResponse]);
 
@@ -30,6 +36,15 @@ const CalendarContainer = (props) => {
     return false;
   };
 
+  const handleChangeDate = (selectedDate) => {
+    if (!form.date) {
+      const earliestDate = getEarliestTimeSlot(selectedDate, datesResponse);
+      handleChangeForm('date', earliestDate);
+    } else {
+      handleChangeForm('date', selectedDate);
+    }
+  };
+
   return (
     <>
       <Grid container className="dateForm">
@@ -43,10 +58,7 @@ const CalendarContainer = (props) => {
             locale={ptBR}
             selected={form.date}
             dateFormat="dd/MM/yyyy - HH:mm"
-            onChange={(selectedDate) => {
-              const updatedDateWithTime = getEarliestTimeSlot(selectedDate, datesResponse);
-              handleChangeForm('date', updatedDateWithTime);
-            }}
+            onChange={handleChangeDate}
             includeDateIntervals={[
               {
                 start: new Date(),
