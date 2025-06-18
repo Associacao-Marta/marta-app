@@ -1,6 +1,7 @@
 import quemSomosImg from '../../../assets/img/artigos/quem_somos_icon.svg';
 import martaEscutaImg from '../../../assets/img/artigos/marta_escuta_icon.svg';
 import doacoesImg from '../../../assets/img/artigos/doacoes_icon.svg';
+import PixCopyButton from '../CopyButton';
 
 const aboutArticlesData = [
   {
@@ -166,22 +167,13 @@ const aboutArticlesData = [
     text: (
       <>
         <p>
-          Gostaria de ajudar a Associação Marta a crescer? Você pode fazer uma doação via Pix, além
-          de doar pela nossa Benfeitoria. Fazendo isso você ajuda a alcançar mulheres em situação de
-          vulnerabilidade e contribui em um papel de ruptura de um ciclo de violência.
+          Gostaria de ajudar a Associação Marta a crescer? Você pode fazer uma doação via Pix.
+          Fazendo isso você ajuda a alcançar mulheres em situação de vulnerabilidade e contribui em
+          um papel de ruptura de um ciclo de violência.
         </p>
         <p>
           Doações via Pix por: <br />
-          <b>ajude.marta@gmail.com</b>
-        </p>
-        <p>
-          Você também pode contribuir diretamente no site da benfeitoria:
-          <br />
-          <b>
-            <a href="https://benfeitoria.com/projeto/associacaomarta">
-              Benfeitoria - Associação Marta
-            </a>
-          </b>
+          <PixCopyButton pixCode="61.295.659/0001-07" />
         </p>
       </>
     ),
